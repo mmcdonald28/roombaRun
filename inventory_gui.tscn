@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpekv5tdukjnc"]
+
+[ext_resource type="Texture2D" uid="uid://dfqehjy7qs5mv" path="res://InventoryRect.png" id="1_hqjd3"]
+[ext_resource type="Script" path="res://inventory_gui.gd" id="1_yuyrk"]
+[ext_resource type="PackedScene" uid="uid://hr172omqouk6" path="res://slot_gui.tscn" id="2_urxlg"]
+
+[node name="InventoryGui" type="Control"]
+custom_minimum_size = Vector2(128, 80)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -163.0
+offset_right = -119.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.68998, 3.68998)
+script = ExtResource("1_yuyrk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 140.0
+offset_bottom = 87.0
+texture = ExtResource("1_hqjd3")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -34.0
+offset_right = 58.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
+layout_mode = 2
+
+[node name="REMEMBER" type="Label" parent="."]
+layout_mode = 0
+offset_left = -213.28
+offset_top = -101.084
+offset_right = 398.72
+offset_bottom = -75.0845
+text = "The InventoryGui needs to be added as a child node to the \"world\" canvas layer"
