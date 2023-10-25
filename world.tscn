@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg6e72pam0f40"]
+[gd_scene load_steps=4 format=3 uid="uid://dg6e72pam0f40"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_4pcsn"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
+[ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_jlupe"]
 
 [node name="world" type="Node2D"]
 
@@ -10,3 +11,5 @@ process_mode = 3
 script = ExtResource("1_4pcsn")
 
 [node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("1_qh4io")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_jlupe")]
