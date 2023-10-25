@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1698244677
 CanvasLayer.gd::GDScript::-1::1697823984::0::1::::<>CanvasLayer<>::
 Documentation Tracking.txt::TextFile::-1::1697823984::0::1::::<><>::
@@ -31,3 +32,38 @@ pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1697823984::16982
 ::res://Levels/::1698244677
 ::res://Pause Menu/::1698244429
 game_theme.tres::Theme::1509663397543115312::1697823984::0::1::::<><>::
+=======
+::res://::1698252684
+CanvasLayer.gd::GDScript::-1::1697733512::0::1::::<>CanvasLayer<>::
+darkroom.png::CompressedTexture2D::4054820686120468941::1697822246::1697823560::1::::<><>::
+Documentation Tracking.txt::TextFile::-1::1697819666::0::1::::<><>::
+exampleItem.tres::Resource/Resource::5984546644029856969::1697733512::0::1::::<><>::res://Inventory/inventoryItem.gd<>uid://dfqehjy7qs5mv
+game.tscn::PackedScene::2052713242275741372::1697733512::0::1::::<><>::uid://ciwijsy10y1nf
+gameMenu2.tscn::PackedScene::7925421120739745658::1697819666::0::1::::<><>::
+gameMenu.tscn::PackedScene::272924818659535440::1697733512::0::1::::<><>::
+game_manager.gd::GDScript::-1::1697733512::0::1::::GameManager<>Node<>::
+game_theme.tres::Theme::1509663397543115312::1697733512::0::1::::<><>::
+icon.svg::CompressedTexture2D::1597753189438133880::1697736314::1697823560::1::::<><>::
+inventory.gd::GDScript::-1::1697733512::0::1::::Inventory<>Resource<>::
+inventoryItem.gd::GDScript::-1::1697733512::0::1::::InventoryItem<>Resource<>::
+InventoryRect.png::CompressedTexture2D::7543492193124336437::1697733512::1697823560::1::::<><>::
+inventorySlot.png::CompressedTexture2D::3141689344654865325::1697733512::1697823560::1::::<><>::
+inventory_gui.gd::GDScript::-1::1697733512::0::1::::<>Control<>::
+inventory_gui.tscn::PackedScene::8220998493480920592::1697818495::0::1::::<><>::uid://dfqehjy7qs5mv
+menu.gd::GDScript::-1::1697820392::0::1::::<>Control<>::
+menuMainMenu.tscn::PackedScene::1638160130944835459::1697823572::0::1::::<><>::res://menu.gd
+new_resource.tres::Resource/Resource::1295741865697874009::1697733512::0::1::::<><>::res://Inventory/inventoryItem.gd<>uid://bk04fufrfcf0h
+options_menu.gd::GDScript::-1::1697733512::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::4454864356766979053::1697819666::0::1::::<><>::res://options_menu.gd
+overhead.png::CompressedTexture2D::4027247233676714666::1697822246::1697823560::1::::<><>::
+pause_menu.gd::GDScript::-1::1697733512::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::4977361097077901079::1697817959::0::1::::<><>::res://UI/pause_menu.gd<>uid://vrj62sssqneu
+pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1697822246::1697823560::1::::<><>::
+player.gd::GDScript::-1::1697218886::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4190104282406082268::1698252235::0::1::::<><>::uid://d1jggumvdvdh8::::res://icon.svg<>res://player.gd
+README.md::TextFile::-1::1697823144::0::1::::<><>::
+slot_gui.gd::GDScript::-1::1697733512::0::1::::<>Panel<>::
+slot_gui.tscn::PackedScene::528053554827023539::1697818495::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h
+world.gd::GDScript::-1::1697733512::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7644692277978918607::1697821749::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc
+>>>>>>> refs/remotes/origin/main

@@ -1,5 +1,6 @@
 res://Levels/gameMenu.tscn
 res://menuMainMenu.tscn
+<<<<<<< HEAD
 res://gameMenu.tscn
 res://options_menu.gd
 res://menu.gd
@@ -9,3 +10,6 @@ res://world.gd
 res://game_manager.gd
 res://game_manager_actual.gd
 res://Pause Menu/pause_menu.gd
+=======
+res://world.tscn
+>>>>>>> refs/remotes/origin/main
