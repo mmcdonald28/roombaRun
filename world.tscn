@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
 
 [node name="world" type="Node2D"]
+process_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3

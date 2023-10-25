@@ -1,1 +1,11 @@
+res://Levels/gameMenu.tscn
 res://menuMainMenu.tscn
+res://gameMenu.tscn
+res://options_menu.gd
+res://menu.gd
+res://game_manager_actual.tscn
+res://world.tscn
+res://world.gd
+res://game_manager.gd
+res://game_manager_actual.gd
+res://Pause Menu/pause_menu.gd

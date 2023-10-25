@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2uwaqctbwtlp"]
+
+[ext_resource type="Script" path="res://game_manager_actual.gd" id="1_mj1ek"]
+[ext_resource type="PackedScene" path="res://Pause Menu/pause_menu.tscn" id="2_r7gqc"]
+[ext_resource type="Script" path="res://Pause Menu/pause_menu.gd" id="3_k4ekg"]
+
+[node name="GameManagerActual" type="Node"]
+process_mode = 3
+script = ExtResource("1_mj1ek")
+
+[node name="PauseMenuCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseMenuCanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("2_r7gqc")]
+process_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_k4ekg")
+game_manager = NodePath("../..")
+
+[node name="Panel" type="Panel" parent="PauseMenuCanvasLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -147.0
+offset_right = 151.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuCanvasLayer/PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+text = "=Pause="
+
+[node name="SaveButton" type="Button" parent="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="ResumeButton" type="Button" parent="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="OptionsButton" type="Button" parent="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer/SaveButton" to="PauseMenuCanvasLayer/PauseMenu" method="_on_save_button_pressed"]
+[connection signal="pressed" from="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer/ResumeButton" to="PauseMenuCanvasLayer/PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer/OptionsButton" to="PauseMenuCanvasLayer/PauseMenu" method="_on_options_button_pressed"]
+[connection signal="pressed" from="PauseMenuCanvasLayer/PauseMenu/Panel/VBoxContainer/ExitButton" to="PauseMenuCanvasLayer/PauseMenu" method="_on_exit_button_pressed"]
