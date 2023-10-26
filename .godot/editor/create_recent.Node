@@ -1,3 +1,11 @@
+AnimationPlayer
+AnimationTree
+CollisionShape2D
+Sprite2D
+StaticBody2D
+Camera2D
+AudioStreamPlayer2D
+Area2D
 Button
 Label
 VBoxContainer

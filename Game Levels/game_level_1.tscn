@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw6fecugl21ly"]
+
+[ext_resource type="Texture2D" uid="uid://cxg5yh0bsb0dk" path="res://Art/pixel-waver-002.jpg" id="1_w15gi"]
+[ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="2_spq2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxwhr"]
+size = Vector2(97, 422)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bu83"]
+size = Vector2(112, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdx34"]
+size = Vector2(7.25, 220.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txd51"]
+size = Vector2(150, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvsyn"]
+size = Vector2(162, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cl5v"]
+size = Vector2(124, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8f7j"]
+size = Vector2(5, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2hy0"]
+size = Vector2(622, 5)
+
+[node name="Game_Level1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(568, 456)
+texture = ExtResource("1_w15gi")
+
+[node name="OuterWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(436.5, 383)
+shape = SubResource("RectangleShape2D_yxwhr")
+
+[node name="TopLeftDoor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(330, 437)
+shape = SubResource("RectangleShape2D_3bu83")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(277.375, 594.75)
+shape = SubResource("RectangleShape2D_fdx34")
+
+[node name="Appliances" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(565, 480)
+shape = SubResource("RectangleShape2D_txd51")
+
+[node name="TopRightDoor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(722, 437)
+shape = SubResource("RectangleShape2D_hvsyn")
+
+[node name="Microwave" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(838, 567)
+shape = SubResource("RectangleShape2D_6cl5v")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(902.5, 669)
+shape = SubResource("RectangleShape2D_b8f7j")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(588, 702.5)
+shape = SubResource("RectangleShape2D_n2hy0")
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_spq2u")
+autoplay = true

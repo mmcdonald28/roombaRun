@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2uwaqctbwtlp"]
 
 [ext_resource type="Script" path="res://game_manager_actual.gd" id="1_mj1ek"]
-[ext_resource type="PackedScene" path="res://Pause Menu/pause_menu.tscn" id="2_r7gqc"]
+[ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://Pause Menu/pause_menu.tscn" id="2_r7gqc"]
 [ext_resource type="Script" path="res://Pause Menu/pause_menu.gd" id="3_k4ekg"]
 
 [node name="GameManagerActual" type="Node"]
