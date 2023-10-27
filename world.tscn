@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dg6e72pam0f40"]
+[gd_scene load_steps=14 format=3 uid="uid://dg6e72pam0f40"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_4pcsn"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_jlupe"]
 [ext_resource type="Texture2D" uid="uid://cxg5yh0bsb0dk" path="res://Art/pixel-waver-002.jpg" id="3_y5int"]
+[ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
 size = Vector2(113, 241.5)
@@ -76,6 +77,10 @@ shape = SubResource("RectangleShape2D_ukd6o")
 [node name="MicrowaveTable" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(807, 518)
 shape = SubResource("RectangleShape2D_m3jy6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="StaticBody2D"]
+stream = ExtResource("4_moq7n")
+autoplay = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jlupe")]
 position = Vector2(62, 204)

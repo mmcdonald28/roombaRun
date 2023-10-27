@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baeycy5e3ff37"
-path="res://.godot/imported/RoombSpriteSheetWIP2.png-8a2d4dbe7f5097f477b35063ad86799d.ctex"
+uid="uid://c27o77b4hit2m"
+path="res://.godot/imported/RoombaRunSpriteSheet.png-4414209113ae4a6756ab06c5c5d7f625.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RoombSpriteSheetWIP2.png"
-dest_files=["res://.godot/imported/RoombSpriteSheetWIP2.png-8a2d4dbe7f5097f477b35063ad86799d.ctex"]
+source_file="res://Art/RoombaRunSpriteSheet.png"
+dest_files=["res://.godot/imported/RoombaRunSpriteSheet.png-4414209113ae4a6756ab06c5c5d7f625.ctex"]
 
 [params]
 
