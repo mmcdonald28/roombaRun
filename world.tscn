@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dg6e72pam0f40"]
+[gd_scene load_steps=15 format=3 uid="uid://dg6e72pam0f40"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_4pcsn"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_jlupe"]
 [ext_resource type="Texture2D" uid="uid://cxg5yh0bsb0dk" path="res://Art/pixel-waver-002.jpg" id="3_y5int"]
 [ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="5_xdqsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
 size = Vector2(113, 241.5)
@@ -84,3 +85,12 @@ autoplay = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jlupe")]
 position = Vector2(62, 204)
+
+[node name="pickup" parent="." instance=ExtResource("5_xdqsl")]
+position = Vector2(-79, -124)
+
+[node name="pickup2" parent="." instance=ExtResource("5_xdqsl")]
+position = Vector2(444, 21)
+
+[node name="pickup3" parent="." instance=ExtResource("5_xdqsl")]
+position = Vector2(-85, 12)
