@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_jlupe"]
 [ext_resource type="Texture2D" uid="uid://cxg5yh0bsb0dk" path="res://Art/pixel-waver-002.jpg" id="3_y5int"]
 [ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
-[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="5_xdqsl"]
+[ext_resource type="PackedScene" path="res://pickup.tscn" id="5_xdqsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
 size = Vector2(113, 241.5)
