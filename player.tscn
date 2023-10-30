@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0xyn1t35yvx1"]
+[gd_scene load_steps=5 format=3 uid="uid://b0xyn1t35yvx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="2_vfdrc"]
+[ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://Pause Menu/pause_menu.tscn" id="3_qiy31"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fe4ac"]
 radius = 22.0227
@@ -21,3 +22,10 @@ shape = SubResource("CircleShape2D_fe4ac")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(587, 352)
 zoom = Vector2(2, 2)
+
+[node name="PauseMenu" parent="Camera2D" instance=ExtResource("3_qiy31")]
+visible = false
+offset_left = -112.0
+offset_top = -92.0
+offset_right = 113.0
+offset_bottom = 87.0

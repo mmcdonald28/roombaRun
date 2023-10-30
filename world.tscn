@@ -1,11 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg6e72pam0f40"]
+[gd_scene load_steps=16 format=3 uid="uid://dg6e72pam0f40"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_4pcsn"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_jlupe"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="3_nks1o"]
 [ext_resource type="Texture2D" uid="uid://cxg5yh0bsb0dk" path="res://Art/pixel-waver-002.jpg" id="3_y5int"]
 [ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
-[ext_resource type="PackedScene" path="res://pickup.tscn" id="5_xdqsl"]
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="5_xdqsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
 size = Vector2(113, 241.5)
@@ -40,6 +41,11 @@ script = ExtResource("1_4pcsn")
 
 [node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("1_qh4io")]
 visible = false
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(584, 477)
+scale = Vector2(1.99024, 1.73833)
+texture = ExtResource("3_nks1o")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
