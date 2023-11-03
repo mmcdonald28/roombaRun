@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bex62668j25j6"]
+
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="1_70tfa"]
+[ext_resource type="Resource" uid="uid://dbys5hgqvhppu" path="res://Pickups/testPickup.tres" id="2_tyku2"]
+[ext_resource type="Texture2D" uid="uid://w0705n0lf4vc" path="res://icon.svg" id="3_sidk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw647"]
+resource_local_to_scene = true
+size = Vector2(40, 42)
+
+[node name="testPickup" instance=ExtResource("1_70tfa")]
+itemRes = ExtResource("2_tyku2")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.3125, 0.328125)
+texture = ExtResource("3_sidk7")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_vw647")

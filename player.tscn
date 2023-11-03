@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0xyn1t35yvx1"]
+[gd_scene load_steps=6 format=3 uid="uid://b0xyn1t35yvx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
+[ext_resource type="Resource" uid="uid://8g2yts47qimk" path="res://playerInventory.tres" id="2_4h4bv"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="2_vfdrc"]
 [ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://Pause Menu/pause_menu.tscn" id="3_qiy31"]
 
@@ -10,6 +11,7 @@ radius = 22.0227
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_togku")
+inventory = ExtResource("2_4h4bv")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(585, 350)

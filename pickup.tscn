@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnlwfv3igyvha"]
+[gd_scene load_steps=3 format=3 uid="uid://bnlwfv3igyvha"]
 
 [ext_resource type="Script" path="res://pickup.gd" id="1_co28w"]
-[ext_resource type="Texture2D" uid="uid://w0705n0lf4vc" path="res://icon.svg" id="2_x326f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14vef"]
+resource_local_to_scene = true
 size = Vector2(40, 42)
 
 [node name="pickup" type="Area2D"]
@@ -12,7 +12,6 @@ script = ExtResource("1_co28w")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(370, 597)
 scale = Vector2(0.312499, 0.320312)
-texture = ExtResource("2_x326f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(370, 597)

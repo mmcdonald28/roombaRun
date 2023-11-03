@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 400
 @export var rotation_speed = 1.5
+@export var inventory: Inventory
 
 var rotation_direction = 0
 	
