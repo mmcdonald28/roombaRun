@@ -6,5 +6,5 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_geras")
-name = "test"
+name = ""
 texture = ExtResource("2_bxiqh")

@@ -1,61 +1,62 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699221516
-CanvasLayer.gd::GDScript::-1::1697820458::0::1::::<>CanvasLayer<>::
-Collectable.gd::GDScript::-1::1698348676::0::1::::<>Node<>::
-Documentation Tracking.txt::TextFile::-1::1697820458::0::1::::<><>::
-exampleItem.tres::Resource/Resource::5984546644029856969::1698252326::0::1::::<><>::res://inventoryItem.gd<>uid://dfqehjy7qs5mv
-gameMenu2.tscn::PackedScene::7925421120739745658::1697820458::0::1::::<><>::
-gameMenu.tscn::PackedScene::272924818659535440::1697820458::0::1::::<><>::
-game_manager_actual.gd::GDScript::-1::1698764968::0::1::::GameManager<>Node<>::
-game_manager_actual.tscn::PackedScene::4324143635170740721::1698764968::0::1::::<><>::res://game_manager_actual.gd
-game_theme.tres::Theme::1509663397543115312::1697820458::0::1::::<><>::
-icon.svg::CompressedTexture2D::1597753189438133880::1697820458::1698682760::1::::<><>::
-inventory.gd::GDScript::-1::1698976902::0::1::::Inventory<>Resource<>::
-inventoryItem.gd::GDScript::-1::1697820458::0::1::::InventoryItem<>Resource<>::
-inventory_gui.gd::GDScript::-1::1698976902::0::1::::<>Control<>::
-inventory_gui.tscn::PackedScene::8220998493480920592::1698976902::0::1::::<><>::uid://dfqehjy7qs5mv
-Key.gd::GDScript::-1::1698348677::0::1::::<>Area2D<>::
-maze.tscn::PackedScene::320948293840703439::1699221381::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png
-menu.gd::GDScript::-1::1699219581::0::1::::<>Control<>::
-menuMainMenu.tscn::PackedScene::1638160130944835459::1699221058::0::1::::<><>::res://menu.gd
-options_menu.gd::GDScript::-1::1698252326::0::1::::<>Control<>::
-options_menu.tscn::PackedScene::4454864356766979053::1697820458::0::1::::<><>::res://options_menu.gd
-pickup.gd::GDScript::-1::1698976902::0::1::::<>Area2D<>::
-pickup.tscn::PackedScene::3322929655709912162::1698976902::0::1::::<><>::res://pickup.gd
-player.gd::GDScript::-1::1698976902::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4190104282406082268::1699221059::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://Pause Menu/pause_menu.tscn
-playerInventory.tres::Resource/Resource::2330301351549000162::1698976902::0::1::::<><>::uid://dbys5hgqvhppu
-README.md::TextFile::-1::1698424201::0::1::::<><>::
-Skeleton Key - 2.png::CompressedTexture2D::1991378082999177001::1698346289::1698346289::1::::<><>::
-slot_gui.gd::GDScript::-1::1698976902::0::1::::<>Panel<>::
-slot_gui.tscn::PackedScene::528053554827023539::1698976902::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h
-world.gd::GDScript::-1::1699217049::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7644692277978918607::1699221058::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://bex62668j25j6::::res://Pickups/testPickup.tscn<>res://inventoryItem.gd<>uid://w0705n0lf4vc::::res://icon.svg
-::res://Art/::1698976902
-black_background.png::CompressedTexture2D::3999059948313373125::1698764968::1698976902::1::::<><>::
-Comp Room.jpg::CompressedTexture2D::1325369005513008540::1698424201::1698424201::1::::<><>::
-CreepyHouseSounds.mp3::AudioStreamMP3::2118706660471718092::1698424201::1698424201::1::::<><>::
-darkroom.png::CompressedTexture2D::4054820686120468941::1698252326::1698252326::1::::<><>::
-icon - Down.png::CompressedTexture2D::7421058176240794797::1698424201::1698424201::1::::<><>::
-icon - RIght.png::CompressedTexture2D::5394929544508886890::1698424201::1698424201::1::::<><>::
-icon - Up.png::CompressedTexture2D::8221711466414332379::1698424201::1698424201::1::::<><>::
-icon.png::CompressedTexture2D::7909847634920260473::1698424201::1698424201::1::::<><>::
-InventoryRect.png::CompressedTexture2D::7543492193124336437::1698252326::1698252326::1::::<><>::
-inventorySlot.png::CompressedTexture2D::3141689344654865325::1698252326::1698252326::1::::<><>::
-overhead.png::CompressedTexture2D::4027247233676714666::1698252326::1698252326::1::::<><>::
-pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1698252326::1698252326::1::::<><>::
-RoombaRunSpriteSheet.png::CompressedTexture2D::6734909100666004478::1698682760::1698682760::1::::<><>::
-::res://Game Levels/::1698424201
-game_level_1.tscn::PackedScene::3994881818476310974::1698424201::0::1::::<><>::uid://cxg5yh0bsb0dk
-::res://Inventory/::1698976902
-inventory.gd::GDScript::-1::1698976902::0::1::::Inventory<>Resource<>::
-inventoryItem.gd::GDScript::-1::1698976902::0::1::::InventoryItem<>Resource<>::
-inventory_gui.gd::GDScript::-1::1698976902::0::1::::<>Control<>::
-slot_gui.gd::GDScript::-1::1698976902::0::1::::<>Panel<>::
-slot_gui.tscn::PackedScene::528053554827023539::1698976902::0::1::::<><>::res://Inventory/slot_gui.gd<>uid://bk04fufrfcf0h
-::res://Pause Menu/::1699221058
-pause_menu.gd::GDScript::-1::1698764968::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::6969766131160747758::1699221058::0::1::::<><>::res://Pause Menu/pause_menu.gd
-::res://Pickups/::1698976902
-testPickup.tres::Resource/Resource::7280142818189313750::1698976902::0::1::::<><>::res://inventoryItem.gd<>uid://w0705n0lf4vc
-testPickup.tscn::PackedScene::2716588867425081617::1698976902::0::1::::<><>::uid://bnlwfv3igyvha
+::res://::1699245491
+CanvasLayer.gd::GDScript::-1::1697820384::0::1::::<>CanvasLayer<>::
+Collectable.gd::GDScript::-1::1699235788::0::1::::<>Node<>::
+Documentation Tracking.txt::TextFile::-1::1697820384::0::1::::<><>::
+exampleItem.tres::Resource/Resource::5984546644029856969::1698241050::0::1::::<><>::res://inventoryItem.gd<>uid://dfqehjy7qs5mv
+gameMenu2.tscn::PackedScene::7925421120739745658::1697820384::0::1::::<><>::
+gameMenu.tscn::PackedScene::272924818659535440::1698374054::0::1::::<><>::
+game_manager_actual.gd::GDScript::-1::1698685266::0::1::::GameManager<>Node<>::
+game_manager_actual.tscn::PackedScene::4324143635170740721::1698685266::0::1::::<><>::res://game_manager_actual.gd
+game_theme.tres::Theme::1509663397543115312::1697820384::0::1::::<><>::
+icon.svg::CompressedTexture2D::1597753189438133880::1697820384::1698424842::1::::<><>::
+inventory.gd::GDScript::-1::1698976611::0::1::::Inventory<>Resource<>::
+inventoryItem.gd::GDScript::-1::1699235780::0::1::::InventoryItem<>Resource<>::
+inventory_gui.gd::GDScript::-1::1698976611::0::1::::<>Control<>::
+inventory_gui.tscn::PackedScene::8220998493480920592::1698976611::0::1::::<><>::uid://dfqehjy7qs5mv
+Key.gd::GDScript::-1::1699235788::0::1::::<>Area2D<>::
+maze.tscn::PackedScene::320948293840703439::1699235788::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png
+menu.gd::GDScript::-1::1699235788::0::1::::<>Control<>::
+menuMainMenu.tscn::PackedScene::1638160130944835459::1699235788::0::1::::<><>::res://menu.gd
+options_menu.gd::GDScript::-1::1698241169::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::4454864356766979053::1697820384::0::1::::<><>::res://options_menu.gd
+pickup.gd::GDScript::-1::1698976611::0::1::::<>Area2D<>::
+pickup.tscn::PackedScene::3322929655709912162::1698976611::0::1::::<><>::res://pickup.gd
+player.gd::GDScript::-1::1698976611::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4190104282406082268::1699235780::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://Pause Menu/pause_menu.tscn
+playerInventory.tres::Resource/Resource::2330301351549000162::1698976611::0::1::::<><>::uid://dbys5hgqvhppu
+README.md::TextFile::-1::1698424339::0::1::::<><>::
+Skeleton Key - 2.png::CompressedTexture2D::1991378082999177001::1699235788::1699235819::1::::<><>::
+slot_gui.gd::GDScript::-1::1698976611::0::1::::<>Panel<>::
+slot_gui.tscn::PackedScene::528053554827023539::1698976611::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h
+world.gd::GDScript::-1::1699026456::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7644692277978918607::1699235788::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://bex62668j25j6::::res://Pickups/testPickup.tscn<>res://inventoryItem.gd<>uid://w0705n0lf4vc::::res://icon.svg
+::res://Art/::1698685981
+black_background.png::CompressedTexture2D::3999059948313373125::1698685981::1698685981::1::::<><>::
+Comp Room.jpg::CompressedTexture2D::1325369005513008540::1698424339::1698424339::1::::<><>::
+CreepyHouseSounds.mp3::AudioStreamMP3::2118706660471718092::1698424339::1698424339::1::::<><>::
+darkroom.png::CompressedTexture2D::4054820686120468941::1697820384::1698240456::1::::<><>::
+icon - Down.png::CompressedTexture2D::7421058176240794797::1698424339::1698424339::1::::<><>::
+icon - RIght.png::CompressedTexture2D::5394929544508886890::1698424339::1698424339::1::::<><>::
+icon - Up.png::CompressedTexture2D::8221711466414332379::1698424339::1698424339::1::::<><>::
+icon.png::CompressedTexture2D::7909847634920260473::1698424339::1698424339::1::::<><>::
+InventoryRect.png::CompressedTexture2D::7543492193124336437::1697820384::1698240441::1::::<><>::
+inventorySlot.png::CompressedTexture2D::3141689344654865325::1697820384::1698240447::1::::<><>::
+overhead.png::CompressedTexture2D::4027247233676714666::1697820384::1698240576::1::::<><>::
+pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1697820384::1698240620::1::::<><>::
+RoombaRunSpriteSheet.png::CompressedTexture2D::6734909100666004478::1698684327::1698684327::1::::<><>::
+::res://Game Levels/::1698424339
+game_level_1.tscn::PackedScene::3994881818476310974::1698424339::0::1::::<><>::uid://cxg5yh0bsb0dk
+::res://Inventory/::1699235780
+inventory.gd::GDScript::-1::1698976611::0::1::::Inventory<>Resource<>::
+inventoryItem.gd::GDScript::-1::1699235780::0::1::::InventoryItem<>Resource<>::
+inventory_gui.gd::GDScript::-1::1698976611::0::1::::<>Control<>::
+slot_gui.gd::GDScript::-1::1698976611::0::1::::<>Panel<>::
+slot_gui.tscn::PackedScene::528053554827023539::1698976611::0::1::::<><>::res://Inventory/slot_gui.gd<>uid://bk04fufrfcf0h
+::res://Levels/::1698241077
+::res://Pause Menu/::1699235788
+pause_menu.gd::GDScript::-1::1698686077::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::6969766131160747758::1699235788::0::1::::<><>::res://Pause Menu/pause_menu.gd
+::res://Pickups/::1698976611
+testPickup.tres::Resource/Resource::7280142818189313750::1698976611::0::1::::<><>::res://inventoryItem.gd<>uid://w0705n0lf4vc
+testPickup.tscn::PackedScene::2716588867425081617::1698976611::0::1::::<><>::uid://bnlwfv3igyvha

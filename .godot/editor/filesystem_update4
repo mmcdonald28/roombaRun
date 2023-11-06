@@ -1,7 +1,13 @@
 res://world.gd
-res://maze.tscn
-res://menu.gd
-res://menuMainMenu.tscn
-res://world.tscn
-res://Pause Menu/pause_menu.tscn
+res://Interactions/interact_area.tscn
+res://Interactions/interact_area.gd
+res://player.gd
 res://player.tscn
+res://world.tscn
+res://inventory_gui.gd
+res://menuMainMenu.tscn
+res://Pause Menu/pause_menu.tscn
+res://maze.tscn
+res://inventory_gui.tscn
+res://Pickups/testPickup.tres
+res://playerInventory.tres

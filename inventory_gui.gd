@@ -5,7 +5,8 @@ extends Control
 
 signal opened
 signal closed
-#we will use these signals to pause the game while the inventory is open
+#we will use these signals above to pause the game while the inventory is open
+signal collectedKeys
 
 var isOpen: bool = false
 
@@ -20,9 +21,13 @@ func _ready():
 
 #for when we have a player
 func update():
+	keyCount()
 	for i in range(min(inventory.items.size(), slots.size())):
 		slots[i].update(inventory.items[i])
-	
+
+#signals the Player Node. Counts items collected
+func keyCount():
+	emit_signal("collectedKeys")
 
 func open():
 	visible = true

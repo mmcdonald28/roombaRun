@@ -4,6 +4,12 @@ extends CharacterBody2D
 @export var rotation_speed = 1.5
 @export var inventory: Inventory
 
+@onready var allInteractions = []
+@onready var interactLabel = $"Interaction Components/InteractLabel"
+@onready var keys : int = 0 #how many keys (or items cause i cant single items out) the user has
+@onready var collectedAllKeys = false #have you collected all 3 keys?
+@onready var getToDoor = false #are you at the door?
+
 var rotation_direction = 0
 	
 func get_input():
@@ -14,6 +20,7 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 
+#this function is for the animation of the sprite
 func _input(event):
 	if(event.is_action_pressed("left")):
 		$Icon.texture = load("res://Art/icon.png")
@@ -27,9 +34,38 @@ func _input(event):
 	if(event.is_action_pressed("down")):
 		$Icon.texture = load("res://Art/icon - Down.png")
 	
-#func _on_Player_body_entered(body):
-	#hide()
-	#if body.is_in_group("Collectibles"):
-		#print("Collision!")
-		#body.queue_free()  # Remove the collectible
-			# Add to inventory:
+#this function counts the items collected. There are 3 total
+func _on_inventory_gui_collected_keys():
+	keys += 1
+	if keys == 3:
+		collectedAllKeys = true
+		print("keys!!!")
+
+
+#/////////////////////////////////
+#///////Interaction Methods///////
+#/////////////////////////////////
+
+func _on_interaction_area_area_entered(area):
+	allInteractions.insert(0, area) #stores collisions in the front of the array
+	getToDoor = true
+	updateInteraction()
+	if collectedAllKeys && getToDoor: #you need all 3 keys and to be interacting with door
+		keys = 0 #resetting for next level
+		getToDoor = false #resetting for next level
+		get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
+
+func _on_interaction_area_area_exited(area):
+	#removes the collion area we just exited
+	allInteractions.erase(area)
+	getToDoor = false 
+	updateInteraction()
+
+func updateInteraction():
+	#this updates the text of the label for the interaction
+	if allInteractions:
+		if collectedAllKeys == false:
+			interactLabel.text = "The door seems to be locked..."
+	else:
+		interactLabel.text = ""
+
