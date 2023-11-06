@@ -1,6 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://etp8bcfxfj08"]
+[gd_scene load_steps=35 format=3 uid="uid://etp8bcfxfj08"]
 
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="1_f86io"]
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_mjup3"]
+[ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="2_a8usy"]
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="2_yckas"]
 [ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="3_qphwa"]
 [ext_resource type="AudioStream" uid="uid://bsfwb2jrkfjni" path="res://Art/Horror Wind Sound Effect.mp3" id="4_xrc2k"]
@@ -90,6 +92,13 @@ size = Vector2(42.5, 594)
 size = Vector2(405.5, 43.5)
 
 [node name="Maze" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_mjup3")
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("2_a8usy")]
+visible = false
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_f86io")]
 position = Vector2(-518, -305)
@@ -369,14 +378,16 @@ scale = Vector2(0.0171429, 0.17)
 texture = ExtResource("2_yckas")
 
 [node name="keyOne" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(-309, 363)
+position = Vector2(10, -554)
 
 [node name="keyTwo" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(1208, 363)
+position = Vector2(92, -548)
 
 [node name="keyThree" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(1154, -336)
+position = Vector2(-65, -551)
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xrc2k")
 autoplay = true
+
+[connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

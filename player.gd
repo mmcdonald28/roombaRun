@@ -39,7 +39,7 @@ func _on_inventory_gui_collected_keys():
 	keys += 1
 	if keys == 3:
 		collectedAllKeys = true
-		print("keys!!!")
+		print("Got all keys!!!") #for testing
 
 
 #/////////////////////////////////
@@ -53,7 +53,12 @@ func _on_interaction_area_area_entered(area):
 	if collectedAllKeys && getToDoor: #you need all 3 keys and to be interacting with door
 		keys = 0 #resetting for next level
 		getToDoor = false #resetting for next level
-		get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
+		
+		#moving to the next level
+		if get_tree().current_scene.name == "world":
+			get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
+#		if get_tree().current_scene.name == "maze":
+#			get_tree().change_scene_to_file(WHATEVER IS NEXT)
 
 func _on_interaction_area_area_exited(area):
 	#removes the collision area we just exited
