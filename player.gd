@@ -56,7 +56,7 @@ func _on_interaction_area_area_entered(area):
 		get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
 
 func _on_interaction_area_area_exited(area):
-	#removes the collion area we just exited
+	#removes the collision area we just exited
 	allInteractions.erase(area)
 	getToDoor = false 
 	updateInteraction()
