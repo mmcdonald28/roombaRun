@@ -12,3 +12,8 @@ func _on_options_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 	#Exits the game
+
+
+func _on_maze_pressed():
+	get_tree().change_scene_to_file("res://maze.tscn")
+	
