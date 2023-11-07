@@ -37,9 +37,20 @@ func _input(event):
 #this function counts the items collected. There are 3 total
 func _on_inventory_gui_collected_keys():
 	keys += 1
-	if keys == 3:
-		collectedAllKeys = true
-		print("Got all keys!!!") #for testing
+	
+	if keys == 3: #we put all levels with 3 keys under this
+		if get_tree().current_scene.name == "world": #use || ('or') when other worlds only have 3 keys
+			collectedAllKeys = true
+			
+			print("Got all 3 keys!!!") #for testing
+	
+	if keys == 4: # we put all levels with 4 keys under this, and etc. etc. for as much as we want
+		if get_tree().current_scene.name == "Maze": 
+			#if this part isn't working, just use print(get_tree().current_scene.name) before this to
+			#get the correct scene name. Example: I thought this was 'maze' but it's 'Maze'
+			collectedAllKeys = true
+			
+			print("Got all 4 keys!!!!") #for testing
 
 
 #/////////////////////////////////
@@ -47,6 +58,7 @@ func _on_inventory_gui_collected_keys():
 #/////////////////////////////////
 
 func _on_interaction_area_area_entered(area):
+	print("entered door area!") #for testing
 	allInteractions.insert(0, area) #stores collisions in the front of the array
 	getToDoor = true
 	updateInteraction()

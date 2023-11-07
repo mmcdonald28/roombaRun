@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://etp8bcfxfj08"]
+[gd_scene load_steps=36 format=3 uid="uid://etp8bcfxfj08"]
 
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="1_f86io"]
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_mjup3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="2_yckas"]
 [ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="3_qphwa"]
 [ext_resource type="AudioStream" uid="uid://bsfwb2jrkfjni" path="res://Art/Horror Wind Sound Effect.mp3" id="4_xrc2k"]
+[ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="7_vys2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggdd7"]
 size = Vector2(48, 1077.5)
@@ -110,6 +111,16 @@ offset_top = 33.0
 offset_right = 286.0
 offset_bottom = 73.0
 text = "START --->"
+
+[node name="MESSAGE FOR SERENA" type="Label" parent="Label"]
+z_index = -1
+layout_mode = 0
+offset_left = 1666.0
+offset_top = 475.0
+offset_right = 1845.0
+offset_bottom = 605.0
+text = "For Serena: This is the Interact Area to go to the next level. Place it where you want and delete this message :P"
+autowrap_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -384,10 +395,16 @@ position = Vector2(10, -554)
 position = Vector2(92, -548)
 
 [node name="keyThree" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(-65, -551)
+position = Vector2(-64, -551)
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xrc2k")
 autoplay = true
+
+[node name="Interact Area" parent="." instance=ExtResource("7_vys2u")]
+position = Vector2(1839, 704)
+
+[node name="keyOne2" parent="." instance=ExtResource("3_qphwa")]
+position = Vector2(157, -551)
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
