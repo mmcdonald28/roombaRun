@@ -1,6 +1,7 @@
-res://world.gd
-res://Game Levels/maze_2.tscn
-res://player.gd
-res://world.tscn
 res://player.tscn
+res://world.gd
+res://world.tscn
 res://maze.tscn
+res://Game Levels/maze_2.tscn
+res://inventory_gui.gd
+res://player.gd

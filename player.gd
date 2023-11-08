@@ -11,7 +11,17 @@ extends CharacterBody2D
 @onready var getToDoor = false #are you at the door?
 
 var rotation_direction = 0
-	
+
+func _ready():
+	#this sets up the Keys Collected Label
+	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
+	if get_tree().current_scene.name == "world":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
+	if get_tree().current_scene.name == "Maze": 
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/4"
+	if get_tree().current_scene.name == "Maze 2":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
+
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
@@ -35,25 +45,36 @@ func _input(event):
 		$Icon.texture = load("res://Art/icon - Down.png")
 	
 #this function counts the items collected. There are 3 total
+#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text
 func _on_inventory_gui_collected_keys():
 	keys += 1
 	print(keys)
-	if keys == 3: #we put all levels with 3 keys under this
-		print(get_tree().current_scene.name)
-		if get_tree().current_scene.name == "world": #use || ('or') when other worlds only have 3 keys
+	
+	if get_tree().current_scene.name == "world":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/3"
+		if keys == 3:
 			collectedAllKeys = true
 			print("Got all 3 keys!!!") #for testing
-		if get_tree().current_scene.name == "Maze 2":
+	
+	if get_tree().current_scene.name == "Maze": 
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/4"
+		if keys == 4:
+			collectedAllKeys = true
+			print("Got all 4 keys!!!!") #for testing
+		
+	if get_tree().current_scene.name == "Maze 2":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/3"
+		if keys == 3:
 			collectedAllKeys = true
 			print("Got all 3 keys!!!") #for testing
 		
-	if keys == 4: # we put all levels with 4 keys under this, and etc. etc. for as much as we want
-		if get_tree().current_scene.name == "Maze": 
-			#if this part isn't working, just use print(get_tree().current_scene.name) before this to
-			#get the correct scene name. Example: I thought this was 'maze' but it's 'Maze'
-			collectedAllKeys = true
-			
-			print("Got all 4 keys!!!!") #for testing
+	#HOW TO SET IT UP (Just copy paste starting at the if)
+	#To find the name of the scene, just use print(get_tree().current_scene.name)
+#	#for example, I thought it was maza when it was Maze, which caused it not to work
+#	if get_tree().current_scene.name == "NAME OF SCENE":
+#		$KeyCountCanvasLayer/Panel/KeysCollectedAmount.text = str(keys)+"/NUMBER OF KEYS IN THE LEVEL"
+#		if keys == NUMBER OF KEYS IN THE LEVEL:
+#			collectedAllKeys = true
 
 
 #/////////////////////////////////

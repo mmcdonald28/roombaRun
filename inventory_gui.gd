@@ -9,6 +9,7 @@ signal closed
 signal collectedKeys
 
 var isOpen: bool = false
+var firstUpdate: bool = true
 
 #for when we have a player
 @onready var inventory: Inventory = preload("res://playerInventory.tres")
@@ -21,9 +22,15 @@ func _ready():
 
 #for when we have a player
 func update():
-	keyCount()
-	for i in range(min(inventory.items.size(), slots.size())):
-		slots[i].update(inventory.items[i])
+	#it is split up so the first update (ready function) does not count a key
+	if firstUpdate:
+		for i in range(min(inventory.items.size(), slots.size())):
+			slots[i].update(inventory.items[i])
+			firstUpdate = false
+	else:
+		for i in range(min(inventory.items.size(), slots.size())):
+			slots[i].update(inventory.items[i])
+		keyCount()
 
 #signals the Player Node. Counts items collected
 func keyCount():
