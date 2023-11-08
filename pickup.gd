@@ -10,6 +10,17 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+# HOW TO ADD NEW PICKUPS:
+# Create a new resource in the inspector window, of Inventory item resource
+# Drag the image file to the texture window in the inspector
+# Save the .tres file with a name in the PICKUPS FOLDER
+# Next, create an inherited scene of the pickup scene file
+# drag the .tres file into the itemRes part of the inspector for the scene
+# drag the image into the texture of the sprite
+# save the scene into pickups folder
+# All done! The item will appear and show up in the iventory, the 
+# itemRes variable of the pickups is what interacts with the inventory
 
 # func to add to inventory, will be called upon collision
 func collect (inventory: Inventory):

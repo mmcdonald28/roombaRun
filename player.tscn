@@ -54,6 +54,7 @@ text = "00:"
 horizontal_alignment = 2
 
 [node name="Seconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
+layout_mode = 0
 offset_left = 50.0
 offset_right = 81.0
 offset_bottom = 38.0
@@ -61,6 +62,7 @@ text = "00."
 horizontal_alignment = 2
 
 [node name="Milliseconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
+layout_mode = 0
 offset_left = 97.0
 offset_right = 128.0
 offset_bottom = 38.0

@@ -1,13 +1,15 @@
-[gd_scene load_steps=37 format=3 uid="uid://etp8bcfxfj08"]
+[gd_scene load_steps=39 format=3 uid="uid://etp8bcfxfj08"]
 
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="1_f86io"]
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_mjup3"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="2_a8usy"]
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="2_yckas"]
-[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="3_qphwa"]
 [ext_resource type="AudioStream" uid="uid://bsfwb2jrkfjni" path="res://Art/Horror Wind Sound Effect.mp3" id="4_xrc2k"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="7_vys2u"]
+[ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="8_6e2m4"]
 [ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="8_je7o0"]
+[ext_resource type="PackedScene" uid="uid://dgqhn3kam0wtt" path="res://Pickups/key2.tscn" id="9_nblx8"]
+[ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="10_sykpt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggdd7"]
 size = Vector2(48, 1077.5)
@@ -389,15 +391,6 @@ position = Vector2(762, 223.5)
 scale = Vector2(0.0171429, 0.17)
 texture = ExtResource("2_yckas")
 
-[node name="keyOne" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(10, -554)
-
-[node name="keyTwo" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(92, -548)
-
-[node name="keyThree" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(-64, -551)
-
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xrc2k")
 autoplay = true
@@ -405,12 +398,21 @@ autoplay = true
 [node name="Interact Area" parent="." instance=ExtResource("7_vys2u")]
 position = Vector2(1661, 957)
 
-[node name="keyOne2" parent="." instance=ExtResource("3_qphwa")]
-position = Vector2(157, -551)
-
 [node name="MazeDoor" type="Sprite2D" parent="."]
 position = Vector2(1663.63, 958.875)
 scale = Vector2(0.391244, 0.377946)
 texture = ExtResource("8_je7o0")
+
+[node name="pickup" parent="." instance=ExtResource("8_6e2m4")]
+position = Vector2(80, -552)
+
+[node name="pickup2" parent="." instance=ExtResource("9_nblx8")]
+position = Vector2(3, -552)
+
+[node name="pickup3" parent="." instance=ExtResource("10_sykpt")]
+position = Vector2(-96, -552)
+
+[node name="pickup4" parent="." instance=ExtResource("9_nblx8")]
+position = Vector2(170, -553)
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

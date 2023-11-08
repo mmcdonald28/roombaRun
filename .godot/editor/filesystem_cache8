@@ -1,129 +1,131 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699457339
-button.tscn::PackedScene::8024657474446498803::1699457295::0::1::::<><>::
-CanvasLayer.gd::GDScript::-1::1697820458::0::1::::<>CanvasLayer<>::
-Collectable.gd::GDScript::-1::1698348676::0::1::::<>Node<>::
-Documentation Tracking.txt::TextFile::-1::1697820458::0::1::::<><>::
-exampleItem.tres::Resource/InventoryItem::5984546644029856969::1698252326::0::1::::<><>::res://inventoryItem.gd<>uid://dfqehjy7qs5mv::::res://Art/InventoryRect.png
-gameMenu2.tscn::PackedScene::7925421120739745658::1697820458::0::1::::<><>::
-gameMenu.tscn::PackedScene::272924818659535440::1697820458::0::1::::<><>::
-game_manager_actual.gd::GDScript::-1::1698764968::0::1::::GameManager<>Node<>::
-game_manager_actual.tscn::PackedScene::4324143635170740721::1698764968::0::1::::<><>::res://game_manager_actual.gd
-game_theme.tres::Theme::1509663397543115312::1697820458::0::1::::<><>::
-icon.svg::CompressedTexture2D::1597753189438133880::1697820458::1699457339::1::::<><>::
-interactionCollision.gd::GDScript::-1::1699291986::0::1::::Interactable<>Area2D<>::
-interactionCollision.tscn::PackedScene::4280720181151576652::1699291986::0::1::::<><>::res://interactionCollision.gd
-InteractKeyPromptImage.png::CompressedTexture2D::8937969232411818445::1699457295::1699457339::1::::<><>::
-inventory.gd::GDScript::-1::1698976902::0::1::::Inventory<>Resource<>::
-inventoryItem.gd::GDScript::-1::1697820458::0::1::::InventoryItem<>Resource<>::
-inventory_gui.gd::GDScript::-1::1699291986::0::1::::<>Control<>::
-inventory_gui.tscn::PackedScene::8220998493480920592::1699457295::0::1::::<><>::uid://dfqehjy7qs5mv::::res://Art/InventoryRect.png<>res://inventory_gui.gd<>uid://hr172omqouk6::::res://slot_gui.tscn
-Key.gd::GDScript::-1::1698348677::0::1::::<>Area2D<>::
-key.tscn::PackedScene::5747651314809248522::1699457295::0::1::::<><>::uid://dkxubgl4nb6f2::::res://Art/icon.png
-Keys.png::CompressedTexture2D::902460682152585206::1699457295::1699457339::1::::<><>::
-maze.tscn::PackedScene::320948293840703439::1699457295::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://bsfwb2jrkfjni::::res://Art/Horror Wind Sound Effect.mp3<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn
-menu.gd::GDScript::-1::1699219581::0::1::::<>Control<>::
-menuMainMenu.tscn::PackedScene::1638160130944835459::1699457295::0::1::::<><>::res://menu.gd
-new_resource.tres::Resource/InventoryItem::1295741865697874009::1698252326::0::1::::<><>::res://inventoryItem.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
-options_menu.gd::GDScript::-1::1698252326::0::1::::<>Control<>::
-options_menu.tscn::PackedScene::4454864356766979053::1697820458::0::1::::<><>::res://options_menu.gd
-pickup.gd::GDScript::-1::1698976902::0::1::::<>Area2D<>::
-pickup.tscn::PackedScene::3322929655709912162::1699457295::0::1::::<><>::res://pickup.gd<>uid://cou8htfhsjy8g::::res://Art/00.png
-player.gd::GDScript::-1::1699457295::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4190104282406082268::1699457295::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://Pause Menu/pause_menu.tscn<>res://TimerPanel.gd
-playerInventory.tres::Resource/Inventory::2330301351549000162::1699291986::0::1::::<><>::res://inventory.gd
-README.md::TextFile::-1::1698424201::0::1::::<><>::
-Skeleton Key - 2.png::CompressedTexture2D::1991378082999177001::1698346289::1698346289::1::::<><>::
-slot_gui.gd::GDScript::-1::1698976902::0::1::::<>Panel<>::
-slot_gui.tscn::PackedScene::528053554827023539::1698976902::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
-timer.gd::GDScript::-1::1699457295::0::1::::<>Control<>::
-timer.tscn::PackedScene::2550975219195536722::1699457295::0::1::::<><>::
-TimerPanel.gd::GDScript::-1::1699457295::0::1::::<>Panel<>::
-world.gd::GDScript::-1::1699457295::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7644692277978918607::1699457295::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://bnlwfv3igyvha::::res://pickup.tscn
-::res://Art/::1699457339
-00.png::CompressedTexture2D::5798789900728638032::1699291986::1699457295::1::::<><>::
-black_background.png::CompressedTexture2D::3999059948313373125::1698764968::1698976902::1::::<><>::
-Comp Room.jpg::CompressedTexture2D::1325369005513008540::1698424201::1698424201::1::::<><>::
-CreepyHouseSounds.mp3::AudioStreamMP3::2118706660471718092::1698424201::1698424201::1::::<><>::
-darkroom.png::CompressedTexture2D::4054820686120468941::1698252326::1698252326::1::::<><>::
-FPressed.png::CompressedTexture2D::6383765964913125105::1699457295::1699457339::1::::<><>::
-Horror Wind Sound Effect.mp3::AudioStreamMP3::3661480750402416526::1699291986::1699457295::1::::<><>::
-icon - Down.png::CompressedTexture2D::7421058176240794797::1698424201::1698424201::1::::<><>::
-icon - RIght.png::CompressedTexture2D::5394929544508886890::1698424201::1698424201::1::::<><>::
-icon - Up.png::CompressedTexture2D::8221711466414332379::1698424201::1698424201::1::::<><>::
-icon.png::CompressedTexture2D::7909847634920260473::1698424201::1698424201::1::::<><>::
-InteractKeyPromptImage.png::CompressedTexture2D::7671449283229793942::1699457295::1699457339::1::::<><>::
-InventoryRect.png::CompressedTexture2D::7543492193124336437::1698252326::1698252326::1::::<><>::
-inventorySlot.png::CompressedTexture2D::3141689344654865325::1698252326::1698252326::1::::<><>::
-key.tscn::PackedScene::5747651314809248522::1699457295::0::1::::<><>::uid://dhkdwcdwobp4y::::res://Art/InteractKeyPromptImage.png<>uid://dkxubgl4nb6f2::::res://Art/icon.png<>uid://cw7lxs3lecmib::::res://Art/FPressed.png
-Keys.png::CompressedTexture2D::8761730573414973918::1699457295::1699457339::1::::<><>::
-overhead.png::CompressedTexture2D::4027247233676714666::1698252326::1698252326::1::::<><>::
-pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1698252326::1698252326::1::::<><>::
-RoombaRunSpriteSheet.png::CompressedTexture2D::6734909100666004478::1698682760::1698682760::1::::<><>::
-::res://Art/Key Items 16x16/::1699457295
-00.png::CompressedTexture2D::3472580711498282922::1699291986::1699457295::1::::<><>::
-01.png::CompressedTexture2D::7177587822348424529::1699291986::1699457295::1::::<><>::
-02.png::CompressedTexture2D::3398204229601996028::1699291986::1699457295::1::::<><>::
-03.png::CompressedTexture2D::7508951414694047713::1699291986::1699457295::1::::<><>::
-04.png::CompressedTexture2D::7289078440089256758::1699291986::1699457295::1::::<><>::
-05.png::CompressedTexture2D::6304560089691218190::1699291986::1699457295::1::::<><>::
-06.png::CompressedTexture2D::476255732868544315::1699291986::1699457295::1::::<><>::
-07.png::CompressedTexture2D::6534674062311534988::1699291986::1699457295::1::::<><>::
-08.png::CompressedTexture2D::8348012792844917779::1699291986::1699457295::1::::<><>::
-09.png::CompressedTexture2D::2446669250287332272::1699291986::1699457295::1::::<><>::
-10.png::CompressedTexture2D::464603832372227365::1699291986::1699457295::1::::<><>::
-11.png::CompressedTexture2D::4813896784158954253::1699291986::1699457295::1::::<><>::
-12.png::CompressedTexture2D::4963665921983151854::1699291986::1699457295::1::::<><>::
-13.png::CompressedTexture2D::6917760989969198353::1699291986::1699457295::1::::<><>::
-14.png::CompressedTexture2D::3626758204548971302::1699291986::1699457295::1::::<><>::
-15.png::CompressedTexture2D::4650366560778709350::1699291986::1699457295::1::::<><>::
-16.png::CompressedTexture2D::4205891457203116976::1699291986::1699457295::1::::<><>::
-17.png::CompressedTexture2D::7289785195012983980::1699291986::1699457295::1::::<><>::
-18.png::CompressedTexture2D::2381159261201105521::1699291986::1699457295::1::::<><>::
-19.png::CompressedTexture2D::6147459284527683633::1699291986::1699457295::1::::<><>::
-20.png::CompressedTexture2D::2413294101514427191::1699291986::1699457295::1::::<><>::
-21.png::CompressedTexture2D::7539119457970505464::1699291986::1699457295::1::::<><>::
-Full Sheet.png::CompressedTexture2D::8071952223347178060::1699291986::1699457295::1::::<><>::
-::res://Art/Key Items 16x16/Selected/::1699457295
-00.png::CompressedTexture2D::7129690636945943491::1699291986::1699457295::1::::<><>::
-01.png::CompressedTexture2D::4665981431127803553::1699291986::1699457295::1::::<><>::
-02.png::CompressedTexture2D::2844122919670235887::1699291986::1699457295::1::::<><>::
-03.png::CompressedTexture2D::9168618959067349598::1699291986::1699457295::1::::<><>::
-04.png::CompressedTexture2D::3477851008598756232::1699291986::1699457295::1::::<><>::
-05.png::CompressedTexture2D::188586293321116782::1699291986::1699457295::1::::<><>::
-06.png::CompressedTexture2D::3354267566877083868::1699291986::1699457295::1::::<><>::
-07.png::CompressedTexture2D::7311503057357377592::1699291986::1699457295::1::::<><>::
-08.png::CompressedTexture2D::3898461894216161622::1699291986::1699457295::1::::<><>::
-09.png::CompressedTexture2D::8056254988639417353::1699291986::1699457295::1::::<><>::
-10.png::CompressedTexture2D::2767450211490344999::1699291986::1699457295::1::::<><>::
-11.png::CompressedTexture2D::5051374801075580857::1699291986::1699457295::1::::<><>::
-12.png::CompressedTexture2D::7846679522444494601::1699291986::1699457295::1::::<><>::
-13.png::CompressedTexture2D::8546706805699532207::1699291986::1699457295::1::::<><>::
-14.png::CompressedTexture2D::5768833802975379358::1699291986::1699457295::1::::<><>::
-15.png::CompressedTexture2D::4418157830545386025::1699291986::1699457295::1::::<><>::
-16.png::CompressedTexture2D::7247299537693194021::1699291986::1699457295::1::::<><>::
-17.png::CompressedTexture2D::6438514572731744817::1699291986::1699457295::1::::<><>::
-18.png::CompressedTexture2D::1021126609898582434::1699291986::1699457295::1::::<><>::
-19.png::CompressedTexture2D::3090924450392135234::1699291986::1699457295::1::::<><>::
-20.png::CompressedTexture2D::3791954451116437306::1699291986::1699457295::1::::<><>::
-21.png::CompressedTexture2D::5232432290383331019::1699291986::1699457295::1::::<><>::
-Full Sheet.png::CompressedTexture2D::3934343404851135959::1699291986::1699457295::1::::<><>::
-::res://Game Levels/::1698424201
-game_level_1.tscn::PackedScene::3994881818476310974::1698424201::0::1::::<><>::uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3
-::res://Interactions/::1699457727
-interact_area.gd::GDScript::-1::1699291986::0::1::::<>Area2D<>::
-interact_area.tscn::PackedScene::8235033432374623391::1699457295::0::1::::<><>::res://Interactions/interact_area.gd
-MazeDoor.png::CompressedTexture2D::7541588207456185436::1699457727::1699457727::1::::<><>::
-::res://Inventory/::1698976902
-inventory.gd::GDScript::-1::1698976902::0::1::::Inventory<>Resource<>::
-inventoryItem.gd::GDScript::-1::1698976902::0::1::::InventoryItem<>Resource<>::
-inventory_gui.gd::GDScript::-1::1698976902::0::1::::<>Control<>::
-slot_gui.gd::GDScript::-1::1698976902::0::1::::<>Panel<>::
-slot_gui.tscn::PackedScene::528053554827023539::1698976902::0::1::::<><>::res://Inventory/slot_gui.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
-::res://Pause Menu/::1699457295
-pause_menu.gd::GDScript::-1::1698764968::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::6969766131160747758::1699457295::0::1::::<><>::res://Pause Menu/pause_menu.gd
-::res://Pickups/::1699291986
-testPickup.tres::Resource/InventoryItem::7280142818189313750::1699291986::0::1::::<><>::res://inventoryItem.gd<>uid://w0705n0lf4vc::::res://icon.svg
-testPickup.tscn::PackedScene::2716588867425081617::1698976902::0::1::::<><>::uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://dbys5hgqvhppu::::res://Pickups/testPickup.tres<>uid://w0705n0lf4vc::::res://icon.svg
+::res://::1699462808
+button.tscn::PackedScene::8024657474446498803::1699461936::0::1::::<><>::
+CanvasLayer.gd::GDScript::-1::1697733512::0::1::::<>CanvasLayer<>::
+Collectable.gd::GDScript::-1::1699369870::0::1::::<>Node<>::
+Documentation Tracking.txt::TextFile::-1::1697819666::0::1::::<><>::
+exampleItem.tres::Resource/InventoryItem::5984546644029856969::1698850232::0::1::::<><>::res://inventoryItem.gd<>uid://dfqehjy7qs5mv::::res://Art/InventoryRect.png
+gameMenu2.tscn::PackedScene::7925421120739745658::1697819666::0::1::::<><>::
+gameMenu.tscn::PackedScene::272924818659535440::1697733512::0::1::::<><>::
+game_manager_actual.gd::GDScript::-1::1698693076::0::1::::GameManager<>Node<>::
+game_manager_actual.tscn::PackedScene::4324143635170740721::1698693076::0::1::::<><>::res://game_manager_actual.gd
+game_theme.tres::Theme::1509663397543115312::1697733512::0::1::::<><>::
+icon.svg::CompressedTexture2D::1597753189438133880::1697736314::1699462128::1::::<><>::
+interactionCollision.gd::GDScript::-1::1699369870::0::1::::Interactable<>Area2D<>::
+interactionCollision.tscn::PackedScene::4280720181151576652::1699369870::0::1::::<><>::res://interactionCollision.gd
+InteractKeyPromptImage.png::CompressedTexture2D::8937969232411818445::1699461936::1699462128::1::::<><>::
+inventory.gd::GDScript::-1::1698948529::0::1::::Inventory<>Resource<>::
+inventoryItem.gd::GDScript::-1::1698943658::0::1::::InventoryItem<>Resource<>::
+inventory_gui.gd::GDScript::-1::1699369870::0::1::::<>Control<>::
+inventory_gui.tscn::PackedScene::8220998493480920592::1699462808::0::1::::<><>::uid://dfqehjy7qs5mv::::res://Art/InventoryRect.png<>res://inventory_gui.gd<>uid://hr172omqouk6::::res://slot_gui.tscn
+Key.gd::GDScript::-1::1699369870::0::1::::<>Area2D<>::
+key.tscn::PackedScene::5747651314809248522::1699461936::0::1::::<><>::uid://dkxubgl4nb6f2::::res://Art/icon.png
+Keys.png::CompressedTexture2D::902460682152585206::1699461936::1699462128::1::::<><>::
+maze.tscn::PackedScene::320948293840703439::1699462808::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://bsfwb2jrkfjni::::res://Art/Horror Wind Sound Effect.mp3<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://dfpg4dp0npqhg::::res://Interactions/MazeDoor.png
+menu.gd::GDScript::-1::1699369870::0::1::::<>Control<>::
+menuMainMenu.tscn::PackedScene::1638160130944835459::1699462808::0::1::::<><>::res://menu.gd
+new_resource.tres::Resource/InventoryItem::1295741865697874009::1699461936::0::1::::<><>::res://inventoryItem.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
+options_menu.gd::GDScript::-1::1698354264::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::4454864356766979053::1697819666::0::1::::<><>::res://options_menu.gd
+pickup.gd::GDScript::-1::1698972501::0::1::::<>Area2D<>::
+pickup.tscn::PackedScene::3322929655709912162::1699462808::0::1::::<><>::res://pickup.gd
+player.gd::GDScript::-1::1699461936::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4190104282406082268::1699462808::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://Pause Menu/pause_menu.tscn<>res://TimerPanel.gd
+playerInventory.tres::Resource/Inventory::2330301351549000162::1699462555::0::1::::<><>::res://inventory.gd
+README.md::TextFile::-1::1698427032::0::1::::<><>::
+Skeleton Key - 2.png::CompressedTexture2D::1991378082999177001::1699369870::1699370034::1::::<><>::
+slot_gui.gd::GDScript::-1::1698949538::0::1::::<>Panel<>::
+slot_gui.tscn::PackedScene::528053554827023539::1698972670::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
+timer.gd::GDScript::-1::1699461936::0::1::::<>Control<>::
+timer.tscn::PackedScene::2550975219195536722::1699461936::0::1::::<><>::
+TimerPanel.gd::GDScript::-1::1699461936::0::1::::<>Panel<>::
+world.gd::GDScript::-1::1699462555::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7644692277978918607::1699462808::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://g04wfuhnkn07::::res://Pickups/key01.tscn<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://bnlwfv3igyvha::::res://pickup.tscn
+::res://Art/::1699462128
+00.png::CompressedTexture2D::5798789900728638032::1699369870::1699370034::1::::<><>::
+black_background.png::CompressedTexture2D::3999059948313373125::1698693076::1698849055::1::::<><>::
+Comp Room.jpg::CompressedTexture2D::1325369005513008540::1698354264::1698354264::1::::<><>::
+CreepyHouseSounds.mp3::AudioStreamMP3::2118706660471718092::1698354264::1698354264::1::::<><>::
+darkroom.png::CompressedTexture2D::4054820686120468941::1698354264::1698354264::1::::<><>::
+FPressed.png::CompressedTexture2D::6383765964913125105::1699461936::1699462128::1::::<><>::
+Horror Wind Sound Effect.mp3::AudioStreamMP3::3661480750402416526::1699369870::1699370034::1::::<><>::
+icon - Down.png::CompressedTexture2D::7421058176240794797::1698354264::1698354264::1::::<><>::
+icon - RIght.png::CompressedTexture2D::5394929544508886890::1698354264::1698354264::1::::<><>::
+icon - Up.png::CompressedTexture2D::8221711466414332379::1698354264::1698354264::1::::<><>::
+icon.png::CompressedTexture2D::7909847634920260473::1698354264::1698354264::1::::<><>::
+InteractKeyPromptImage.png::CompressedTexture2D::7671449283229793942::1699461936::1699462128::1::::<><>::
+InventoryRect.png::CompressedTexture2D::7543492193124336437::1698354264::1698354264::1::::<><>::
+inventorySlot.png::CompressedTexture2D::3141689344654865325::1698354264::1698354264::1::::<><>::
+key.tscn::PackedScene::5747651314809248522::1699461936::0::1::::<><>::uid://dhkdwcdwobp4y::::res://Art/InteractKeyPromptImage.png<>uid://dkxubgl4nb6f2::::res://Art/icon.png<>uid://cw7lxs3lecmib::::res://Art/FPressed.png
+Keys.png::CompressedTexture2D::8761730573414973918::1699461936::1699462128::1::::<><>::
+overhead.png::CompressedTexture2D::4027247233676714666::1698354264::1698354264::1::::<><>::
+pixel-waver-002.jpg::CompressedTexture2D::6401435812775136220::1698354264::1698354264::1::::<><>::
+RoombaRunSpriteSheet.png::CompressedTexture2D::6734909100666004478::1698686421::1698686421::1::::<><>::
+::res://Art/Key Items 16x16/::1699370034
+00.png::CompressedTexture2D::3472580711498282922::1699369870::1699370034::1::::<><>::
+01.png::CompressedTexture2D::7177587822348424529::1699369870::1699370034::1::::<><>::
+02.png::CompressedTexture2D::3398204229601996028::1699369870::1699370034::1::::<><>::
+03.png::CompressedTexture2D::7508951414694047713::1699369870::1699370034::1::::<><>::
+04.png::CompressedTexture2D::7289078440089256758::1699369870::1699370034::1::::<><>::
+05.png::CompressedTexture2D::6304560089691218190::1699369870::1699370034::1::::<><>::
+06.png::CompressedTexture2D::476255732868544315::1699369870::1699370034::1::::<><>::
+07.png::CompressedTexture2D::6534674062311534988::1699369870::1699370034::1::::<><>::
+08.png::CompressedTexture2D::8348012792844917779::1699369870::1699370034::1::::<><>::
+09.png::CompressedTexture2D::2446669250287332272::1699369870::1699370034::1::::<><>::
+10.png::CompressedTexture2D::464603832372227365::1699369870::1699370034::1::::<><>::
+11.png::CompressedTexture2D::4813896784158954253::1699369870::1699370034::1::::<><>::
+12.png::CompressedTexture2D::4963665921983151854::1699369870::1699370034::1::::<><>::
+13.png::CompressedTexture2D::6917760989969198353::1699369870::1699370034::1::::<><>::
+14.png::CompressedTexture2D::3626758204548971302::1699369870::1699370034::1::::<><>::
+15.png::CompressedTexture2D::4650366560778709350::1699369870::1699370034::1::::<><>::
+16.png::CompressedTexture2D::4205891457203116976::1699369870::1699370034::1::::<><>::
+17.png::CompressedTexture2D::7289785195012983980::1699369870::1699370034::1::::<><>::
+18.png::CompressedTexture2D::2381159261201105521::1699369870::1699370034::1::::<><>::
+19.png::CompressedTexture2D::6147459284527683633::1699369870::1699370034::1::::<><>::
+20.png::CompressedTexture2D::2413294101514427191::1699369870::1699370034::1::::<><>::
+21.png::CompressedTexture2D::7539119457970505464::1699369870::1699370034::1::::<><>::
+Full Sheet.png::CompressedTexture2D::8071952223347178060::1699369870::1699370034::1::::<><>::
+::res://Art/Key Items 16x16/Selected/::1699370034
+00.png::CompressedTexture2D::7129690636945943491::1699369870::1699370034::1::::<><>::
+01.png::CompressedTexture2D::4665981431127803553::1699369870::1699370034::1::::<><>::
+02.png::CompressedTexture2D::2844122919670235887::1699369870::1699370034::1::::<><>::
+03.png::CompressedTexture2D::9168618959067349598::1699369870::1699370034::1::::<><>::
+04.png::CompressedTexture2D::3477851008598756232::1699369870::1699370034::1::::<><>::
+05.png::CompressedTexture2D::188586293321116782::1699369870::1699370034::1::::<><>::
+06.png::CompressedTexture2D::3354267566877083868::1699369870::1699370034::1::::<><>::
+07.png::CompressedTexture2D::7311503057357377592::1699369870::1699370034::1::::<><>::
+08.png::CompressedTexture2D::3898461894216161622::1699369870::1699370034::1::::<><>::
+09.png::CompressedTexture2D::8056254988639417353::1699369870::1699370034::1::::<><>::
+10.png::CompressedTexture2D::2767450211490344999::1699369870::1699370034::1::::<><>::
+11.png::CompressedTexture2D::5051374801075580857::1699369870::1699370034::1::::<><>::
+12.png::CompressedTexture2D::7846679522444494601::1699369870::1699370034::1::::<><>::
+13.png::CompressedTexture2D::8546706805699532207::1699369870::1699370034::1::::<><>::
+14.png::CompressedTexture2D::5768833802975379358::1699369870::1699370034::1::::<><>::
+15.png::CompressedTexture2D::4418157830545386025::1699369870::1699370034::1::::<><>::
+16.png::CompressedTexture2D::7247299537693194021::1699369870::1699370034::1::::<><>::
+17.png::CompressedTexture2D::6438514572731744817::1699369870::1699370034::1::::<><>::
+18.png::CompressedTexture2D::1021126609898582434::1699369870::1699370034::1::::<><>::
+19.png::CompressedTexture2D::3090924450392135234::1699369870::1699370034::1::::<><>::
+20.png::CompressedTexture2D::3791954451116437306::1699369870::1699370034::1::::<><>::
+21.png::CompressedTexture2D::5232432290383331019::1699369870::1699370034::1::::<><>::
+Full Sheet.png::CompressedTexture2D::3934343404851135959::1699369870::1699370034::1::::<><>::
+::res://Game Levels/::1698686675
+game_level_1.tscn::PackedScene::3994881818476310974::1698686675::0::1::::<><>::uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3
+::res://Interactions/::1699462808
+interact_area.gd::GDScript::-1::1699369870::0::1::::<>Area2D<>::
+interact_area.tscn::PackedScene::8235033432374623391::1699462808::0::1::::<><>::res://Interactions/interact_area.gd
+MazeDoor.png::CompressedTexture2D::7541588207456185436::1699461936::1699462128::1::::<><>::
+::res://Inventory/::1698850864
+inventory.gd::GDScript::-1::1698850776::0::1::::Inventory<>Resource<>::
+inventoryItem.gd::GDScript::-1::1698850776::0::1::::InventoryItem<>Resource<>::
+inventory_gui.gd::GDScript::-1::1698850776::0::1::::<>Control<>::
+slot_gui.gd::GDScript::-1::1698850776::0::1::::<>Panel<>::
+slot_gui.tscn::PackedScene::528053554827023539::1698850864::0::1::::<><>::res://Inventory/slot_gui.gd<>uid://bk04fufrfcf0h::::res://Art/inventorySlot.png
+::res://Pause Menu/::1699462808
+pause_menu.gd::GDScript::-1::1698693076::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::6969766131160747758::1699462808::0::1::::<><>::res://Pause Menu/pause_menu.gd
+::res://Pickups/::1699462808
+key1.tres::Resource/InventoryItem::8311695951914235563::1699462407::0::1::::<><>::res://inventoryItem.gd<>uid://cou8htfhsjy8g::::res://Art/00.png
+key01.tscn::PackedScene::474542879784492198::1699462808::0::1::::<><>::uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://dqoiohgb1iemd::::res://Pickups/key1.tres
+testPickup.tres::Resource/InventoryItem::7280142818189313750::1699369870::0::1::::<><>::res://inventoryItem.gd<>uid://w0705n0lf4vc::::res://icon.svg
+testPickup.tscn::PackedScene::2716588867425081617::1698972670::0::1::::<><>::uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://dbys5hgqvhppu::::res://Pickups/testPickup.tres<>uid://w0705n0lf4vc::::res://icon.svg

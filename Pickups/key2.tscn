@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgqhn3kam0wtt"]
+
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="1_h2sbi"]
+[ext_resource type="Resource" uid="uid://cnemuac70wwdv" path="res://Pickups/key2.tres" id="2_g70t8"]
+[ext_resource type="Texture2D" uid="uid://dai428eml7yyr" path="res://Art/Key Items 16x16/01.png" id="3_yx5hk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkiis"]
+resource_local_to_scene = true
+size = Vector2(26, 30)
+
+[node name="pickup" instance=ExtResource("1_h2sbi")]
+itemRes = ExtResource("2_g70t8")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_yx5hk")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_vkiis")
