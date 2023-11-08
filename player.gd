@@ -37,13 +37,16 @@ func _input(event):
 #this function counts the items collected. There are 3 total
 func _on_inventory_gui_collected_keys():
 	keys += 1
-	
+	print(keys)
 	if keys == 3: #we put all levels with 3 keys under this
+		print(get_tree().current_scene.name)
 		if get_tree().current_scene.name == "world": #use || ('or') when other worlds only have 3 keys
 			collectedAllKeys = true
-			
 			print("Got all 3 keys!!!") #for testing
-	
+		if get_tree().current_scene.name == "Maze 2":
+			collectedAllKeys = true
+			print("Got all 3 keys!!!") #for testing
+		
 	if keys == 4: # we put all levels with 4 keys under this, and etc. etc. for as much as we want
 		if get_tree().current_scene.name == "Maze": 
 			#if this part isn't working, just use print(get_tree().current_scene.name) before this to
@@ -63,14 +66,17 @@ func _on_interaction_area_area_entered(area):
 	getToDoor = true
 	updateInteraction()
 	if collectedAllKeys && getToDoor: #you need all 3 keys and to be interacting with door
+		print("ALL REQUIREMENTS MET")
 		keys = 0 #resetting for next level
 		getToDoor = false #resetting for next level
 		
 		#moving to the next level
 		if get_tree().current_scene.name == "world":
 			get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
-#		if get_tree().current_scene.name == "maze":
-#			get_tree().change_scene_to_file(WHATEVER IS NEXT)
+		if get_tree().current_scene.name == "Maze":
+			get_tree().change_scene_to_file("res://Game Levels/maze_2.tscn")
+		if get_tree().current_scene.name == "Maze 2":
+			print("To the Next World! :D")
 
 func _on_interaction_area_area_exited(area):
 	#removes the collision area we just exited

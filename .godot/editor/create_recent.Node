@@ -1,11 +1,12 @@
+CollisionShape2D
+StaticBody2D
+TileMap
 Label
 Panel
 CanvasLayer
 AudioStreamPlayer2D
-CollisionShape2D
 Area2D
 Node2D
-StaticBody2D
 Button
 MarginContainer
 AudioStreamPlayer
