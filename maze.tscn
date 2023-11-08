@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://etp8bcfxfj08"]
+[gd_scene load_steps=37 format=3 uid="uid://etp8bcfxfj08"]
 
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="1_f86io"]
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_mjup3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="3_qphwa"]
 [ext_resource type="AudioStream" uid="uid://bsfwb2jrkfjni" path="res://Art/Horror Wind Sound Effect.mp3" id="4_xrc2k"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="7_vys2u"]
+[ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="8_je7o0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggdd7"]
 size = Vector2(48, 1077.5)
@@ -115,11 +116,11 @@ text = "START --->"
 [node name="MESSAGE FOR SERENA" type="Label" parent="Label"]
 z_index = -1
 layout_mode = 0
-offset_left = 1666.0
-offset_top = 475.0
-offset_right = 1845.0
-offset_bottom = 605.0
-text = "For Serena: This is the Interact Area to go to the next level. Place it where you want and delete this message :P"
+offset_left = 1434.0
+offset_top = 908.0
+offset_right = 1500.0
+offset_bottom = 943.0
+text = "Exit--->"
 autowrap_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -402,9 +403,14 @@ stream = ExtResource("4_xrc2k")
 autoplay = true
 
 [node name="Interact Area" parent="." instance=ExtResource("7_vys2u")]
-position = Vector2(1839, 704)
+position = Vector2(1661, 957)
 
 [node name="keyOne2" parent="." instance=ExtResource("3_qphwa")]
 position = Vector2(157, -551)
+
+[node name="MazeDoor" type="Sprite2D" parent="."]
+position = Vector2(1663.63, 958.875)
+scale = Vector2(0.391244, 0.377946)
+texture = ExtResource("8_je7o0")
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
