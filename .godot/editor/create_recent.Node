@@ -1,5 +1,7 @@
-AudioStreamPlayer2D
 Label
+Panel
+CanvasLayer
+AudioStreamPlayer2D
 CollisionShape2D
 Area2D
 Node2D
@@ -12,7 +14,5 @@ AnimationTree
 Sprite2D
 Camera2D
 VBoxContainer
-Panel
 Control
-CanvasLayer
 Node

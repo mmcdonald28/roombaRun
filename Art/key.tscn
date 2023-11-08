@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn5g8h5hti5ys"]
+
+[ext_resource type="Texture2D" uid="uid://dhkdwcdwobp4y" path="res://Art/InteractKeyPromptImage.png" id="1_crsej"]
+[ext_resource type="Texture2D" uid="uid://dkxubgl4nb6f2" path="res://Art/icon.png" id="2_utkyp"]
+[ext_resource type="Texture2D" uid="uid://cw7lxs3lecmib" path="res://Art/FPressed.png" id="3_w334i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8pyb"]
+radius = 278.625
+
+[sub_resource type="Animation" id="Animation_isfsl"]
+resource_name = "KeyPrompt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractKeyPromptImage:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_crsej"), ExtResource("3_w334i")]
+}
+
+[sub_resource type="Animation" id="Animation_do237"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractKeyPromptImage:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_crsej")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_508w7"]
+_data = {
+"KeyPrompt": SubResource("Animation_isfsl"),
+"RESET": SubResource("Animation_do237")
+}
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="InteractKeyPromptImage" type="Sprite2D" parent="."]
+position = Vector2(1508.46, 204.13)
+texture = ExtResource("1_crsej")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1536, 711)
+scale = Vector2(10.7979, 10.0417)
+texture = ExtResource("2_utkyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1522, 698)
+shape = SubResource("CircleShape2D_e8pyb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="KeyPrompt" type="AnimationPlayer" parent="."]
+autoplay = "KeyPrompt"
+libraries = {
+"": SubResource("AnimationLibrary_508w7")
+}

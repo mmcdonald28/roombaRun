@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn5g8h5hti5ys"]
+
+[ext_resource type="Texture2D" uid="uid://dkxubgl4nb6f2" path="res://Art/icon.png" id="2_utkyp"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1v8kq"]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="Key" type="Sprite2D" parent="."]
+position = Vector2(124, 152.5)
+scale = Vector2(3.23077, 2.3125)
+texture = SubResource("ViewportTexture_1v8kq")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(122, 210)
+texture = ExtResource("2_utkyp")
+
+[node name="KeyPrompt" type="AnimationPlayer" parent="."]

@@ -1,10 +1,10 @@
-res://maze.tscn
+res://player.tscn
 res://world.gd
-res://player.gd
+res://TimerPanel.gd
 res://menuMainMenu.tscn
 res://world.tscn
 res://Pause Menu/pause_menu.tscn
-res://player.tscn
+res://maze.tscn
 res://Interactions/interact_area.tscn
 res://inventory_gui.tscn
 res://pickup.tscn
