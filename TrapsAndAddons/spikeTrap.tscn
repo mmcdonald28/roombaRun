@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=3 uid="uid://bdoqlm1q7sew3"]
+
+[ext_resource type="Texture2D" uid="uid://by5youtk4bnty" path="res://Art/Spike Trap.png" id="1_630q8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpjnm"]
+atlas = ExtResource("1_630q8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqeyt"]
+atlas = ExtResource("1_630q8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuxul"]
+atlas = ExtResource("1_630q8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cojl6"]
+atlas = ExtResource("1_630q8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtej4"]
+atlas = ExtResource("1_630q8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6edx3"]
+atlas = ExtResource("1_630q8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp64f"]
+atlas = ExtResource("1_630q8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ppiy"]
+atlas = ExtResource("1_630q8")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfwx4"]
+atlas = ExtResource("1_630q8")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkmw0"]
+atlas = ExtResource("1_630q8")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8qkt"]
+atlas = ExtResource("1_630q8")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yo4s"]
+atlas = ExtResource("1_630q8")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogsay"]
+atlas = ExtResource("1_630q8")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65s44"]
+atlas = ExtResource("1_630q8")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcdld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpjnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqeyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuxul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cojl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtej4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6edx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp64f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ppiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfwx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkmw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8qkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yo4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogsay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65s44")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fobeu"]
+size = Vector2(29, 25)
+
+[node name="spikeTrapArea" type="Area2D"]
+
+[node name="animatedSpikeTrap" type="AnimatedSprite2D" parent="."]
+position = Vector2(342, 130)
+sprite_frames = SubResource("SpriteFrames_dcdld")
+autoplay = "default"
+
+[node name="spikeTrapCollision" type="CollisionShape2D" parent="."]
+position = Vector2(342.5, 134.5)
+shape = SubResource("RectangleShape2D_fobeu")

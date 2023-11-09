@@ -1,0 +1,103 @@
+[gd_scene load_steps=15 format=3 uid="uid://5sxctq4s2fjo"]
+
+[ext_resource type="Texture2D" uid="uid://ctn7tna3gtgtp" path="res://Art/Push_Trap_Front.png" id="1_g317r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puhix"]
+atlas = ExtResource("1_g317r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk1o3"]
+atlas = ExtResource("1_g317r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l35fd"]
+atlas = ExtResource("1_g317r")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdhji"]
+atlas = ExtResource("1_g317r")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyccy"]
+atlas = ExtResource("1_g317r")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnrxu"]
+atlas = ExtResource("1_g317r")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx8b3"]
+atlas = ExtResource("1_g317r")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml355"]
+atlas = ExtResource("1_g317r")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upx36"]
+atlas = ExtResource("1_g317r")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18pfe"]
+atlas = ExtResource("1_g317r")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m2nr"]
+atlas = ExtResource("1_g317r")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_puynl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puhix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk1o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l35fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdhji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyccy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnrxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx8b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml355")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upx36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18pfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m2nr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyjac"]
+size = Vector2(34, 32)
+
+[node name="vertPushTrapArea" type="Area2D"]
+
+[node name="animatedVerticalPushTrap" type="AnimatedSprite2D" parent="."]
+position = Vector2(315, 151)
+sprite_frames = SubResource("SpriteFrames_puynl")
+autoplay = "default"
+frame_progress = 0.634515
+
+[node name="vertPushTrapCollision" type="CollisionShape2D" parent="."]
+position = Vector2(316, 151)
+shape = SubResource("RectangleShape2D_xyjac")
