@@ -1,12 +1,10 @@
 res://world.tscn
 res://world.gd
 res://player.tscn
-res://maze.tscn
 res://Interactions/interact_area.tscn
-res://inventory_gui.tscn
-res://pickup.tscn
 res://Game Levels/maze_2.tscn
 res://TrapsAndAddons/FireTrap.tscn
 res://TrapsAndAddons/spikeTrap.tscn
 res://TrapsAndAddons/horizontalPushTrap.tscn
 res://TrapsAndAddons/vertPushTrap.tscn
+res://TimerPanel.gd

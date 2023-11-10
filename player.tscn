@@ -47,26 +47,28 @@ script = ExtResource("5_mi1vw")
 
 [node name="Minutes" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
 layout_mode = 0
-offset_left = 5.0
-offset_right = 36.0
+offset_left = 15.0
+offset_right = 46.0
 offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
 
 [node name="Seconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
 layout_mode = 0
-offset_left = 50.0
-offset_right = 81.0
-offset_bottom = 38.0
+offset_left = 48.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 39.0
 text = "00."
 horizontal_alignment = 2
 
-[node name="Milliseconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
+[node name="Centiseconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
 layout_mode = 0
-offset_left = 97.0
-offset_right = 128.0
-offset_bottom = 38.0
-text = "000"
+offset_left = 74.0
+offset_top = 1.0
+offset_right = 105.0
+offset_bottom = 39.0
+text = "00"
 horizontal_alignment = 2
 
 [node name="Interaction Components" type="Node2D" parent="."]
