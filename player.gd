@@ -9,12 +9,19 @@ extends CharacterBody2D
 @onready var keys : int = 0 #how many keys (or items cause i cant single items out) the user has
 @onready var collectedAllKeys = false #have you collected all 3 keys?
 @onready var getToDoor = false #are you at the door?
+@onready var sprite = $CharacterBody2D # sprite
+var lives = 3 # number of lives
+var is_dead = false # dead or alive
 
 var rotation_direction = 0
 
 func _ready():
 	#this sets up the Keys Collected Label
 	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
+	add_to_group("res://Art/Spike Trap.png") # spike trap addition
+	add_to_group("res://Art/Push_Trap_Front.png") # front trap addition
+	add_to_group("res://Art/Push_Trap_Right.png") # right trap addition
+	add_to_group("res://Art/Fire_Trap.png") # fire trap addition
 	if get_tree().current_scene.name == "world":
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
 	if get_tree().current_scene.name == "Maze": 
@@ -29,6 +36,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
+	if is_dead:
+		return
 
 #this function is for the animation of the sprite
 func _input(event):
@@ -107,9 +116,24 @@ func _on_interaction_area_area_exited(area):
 
 func updateInteraction():
 	#this updates the text of the label for the interaction
-	if allInteractions:
-		if collectedAllKeys == false:
-			interactLabel.text = "The door seems to be locked..."
-	else:
-		interactLabel.text = ""
+	if lives == 0:
+		interactLabel.text = "GAME OVER!" #if lives are lost
+	else: # if there is life still around
+		if allInteractions:
+			if collectedAllKeys == false: # without all the keys
+				interactLabel.text = "The door seems to be locked..."
+			else:
+				interactLabel.text = "" # opening the door
 
+func _hitting_the_stuff(sprite):
+	# this is the interact with the roomba and its various enemies to lose the life
+	if sprite.is_dead != false and sprite.is_in_group("res://Art/Spike Trap.png") or sprite.is_in_group("res://Art/Push_Trap_Front.png") or sprite.is_in_group("res://Art/Push_Trap_Right.png") or sprite.is_in_group("res://Art/Fire_Trap.png"):
+		is_dead = true
+		die()
+
+func die():
+	# function of death
+	if is_dead: 
+		return # instating the death
+	is_dead = true
+	lives -= 1
