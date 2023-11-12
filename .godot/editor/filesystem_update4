@@ -1,10 +1,17 @@
-res://maze.tscn
-res://world.gd
 res://world.tscn
+res://world.gd
 res://player.tscn
 res://Interactions/interact_area.tscn
+res://maze.tscn
 res://Game Levels/maze_2.tscn
 res://TrapsAndAddons/FireTrap.tscn
 res://TrapsAndAddons/spikeTrap.tscn
 res://TrapsAndAddons/horizontalPushTrap.tscn
 res://TrapsAndAddons/vertPushTrap.tscn
+res://player.gd
+res://Tutorial/tutorial_1.tscn
+res://menu.gd
+res://menuMainMenu.tscn
+res://Tutorial/tutorial_1.gd
+res://Textbox/textbox.gd
+res://Textbox/textbox.tscn

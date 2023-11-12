@@ -16,4 +16,8 @@ func _on_quit_pressed():
 
 func _on_maze_pressed():
 	get_tree().change_scene_to_file("res://maze.tscn")
-	
+
+
+func _on_tutorial_pressed():
+	#opens tutorial
+	get_tree().change_scene_to_file("res://Tutorial/tutorial_1.tscn")

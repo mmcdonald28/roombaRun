@@ -14,8 +14,14 @@ var lives = 3 # number of lives
 var is_dead = false # dead or alive
 
 var rotation_direction = 0
+var can_move: bool = true # can the roomba move?
 
 func _ready():
+	#this hides the timer and key count for the tutorial
+	if get_tree().current_scene.name == "Tutorial_1":
+		$Camera2D/TimerCanvasLayer/TimerPanel.hide()
+		$KeyCountCanvasLayer/KeyCountPanel.hide()
+	
 	#this sets up the Keys Collected Label
 	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
 	add_to_group("res://Art/Spike Trap.png") # spike trap addition
@@ -30,28 +36,31 @@ func _ready():
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
 
 func get_input():
-	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+	if can_move:
+		var input_direction = Input.get_vector("left", "right", "up", "down")
+		velocity = input_direction * speed
 
 func _physics_process(delta):
-	get_input()
-	move_and_slide()
-	if is_dead:
-		return
+	if can_move:
+		get_input()
+		move_and_slide()
+		if is_dead:
+			return
 
 #this function is for the animation of the sprite
 func _input(event):
-	if(event.is_action_pressed("left")):
-		$Icon.texture = load("res://Art/icon.png")
+	if can_move:
+		if(event.is_action_pressed("left")):
+			$Icon.texture = load("res://Art/icon.png")
 		
-	if(event.is_action_pressed("right")):
-		$Icon.texture = load("res://Art/icon - RIght.png")
+		if(event.is_action_pressed("right")):
+			$Icon.texture = load("res://Art/icon - RIght.png")
 		
-	if(event.is_action_pressed("up")):
-		$Icon.texture = load("res://Art/icon - Up.png")
+		if(event.is_action_pressed("up")):
+			$Icon.texture = load("res://Art/icon - Up.png")
 		
-	if(event.is_action_pressed("down")):
-		$Icon.texture = load("res://Art/icon - Down.png")
+		if(event.is_action_pressed("down")):
+			$Icon.texture = load("res://Art/icon - Down.png")
 	
 #this function counts the items collected. There are 3 total
 #$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text
@@ -112,6 +121,7 @@ func _on_interaction_area_area_exited(area):
 	#removes the collision area we just exited
 	allInteractions.erase(area)
 	getToDoor = false 
+	interactLabel.text = ""
 	updateInteraction()
 
 func updateInteraction():
@@ -137,3 +147,15 @@ func die():
 		return # instating the death
 	is_dead = true
 	lives -= 1
+
+
+#/////////////////////////////////
+#/////////Textbox Methods/////////
+#/////////////////////////////////
+
+func _on_textbox_textbox_is_closed():
+	can_move = true
+
+func _on_textbox_textbox_is_open():
+	can_move = false
+

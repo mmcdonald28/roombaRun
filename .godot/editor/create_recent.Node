@@ -1,3 +1,4 @@
+Button
 CollisionShape2D
 AnimatedSprite2D
 Area2D
@@ -8,7 +9,6 @@ StaticBody2D
 TileMap
 AudioStreamPlayer2D
 Node2D
-Button
 MarginContainer
 AudioStreamPlayer
 AnimationPlayer
