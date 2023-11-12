@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ca8kkxuw6j0ax"]
+[gd_scene load_steps=40 format=3 uid="uid://ca8kkxuw6j0ax"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_c5hg1"]
 [ext_resource type="Texture2D" uid="uid://8r8p71uc7cuk" path="res://Art/Tiles/Floors/Floor-Stone_02-64x64.png" id="2_gcjgp"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="6_lqmu4"]
 [ext_resource type="PackedScene" uid="uid://dgqhn3kam0wtt" path="res://Pickups/key2.tscn" id="7_y6iu7"]
 [ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="8_wnm6o"]
+[ext_resource type="PackedScene" uid="uid://bwlfecpfbe03m" path="res://TrapsAndAddons/FireTrap.tscn" id="11_j5qhf"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="12_h4b7i"]
+[ext_resource type="PackedScene" uid="uid://cfkd1humq1vmm" path="res://TrapsAndAddons/horizontalPushTrap.tscn" id="13_p8vhh"]
+[ext_resource type="PackedScene" uid="uid://5sxctq4s2fjo" path="res://TrapsAndAddons/vertPushTrap.tscn" id="14_2tr6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4ukf"]
 texture = ExtResource("2_gcjgp")
@@ -1747,5 +1751,35 @@ position = Vector2(1858, -376)
 
 [node name="pickup3" parent="." instance=ExtResource("8_wnm6o")]
 position = Vector2(1233, -394)
+
+[node name="fireTrapArea" parent="." instance=ExtResource("11_j5qhf")]
+position = Vector2(706, 55)
+
+[node name="fireTrapArea2" parent="." instance=ExtResource("11_j5qhf")]
+position = Vector2(1168, 537)
+
+[node name="spikeTrapArea" parent="." instance=ExtResource("12_h4b7i")]
+position = Vector2(110, 389)
+
+[node name="spikeTrapArea2" parent="." instance=ExtResource("12_h4b7i")]
+position = Vector2(622, 810)
+
+[node name="horizontalPushTrapArea" parent="." instance=ExtResource("13_p8vhh")]
+position = Vector2(322, 65)
+
+[node name="horizontalPushTrapArea2" parent="." instance=ExtResource("13_p8vhh")]
+position = Vector2(1727, 240)
+
+[node name="horizontalPushTrapArea3" parent="." instance=ExtResource("13_p8vhh")]
+position = Vector2(2268, 567)
+
+[node name="vertPushTrapArea" parent="." instance=ExtResource("14_2tr6u")]
+position = Vector2(892, 356)
+
+[node name="vertPushTrapArea2" parent="." instance=ExtResource("14_2tr6u")]
+position = Vector2(1263, 755)
+
+[node name="vertPushTrapArea3" parent="." instance=ExtResource("14_2tr6u")]
+position = Vector2(1399, 380)
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

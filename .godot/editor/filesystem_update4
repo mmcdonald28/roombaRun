@@ -1,7 +1,7 @@
-res://player.tscn
+res://maze.tscn
 res://world.gd
-res://player.gd
 res://world.tscn
+res://player.tscn
 res://Interactions/interact_area.tscn
 res://Game Levels/maze_2.tscn
 res://TrapsAndAddons/FireTrap.tscn
