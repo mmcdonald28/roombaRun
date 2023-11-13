@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0xyn1t35yvx1"]
+[gd_scene load_steps=10 format=3 uid="uid://b0xyn1t35yvx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
 [ext_resource type="Resource" uid="uid://8g2yts47qimk" path="res://playerInventory.tres" id="2_4h4bv"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="2_vfdrc"]
 [ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://Pause Menu/pause_menu.tscn" id="3_qiy31"]
 [ext_resource type="Script" path="res://TimerPanel.gd" id="5_mi1vw"]
+[ext_resource type="Script" path="res://Lives.gd" id="6_tpga2"]
+[ext_resource type="Texture2D" uid="uid://c4fpdeyeihg17" path="res://Art/LifeHeart.jpg" id="7_miavl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fe4ac"]
 radius = 22.0227
@@ -70,6 +72,22 @@ offset_right = 105.0
 offset_bottom = 39.0
 text = "00"
 horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="Camera2D/TimerCanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_tpga2")
+
+[node name="HeartLives" type="TextureRect" parent="Camera2D/TimerCanvasLayer/Control"]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 1.0
+offset_right = 1468.0
+offset_bottom = 1001.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_miavl")
 
 [node name="Interaction Components" type="Node2D" parent="."]
 z_index = 1

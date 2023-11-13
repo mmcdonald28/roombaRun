@@ -1,3 +1,5 @@
+TextureRect
+Control
 Button
 CollisionShape2D
 AnimatedSprite2D
@@ -16,5 +18,4 @@ AnimationTree
 Sprite2D
 Camera2D
 VBoxContainer
-Control
 Node

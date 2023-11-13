@@ -1,12 +1,10 @@
-res://player.gd
-res://Tutorial/tutorial_1.tscn
-res://world.gd
-res://Textbox/textbox.gd
-res://Tutorial/tutorial_1.gd
-res://world.tscn
 res://player.tscn
+res://world.gd
+res://Lives.gd
+res://world.tscn
 res://Interactions/interact_area.tscn
 res://maze.tscn
 res://Game Levels/maze_2.tscn
+res://Tutorial/tutorial_1.tscn
 res://menuMainMenu.tscn
 res://Textbox/textbox.tscn
