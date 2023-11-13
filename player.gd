@@ -15,6 +15,13 @@ var is_dead = false # dead or alive
 
 var rotation_direction = 0
 var can_move: bool = true # can the roomba move?
+var firstHitWithDoor = true #for part 2 of the tutorial. So we only get the text once
+
+#signals to activate the textbox in the tutorial
+signal Reached_Door_In_Tutorial
+signal Start_Tutorial_Part_3
+signal Collected_Tutorial_Key
+signal Final_Tutorial_Text
 
 func _ready():
 	#this hides the timer and key count for the tutorial
@@ -68,6 +75,11 @@ func _on_inventory_gui_collected_keys():
 	keys += 1
 	print(keys)
 	
+	if get_tree().current_scene.name == "Tutorial_1":
+		collectedAllKeys = true
+		print("Got the only Key!")
+		emit_signal("Collected_Tutorial_Key") #activate the textbox
+		
 	if get_tree().current_scene.name == "world":
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/3"
 		if keys == 3:
@@ -104,10 +116,19 @@ func _on_interaction_area_area_entered(area):
 	allInteractions.insert(0, area) #stores collisions in the front of the array
 	getToDoor = true
 	updateInteraction()
+	
+	if get_tree().current_scene.name == "Tutorial_1" && firstHitWithDoor:
+		emit_signal("Reached_Door_In_Tutorial") ##activate the textbox
+		firstHitWithDoor = false #so we only get the "Locked door" text once
+		emit_signal("Start_Tutorial_Part_3") #in tutorial_1 scene. Shows key
+	
 	if collectedAllKeys && getToDoor: #you need all 3 keys and to be interacting with door
 		print("ALL REQUIREMENTS MET")
 		keys = 0 #resetting for next level
 		getToDoor = false #resetting for next level
+		
+		if get_tree().current_scene.name == "Tutorial_1":
+			emit_signal("Final_Tutorial_Text") #activates the textbox
 		
 		#moving to the next level
 		if get_tree().current_scene.name == "world":
@@ -130,7 +151,7 @@ func updateInteraction():
 		interactLabel.text = "GAME OVER!" #if lives are lost
 	else: # if there is life still around
 		if allInteractions:
-			if collectedAllKeys == false: # without all the keys
+			if collectedAllKeys == false && !get_tree().current_scene.name == "Tutorial_1": # without all the keys
 				interactLabel.text = "The door seems to be locked..."
 			else:
 				interactLabel.text = "" # opening the door
@@ -148,14 +169,13 @@ func die():
 	is_dead = true
 	lives -= 1
 
-
 #/////////////////////////////////
 #/////////Textbox Methods/////////
 #/////////////////////////////////
 
+#These are so that the player cannot move while the textbox is open
 func _on_textbox_textbox_is_closed():
 	can_move = true
 
 func _on_textbox_textbox_is_open():
 	can_move = false
-

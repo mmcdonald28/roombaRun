@@ -1,9 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxj1bwx0w5ilk"]
+[gd_scene load_steps=13 format=3 uid="uid://cxj1bwx0w5ilk"]
 
 [ext_resource type="Script" path="res://Tutorial/tutorial_1.gd" id="1_1f8ih"]
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="2_rh6iq"]
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="2_w141o"]
+[ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="3_7jq0e"]
+[ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="3_dplho"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_thp3g"]
 [ext_resource type="PackedScene" uid="uid://btpwtqmohem2y" path="res://Textbox/textbox.tscn" id="4_b42bt"]
+[ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="4_ymvuw"]
+[ext_resource type="Texture2D" uid="uid://dfoagwtll8at1" path="res://Art/Key Items 16x16/21.png" id="5_2yeh8"]
+[ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="8_khr1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_veqh4"]
 size = Vector2(1154.13, 49)
@@ -14,10 +20,35 @@ size = Vector2(61, 749)
 [node name="Tutorial_1" type="Node2D"]
 script = ExtResource("1_1f8ih")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("2_rh6iq")
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("3_dplho")]
+visible = false
+
 [node name="BlackBackground" type="Sprite2D" parent="."]
 position = Vector2(572.5, 322)
 scale = Vector2(1.6319, 1.556)
 texture = ExtResource("2_w141o")
+
+[node name="MazeDoor" type="Sprite2D" parent="."]
+position = Vector2(735.875, 302.375)
+scale = Vector2(0.430791, 0.37963)
+texture = ExtResource("3_7jq0e")
+
+[node name="Interact Area" parent="." instance=ExtResource("4_ymvuw")]
+position = Vector2(733, 299)
+
+[node name="Lamp1" type="Sprite2D" parent="."]
+position = Vector2(707, 260)
+scale = Vector2(1.5, 1.625)
+texture = ExtResource("5_2yeh8")
+
+[node name="Lamp2" type="Sprite2D" parent="."]
+position = Vector2(765, 260)
+scale = Vector2(1.5, 1.625)
+texture = ExtResource("5_2yeh8")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_thp3g")]
 position = Vector2(-23, -50)
@@ -42,6 +73,15 @@ shape = SubResource("RectangleShape2D_66v0y")
 position = Vector2(1126, 328)
 shape = SubResource("RectangleShape2D_66v0y")
 
+[node name="Key" parent="." instance=ExtResource("8_khr1j")]
+position = Vector2(71, -291)
+
+[connection signal="Start_Tutorial_2_text" from="." to="CharacterBody2D/Textbox" method="_on_tutorial_1_start_tutorial_2_text"]
+[connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
+[connection signal="Collected_Tutorial_Key" from="CharacterBody2D" to="CharacterBody2D/Textbox" method="_on_character_body_2d_collected_tutorial_key"]
+[connection signal="Final_Tutorial_Text" from="CharacterBody2D" to="CharacterBody2D/Textbox" method="_on_character_body_2d_final_tutorial_text"]
+[connection signal="Reached_Door_In_Tutorial" from="CharacterBody2D" to="CharacterBody2D/Textbox" method="_on_character_body_2d_reached_door_in_tutorial"]
+[connection signal="Start_Tutorial_Part_3" from="CharacterBody2D" to="." method="_on_character_body_2d_start_tutorial_part_3"]
 [connection signal="textbox_is_closed" from="CharacterBody2D/Textbox" to="." method="_on_textbox_textbox_is_closed"]
 [connection signal="textbox_is_closed" from="CharacterBody2D/Textbox" to="CharacterBody2D" method="_on_textbox_textbox_is_closed"]
 [connection signal="textbox_is_open" from="CharacterBody2D/Textbox" to="." method="_on_textbox_textbox_is_open"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=40 format=3 uid="uid://ca8kkxuw6j0ax"]
+[gd_scene load_steps=41 format=3 uid="uid://ca8kkxuw6j0ax"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_c5hg1"]
 [ext_resource type="Texture2D" uid="uid://8r8p71uc7cuk" path="res://Art/Tiles/Floors/Floor-Stone_02-64x64.png" id="2_gcjgp"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="2_qrbmi"]
 [ext_resource type="Texture2D" uid="uid://1xscm6myxi8j" path="res://Art/Tiles/Walls/Wall-Stone_02-64x64.png" id="3_8qmbv"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="3_e8xfg"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="4_oet55"]
 [ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="4_ruidb"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="5_fdwep"]
 [ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="6_lqmu4"]
@@ -1637,7 +1638,12 @@ visible = false
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e8xfg")]
 z_index = 1
-position = Vector2(-504, -295)
+position = Vector2(-509, -308)
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(1283, 456)
+scale = Vector2(2.12952, 1.85733)
+texture = ExtResource("4_oet55")
 
 [node name="Floor" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_50ql6")
@@ -1781,5 +1787,10 @@ position = Vector2(1263, 755)
 
 [node name="vertPushTrapArea3" parent="." instance=ExtResource("14_2tr6u")]
 position = Vector2(1399, 380)
+
+[node name="MazeDoor2" type="Sprite2D" parent="."]
+position = Vector2(78.375, -41.1525)
+scale = Vector2(0.504237, 0.429949)
+texture = ExtResource("4_ruidb")
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

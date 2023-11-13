@@ -91,7 +91,7 @@ stream = ExtResource("4_moq7n")
 autoplay = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_jlupe")]
-position = Vector2(62, 204)
+position = Vector2(91, 113)
 
 [node name="Door Interact Area" parent="." instance=ExtResource("10_q33cq")]
 position = Vector2(285, 391)

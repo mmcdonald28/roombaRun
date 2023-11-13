@@ -2,6 +2,8 @@ extends CanvasLayer
 
 const CHAR_READ_RATE = 0.05 #How fast do letters go?
 
+var finishedTutorial = false
+
 @onready var textboxContainer = $TextboxContainer
 @onready var textContainer = $TextContainer
 @onready var start_symbol = $TextContainer/HBoxContainer/Start #The symbol on the top left
@@ -25,15 +27,7 @@ func _ready():
 	print("Starting state: State.READY")
 	hide_textbox()
 	if get_tree().current_scene.name == "Tutorial_1":
-		queue_text("...             \n[Hit the enter key to continue.]")
-		queue_text("...")
-		queue_text("......................................")
-		queue_text("Unngh..?")
-		queue_text("Where... Where am I?")
-		queue_text("It's so dark... I can't see a thing.")
-		queue_text("...")
-		queue_text("I don't remember how I got here. Am I damaged? Can I still move?")
-		queue_text("[Hit the arrow keys to move. Hit each one, please.]")
+		start_tutorial()
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,6 +49,9 @@ func _process(delta):
 				if text_queue.is_empty(): #no more text
 					hide() #hide box
 					emit_signal("textbox_is_closed") #tell others that the box is closed
+					if finishedTutorial:
+						print("world time")
+						get_tree().change_scene_to_file("res://world.tscn")
 
 func queue_text(next_text):
 	text_queue.push_back(next_text)
@@ -99,3 +96,46 @@ func change_state(next_state):
 			print("Changing state to: State.READING")
 		State.FINISHED:
 			print("Changing state to: State.FINISHED")
+
+#/////////////////////////////////
+#//////////Tutorial Text//////////
+#/////////////////////////////////
+
+func start_tutorial():
+	queue_text("...             \n[Hit the enter or space key to continue.]")
+	queue_text("...")
+	queue_text("......................................")
+	queue_text("Unngh..?")
+	queue_text("Where... Where am I?")
+	queue_text("It's so dark... I can't see a thing.")
+	queue_text("...")
+	queue_text("I don't remember how I got here. Am I damaged? Can I still move?")
+	queue_text("[Hit enter/space, then hit each of the arrow keys to move.]")
+
+func _on_tutorial_1_start_tutorial_2_text():
+	queue_text("So I can move around fine. That's good, let's focus on the positives.")
+	queue_text("Woah! The lights on that door just came on!")
+	queue_text("Was... Was that there the whole time? Did I just not see it in my confusion?")
+	queue_text("The real question is why there's a door on the floor...")
+	queue_text("I should see if it's open...")
+
+
+func _on_character_body_2d_reached_door_in_tutorial():
+	queue_text("Dang. It's locked.")
+	queue_text("Maybe There's a key around?")
+	queue_text("[For a better experience, please make sure your sound is on.]")
+	
+
+func _on_character_body_2d_collected_tutorial_key():
+	queue_text("I found it!")
+	queue_text("I guess the metal detector that was installed years ago still works!")
+	queue_text("Let's see if it opens the door.")
+	queue_text("[Press the E key to see the key in your inventory!]")
+
+func _on_character_body_2d_final_tutorial_text():
+	queue_text("*Click* \nIt fits! Let's get out of here!")
+	queue_text("Wait, since I don't know where I am or who brought me here,")
+	queue_text("I should be careful. Who knows what's behind this door?")
+	queue_text("Well... hope only comes from progress, and progress is opening the door.")
+	queue_text("[You have completed the Tutorial! Good luck out there...]")
+	finishedTutorial = true

@@ -109,7 +109,7 @@ script = ExtResource("1_mjup3")
 visible = false
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_f86io")]
-position = Vector2(-518, -305)
+position = Vector2(-514, -317)
 
 [node name="Label" type="Label" parent="."]
 z_index = -1
@@ -459,5 +459,10 @@ position = Vector2(450, 113)
 
 [node name="horizontalPushTrapArea4" parent="." instance=ExtResource("14_1w013")]
 position = Vector2(457, 650)
+
+[node name="MazeDoor2" type="Sprite2D" parent="."]
+position = Vector2(75.375, -46.8538)
+scale = Vector2(0.436441, 0.362994)
+texture = ExtResource("8_je7o0")
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
