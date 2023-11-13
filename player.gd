@@ -26,8 +26,9 @@ signal Final_Tutorial_Text
 func _ready():
 	#this hides the timer and key count for the tutorial
 	if get_tree().current_scene.name == "Tutorial_1":
-		$Camera2D/TimerCanvasLayer/TimerPanel.hide()
+		$Camera2D/TimerCanvasLayer.hide()
 		$KeyCountCanvasLayer/KeyCountPanel.hide()
+		
 	
 	#this sets up the Keys Collected Label
 	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
