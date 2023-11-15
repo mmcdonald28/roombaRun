@@ -10,8 +10,8 @@ extends CharacterBody2D
 @onready var collectedAllKeys = false #have you collected all 3 keys?
 @onready var getToDoor = false #are you at the door?
 @onready var sprite = $CharacterBody2D # sprite
-var lives = 3 # number of lives
-var is_dead = false # dead or alive
+var lives = 1 # number of lives
+var is_dead = false # boolean for dead or alive, may not be used
 
 var rotation_direction = 0
 var can_move: bool = true # can the roomba move?
@@ -48,12 +48,13 @@ func get_input():
 		var input_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = input_direction * speed
 
+# The physics function, occurs ever time unit, houses all the things we have to do and check etc
 func _physics_process(delta):
 	if can_move:
 		get_input()
 		move_and_slide()
-		if is_dead:
-			return
+		handleEnemyCollision()
+		checkDeath()
 
 #this function is for the animation of the sprite
 func _input(event):
@@ -113,6 +114,7 @@ func _on_inventory_gui_collected_keys():
 #/////////////////////////////////
 
 func _on_interaction_area_area_entered(area):
+	inventory.clear() # clears keys
 	print("entered door area!") #for testing
 	allInteractions.insert(0, area) #stores collisions in the front of the array
 	getToDoor = true
@@ -157,18 +159,28 @@ func updateInteraction():
 			else:
 				interactLabel.text = "" # opening the door
 
-func _hitting_the_stuff(sprite):
-	# this is the interact with the roomba and its various enemies to lose the life
-	if sprite.is_dead != false and sprite.is_in_group("res://Art/Spike Trap.png") or sprite.is_in_group("res://Art/Push_Trap_Front.png") or sprite.is_in_group("res://Art/Push_Trap_Right.png") or sprite.is_in_group("res://Art/Fire_Trap.png"):
-		is_dead = true
-		die()
+# Collision methods
 
-func die():
-	# function of death
-	if is_dead: 
-		return # instating the death
-	is_dead = true
-	lives -= 1
+func handleEnemyCollision():
+	# All of this is to get the specific collider, the thing player collides into
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider() # All of this was the get the specific collider
+		if collider.name == "slime":
+			lives = lives - 1
+			print(lives)
+			
+
+# Function to check death and reset what must be reset
+func checkDeath():
+	if lives <= 0: 
+		print("You died")
+		# PUT DEATH SCREEN INSTEAD OF MAIN MENU
+		get_tree().change_scene_to_file("res://menuMainMenu.tscn")
+		is_dead = true # Does nothing??
+		lives = 3
+		inventory.clear()
+
 
 #/////////////////////////////////
 #/////////Textbox Methods/////////

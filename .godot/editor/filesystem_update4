@@ -1,2 +1,7 @@
+res://world.tscn
 res://world.gd
-res://Game Levels/maze_3.tscn
+res://playerInventory.tres
+res://player.gd
+res://player.tscn
+res://maze.tscn
+res://inventory.gd
