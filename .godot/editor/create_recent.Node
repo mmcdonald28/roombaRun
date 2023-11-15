@@ -1,3 +1,4 @@
+TileMap
 TextureRect
 Control
 Button
@@ -8,7 +9,6 @@ Label
 Panel
 CanvasLayer
 StaticBody2D
-TileMap
 AudioStreamPlayer2D
 Node2D
 MarginContainer
