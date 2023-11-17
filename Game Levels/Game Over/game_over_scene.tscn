@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=3 uid="uid://n831qwi2nw8"]
+
+[ext_resource type="Script" path="res://Game Over/game_over_scene.gd" id="1_fu5fu"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="1_mkyov"]
+[ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="2_c7kks"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gq12"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e214t"]
+bg_color = Color(0.239216, 0, 0.0196078, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3er1"]
+bg_color = Color(0.505882, 0.00392157, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="GameOverScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fu5fu")
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(569, 341)
+scale = Vector2(1.38381, 1.34133)
+texture = ExtResource("1_mkyov")
+
+[node name="Game Over Label Background2" type="Label" parent="."]
+layout_mode = 1
+offset_left = -6.0
+offset_top = 65.0
+offset_right = 1152.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0.317647, 0, 0.0352941, 1)
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 200
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Game Over Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 1160.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 200
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 250.0
+offset_right = 754.0
+offset_bottom = 447.0
+theme_override_constants/separation = 20
+
+[node name="Retry" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5gq12")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e214t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3er1")
+text = "Retry"
+
+[node name="Main Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5gq12")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e214t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3er1")
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5gq12")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e214t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3er1")
+text = "Quit Game"
+
+[node name="Morse Code" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 483.0
+offset_right = 1126.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("2_c7kks")
+theme_override_font_sizes/font_size = 50
+text = ".--. .-.. . .- ... . --..-- / -.-- --- ..- / -.-. .- -. .----. - / --. .. ...- . / ..- .--. -.-.-- / .. .----. -- / -.-. --- ..- -. - .. -. --. / --- -. / -.-- --- ..- -.-.--"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

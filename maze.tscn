@@ -418,7 +418,7 @@ position = Vector2(3, -552)
 position = Vector2(-96, -552)
 
 [node name="pickup4" parent="." instance=ExtResource("9_nblx8")]
-position = Vector2(170, -553)
+position = Vector2(407, -561)
 
 [node name="spikeTrapArea" parent="." instance=ExtResource("11_4edyn")]
 

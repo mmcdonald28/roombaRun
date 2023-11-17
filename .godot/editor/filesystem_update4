@@ -1,7 +1,6 @@
 res://world.tscn
 res://world.gd
-res://playerInventory.tres
 res://player.gd
 res://player.tscn
 res://maze.tscn
-res://inventory.gd
+res://Game Over/game_over_scene.tscn

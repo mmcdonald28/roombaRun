@@ -102,7 +102,7 @@ func _on_inventory_gui_collected_keys():
 		
 	#HOW TO SET IT UP (Just copy paste starting at the if)
 	#To find the name of the scene, just use print(get_tree().current_scene.name)
-#	#for example, I thought it was maza when it was Maze, which caused it not to work
+#	#for example, I thought it was maze when it was Maze, which caused it not to work
 #	if get_tree().current_scene.name == "NAME OF SCENE":
 #		$KeyCountCanvasLayer/Panel/KeysCollectedAmount.text = str(keys)+"/NUMBER OF KEYS IN THE LEVEL"
 #		if keys == NUMBER OF KEYS IN THE LEVEL:
@@ -175,8 +175,7 @@ func handleEnemyCollision():
 func checkDeath():
 	if lives <= 0: 
 		print("You died")
-		# PUT DEATH SCREEN INSTEAD OF MAIN MENU
-		get_tree().change_scene_to_file("res://menuMainMenu.tscn")
+		get_tree().change_scene_to_file("res://Game Over/game_over_scene.tscn")
 		is_dead = true # Does nothing??
 		lives = 3
 		inventory.clear()
