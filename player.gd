@@ -10,7 +10,7 @@ extends CharacterBody2D
 @onready var collectedAllKeys = false #have you collected all 3 keys?
 @onready var getToDoor = false #are you at the door?
 @onready var sprite = $CharacterBody2D # sprite
-var lives = 1 # number of lives
+var lives = 3 # number of lives
 var is_dead = false # boolean for dead or alive, may not be used
 
 var rotation_direction = 0
@@ -166,9 +166,9 @@ func handleEnemyCollision():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider() # All of this was the get the specific collider
-		if collider.name == "slime":
-			lives = lives - 1
-			print(lives)
+		if collider.name == "slime" or collider.name == "spikes" or collider.name == "fire" or collider.name == "push":
+			lives = lives - 1 
+			print("Lives Left: ", lives) # losing one life
 			
 
 # Function to check death and reset what must be reset
@@ -191,3 +191,9 @@ func _on_textbox_textbox_is_closed():
 
 func _on_textbox_textbox_is_open():
 	can_move = false
+
+func _on_hitbox_body_entered(sprite):
+	if lives > 0 and sprite.is_in_group("slime") or sprite.is_in_group("spikes") or sprite.is_in_group("fire") or sprite.is_in_group("traps"): # if runninf into any enemies
+		lives -= 1
+		get_tree().reload_current_scene()
+		checkDeath() # reinforcing check death

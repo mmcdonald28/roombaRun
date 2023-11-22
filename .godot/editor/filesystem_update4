@@ -4,3 +4,8 @@ res://player.gd
 res://player.tscn
 res://maze.tscn
 res://Game Over/game_over_scene.tscn
+res://key.tscn
+res://menuMainMenu.tscn
+res://Game Levels/game_level_1.tscn
+res://Game Levels/maze_2.tscn
+res://Game Levels/maze_3.tscn
