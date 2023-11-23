@@ -90,11 +90,3 @@ layout_mode = 2
 
 [node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_urxlg")]
 layout_mode = 2
-
-[node name="REMEMBER" type="Label" parent="."]
-layout_mode = 0
-offset_left = -213.28
-offset_top = -101.084
-offset_right = 398.72
-offset_bottom = -75.0845
-text = "The InventoryGui needs to be added as a child node to the \"world\" canvas layer"
