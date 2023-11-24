@@ -23,6 +23,14 @@ signal Start_Tutorial_Part_3
 signal Collected_Tutorial_Key
 signal Final_Tutorial_Text
 
+#beeping variables
+@onready var beepTimer = Timer
+@onready var allBeepInteraction = []
+@onready var beepSoundObj = $BeepSound
+@onready var isInsideBeep = false
+
+
+
 func _ready():
 	#this hides the timer and key count for the tutorial
 	if get_tree().current_scene.name == "Tutorial_1":
@@ -113,7 +121,7 @@ func _on_inventory_gui_collected_keys():
 #///////Interaction Methods///////
 #/////////////////////////////////
 
-func _on_interaction_area_area_entered(area):
+func _on_interaction_area_area_entered(area):	
 	inventory.clear() # clears keys
 	print("entered door area!") #for testing
 	allInteractions.insert(0, area) #stores collisions in the front of the array
@@ -197,3 +205,44 @@ func _on_hitbox_body_entered(sprite):
 		lives -= 1
 		get_tree().reload_current_scene()
 		checkDeath() # reinforcing check death
+		
+		
+		
+#/////////////////////////////////
+#///// Beeping Stuff //////////
+#//////////////////////////////
+
+func _process(delta):
+	# Check if any general beeping sound is not playing, then play it
+	
+	if not beepSoundObj.is_playing() and isInsideBeep:
+		beepSoundObj.play()
+	
+	for beepSoundObj in allBeepInteraction:
+		if not beepSoundObj.is_playing():
+			beepSoundObj.play()
+
+			
+
+func _on_beep_area_area_entered(area):
+	#check if entered interactable item is a key
+	print("entered")
+	if area.isKey:
+		isInsideBeep = true
+		beepSoundObj.play()
+		print("entered key area")
+	else:
+		#add general interaction area sound to list
+		allInteractions.insert(0, area)
+		getToDoor = true
+		updateInteraction()
+
+
+func _on_beep_area_area_exited(area):
+	if not area.isKey:
+		#remove from list again
+		allBeepInteraction.erase(area)
+		isInsideBeep = false
+		getToDoor = false
+		interactLabel.text = ""
+		updateInteraction()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0xyn1t35yvx1"]
+[gd_scene load_steps=13 format=3 uid="uid://b0xyn1t35yvx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
 [ext_resource type="Resource" uid="uid://8g2yts47qimk" path="res://playerInventory.tres" id="2_4h4bv"]
@@ -7,12 +7,17 @@
 [ext_resource type="Script" path="res://TimerPanel.gd" id="5_mi1vw"]
 [ext_resource type="Script" path="res://Lives.gd" id="6_tpga2"]
 [ext_resource type="Texture2D" uid="uid://c4fpdeyeihg17" path="res://Art/LifeHeart.jpg" id="7_miavl"]
+[ext_resource type="PackedScene" uid="uid://c7pxgim6cnpte" path="res://BeepDetection.tscn" id="8_gdsr2"]
+[ext_resource type="AudioStream" uid="uid://dj1fhwdixp6ap" path="res://Art/Key Buzz.mp3" id="9_ojamp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fe4ac"]
 radius = 22.0227
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_348dh"]
 radius = 23.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n6tfe"]
+radius = 60.208
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -109,6 +114,15 @@ offset_bottom = 322.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BeepArea" parent="Interaction Components" instance=ExtResource("8_gdsr2")]
+position = Vector2(566, 335)
+collision_layer = 0
+collision_mask = 4
+
+[node name="beepCollision" type="CollisionShape2D" parent="Interaction Components/BeepArea"]
+position = Vector2(20, 15)
+shape = SubResource("CircleShape2D_n6tfe")
+
 [node name="KeyCountCanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="KeyCountPanel" type="Panel" parent="KeyCountCanvasLayer"]
@@ -132,5 +146,11 @@ offset_bottom = 49.0
 text = "0/0"
 horizontal_alignment = 1
 
+[node name="BeepSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ojamp")
+pitch_scale = 1.82
+
 [connection signal="area_entered" from="Interaction Components/Interaction Area" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="Interaction Components/Interaction Area" to="." method="_on_interaction_area_area_exited"]
+[connection signal="area_entered" from="Interaction Components/BeepArea" to="." method="_on_beep_area_area_entered"]
+[connection signal="area_exited" from="Interaction Components/BeepArea" to="." method="_on_beep_area_area_exited"]

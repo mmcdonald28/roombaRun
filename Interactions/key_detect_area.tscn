@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj2ini4fuionf"]
+
+[ext_resource type="Script" path="res://Interactions/key_detect_area.gd" id="1_ocppi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0a64"]
+radius = 182.011
+
+[node name="keyDetectArea" type="Area2D"]
+script = ExtResource("1_ocppi")
+
+[node name="keyDetectCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v0a64")

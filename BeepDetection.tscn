@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7pxgim6cnpte"]
+
+[ext_resource type="Script" path="res://BeepDetection.gd" id="1_su8h1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_315ut"]
+radius = 13.0384
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_su8h1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 18)
+shape = SubResource("CircleShape2D_315ut")

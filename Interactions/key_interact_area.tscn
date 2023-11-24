@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpbspjhoaa35f"]
+
+[ext_resource type="Script" path="res://Interactions/key_interact_area.gd" id="1_oix00"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dnewo"]
+
+[node name="keyInteractArea" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_oix00")
+
+[node name="keyInteractCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dnewo")

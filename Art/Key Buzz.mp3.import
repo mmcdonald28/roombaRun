@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj1fhwdixp6ap"
+path="res://.godot/imported/Key Buzz.mp3-771988a64517ff50e6b8be9e80230b7e.mp3str"
+
+[deps]
+
+source_file="res://Art/Key Buzz.mp3"
+dest_files=["res://.godot/imported/Key Buzz.mp3-771988a64517ff50e6b8be9e80230b7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

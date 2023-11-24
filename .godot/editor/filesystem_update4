@@ -1,5 +1,29 @@
+<<<<<<< Updated upstream
+=======
+res://world.tscn
+res://world.gd
+>>>>>>> Stashed changes
 res://player.tscn
 res://world.gd
 res://Pause Menu/pause_menu.tscn
 res://Game Over/game_over_scene.tscn
+<<<<<<< Updated upstream
 res://inventory_gui.tscn
+=======
+res://Game Levels/maze_2.tscn
+res://Game Levels/maze_3.tscn
+res://Enemies/slime.tscn
+res://Pickups/key1.tscn
+res://BeepDetection.tscn
+res://BeepDetection.gd
+res://player.gd
+res://pickup.tscn
+res://interactionCollision.tscn
+res://Interactions/interact_area.tscn
+res://Interactions/key_detect_area.tscn
+res://CanvasLayer.gd
+res://Interactions/interact_area.gd
+res://Interactions/key_detect_area.gd
+res://Interactions/key_interact_area.tscn
+res://Interactions/key_interact_area.gd
+>>>>>>> Stashed changes
