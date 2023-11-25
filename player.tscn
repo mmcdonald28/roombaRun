@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
 [ext_resource type="Resource" uid="uid://8g2yts47qimk" path="res://playerInventory.tres" id="2_4h4bv"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="2_vfdrc"]
-[ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://Pause Menu/pause_menu.tscn" id="3_qiy31"]
+[ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://pause_menu.tscn" id="3_qiy31"]
 [ext_resource type="Script" path="res://TimerPanel.gd" id="5_mi1vw"]
 [ext_resource type="Script" path="res://Lives.gd" id="6_tpga2"]
 [ext_resource type="Texture2D" uid="uid://c4fpdeyeihg17" path="res://Art/LifeHeart.jpg" id="7_miavl"]
