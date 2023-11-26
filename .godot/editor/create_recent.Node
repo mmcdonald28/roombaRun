@@ -1,10 +1,10 @@
+TileMap
 CollisionPolygon2D
 CollisionShape2D
 StaticBody2D
 AudioStreamPlayer2D
 Area2D
 Marker2D
-TileMap
 TextureRect
 Control
 Button

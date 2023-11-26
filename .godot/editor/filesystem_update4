@@ -1,12 +1,2 @@
-res://Game Levels/maze_3.tscn
+res://Game Levels/maze_4.tscn
 res://world.gd
-res://world.tscn
-res://player.tscn
-res://maze.tscn
-res://Game Levels/maze_2.tscn
-res://pickup.tscn
-res://BeepDetection.tscn
-res://interactionCollision.tscn
-res://Interactions/key_interact_area.tscn
-res://Interactions/interact_area.tscn
-res://menu.gd
