@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 @onready var allInteractions = []
 @onready var interactLabel = $"Interaction Components/InteractLabel"
-@onready var keys : int = 0 #how many keys (or items cause i cant single items out) the user has
+#Instead of a keys variable we will use inventory.keys to get keys directly from inventory class
 @onready var collectedAllKeys = false #have you collected all 3 keys?
 @onready var getToDoor = false #are you at the door?
 @onready var sprite = $CharacterBody2D # sprite
@@ -82,29 +82,26 @@ func _input(event):
 #this function counts the items collected. There are 3 total
 #$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text
 func _on_inventory_gui_collected_keys():
-	keys += 1
-	print(keys)
-	
 	if get_tree().current_scene.name == "Tutorial_1":
 		collectedAllKeys = true
 		print("Got the only Key!")
 		emit_signal("Collected_Tutorial_Key") #activate the textbox
 		
 	if get_tree().current_scene.name == "world":
-		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/3"
-		if keys == 3:
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/3"
+		if inventory.keys == 3:
 			collectedAllKeys = true
 			print("Got all 3 keys!!!") #for testing
 	
 	if get_tree().current_scene.name == "Maze": 
-		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/4"
-		if keys == 4:
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/4"
+		if inventory.keys == 4:
 			collectedAllKeys = true
 			print("Got all 4 keys!!!!") #for testing
 		
 	if get_tree().current_scene.name == "Maze 2":
-		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(keys)+"/3"
-		if keys == 3:
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/3"
+		if inventory.keys == 3:
 			collectedAllKeys = true
 			print("Got all 3 keys!!!") #for testing
 		
@@ -121,8 +118,7 @@ func _on_inventory_gui_collected_keys():
 #///////Interaction Methods///////
 #/////////////////////////////////
 
-func _on_interaction_area_area_entered(area):	
-	inventory.clear() # clears keys
+func _on_interaction_area_area_entered(area):
 	print("entered door area!") #for testing
 	allInteractions.insert(0, area) #stores collisions in the front of the array
 	getToDoor = true
@@ -135,7 +131,7 @@ func _on_interaction_area_area_entered(area):
 	
 	if collectedAllKeys && getToDoor: #you need all 3 keys and to be interacting with door
 		print("ALL REQUIREMENTS MET")
-		keys = 0 #resetting for next level
+		inventory.clear() # clears inventory 
 		getToDoor = false #resetting for next level
 		
 		if get_tree().current_scene.name == "Tutorial_1":

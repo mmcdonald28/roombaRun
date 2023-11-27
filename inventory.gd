@@ -7,11 +7,14 @@ class_name Inventory
 signal updated
 
 @export var items: Array[InventoryItem]
+@export var keys = 0
 #this will store the items in the inventory
 
 func insert(item: InventoryItem):
 	for i in range(items.size()):
 		if !items[i]:
+			if item.name == "key1" || "key2" || "key3":
+				keys = keys + 1
 			items[i] = item
 			break
 	updated.emit()
@@ -19,4 +22,5 @@ func insert(item: InventoryItem):
 func clear():
 	for i in range(items.size()):
 		items[i] = null
+	keys = 0
 	updated.emit()
