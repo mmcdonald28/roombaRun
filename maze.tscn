@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="10_sykpt"]
 [ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="11_4edyn"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="12_rb3j7"]
-[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/HorizontalPushTrap.tscn" id="13_wwp0b"]
+[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/horizontalPushTrap.tscn" id="13_wwp0b"]
 [ext_resource type="PackedScene" uid="uid://c2brvd5cf7iwp" path="res://Enemies/slime.tscn" id="15_0gweq"]
 [ext_resource type="PackedScene" uid="uid://4g7xm4iptyt8" path="res://TrapsAndAddons/VerticalPushTrap.tscn" id="15_qj0j3"]
 
@@ -439,6 +439,9 @@ position = Vector2(3.5, 188)
 [node name="horizontalPushTrap" parent="traps (this nodes just a container)" instance=ExtResource("13_wwp0b")]
 position = Vector2(695, 134)
 scale = Vector2(3.5, 3.5)
+
+[node name="horizontalPushTrap" parent="traps (this nodes just a container)/horizontalPushTrap" instance=ExtResource("13_wwp0b")]
+position = Vector2(40.2857, 8)
 
 [node name="spikeTrap" parent="traps (this nodes just a container)" instance=ExtResource("11_4edyn")]
 position = Vector2(608, 44)

@@ -1,46 +1,11 @@
 res://world.tscn
 res://world.gd
-res://playerInventory.tres
-res://player.gd
 res://player.tscn
-res://interactionCollision.tscn
-res://Interactions/key_interact_area.tscn
-res://Interactions/interact_area.tscn
 res://sprayAttack.tscn
-res://inventory.gd
-res://Pickups/sprayBottle.tscn
-res://Pickups/key2.tscn
-res://Pickups/sprayBottle.tres
 res://maze.tscn
-res://TrapsAndAddons/horizontalPushTrap.tscn
 res://Enemies/slime.tscn
-res://testFire.tscn
-res://BeepDetection.gd
-res://CanvasLayer.gd
-res://Enemies/enemy.gd
-res://game_manager_actual.gd
-res://Game Over/game_over_scene.gd
-res://interactionCollision.gd
-res://Interactions/interact_area.gd
-res://inventoryItem.gd
-res://inventory_gui.gd
-res://Interactions/key_detect_area.gd
-res://Interactions/key_interact_area.gd
-res://Lives.gd
-res://menu.gd
-res://options_menu.gd
-res://Pause Menu/pause_menu.gd
-res://pickup.gd
-res://slot_gui.gd
-res://Textbox/textbox.gd
-res://TimerPanel.gd
-res://Tutorial/tutorial_1.gd
-res://TrapsAndAddons/FireTrap.tscn
-res://TrapsAndAddons/spikeTrap.tscn
-res://TrapsAndAddons/HorizontalPushTrap.tscn
 res://TrapsAndAddons/VerticalPushTrap.tscn
-res://TrapsAndAddons/trap.gd
-res://TrapsAndAddons/HorizontalPushTrap.gd
-res://TrapsAndAddons/FireTrap.gd
-res://TrapsAndAddons/spikeTrap.gd
-res://TrapsAndAddons/VerticalPushTrap.gd
+res://TrapsAndAddons/spikeTrap.tscn
+res://TrapsAndAddons/FireTrap.tscn
+res://Game Levels/maze_3.tscn
+res://Game Levels/maze_4.tscn
