@@ -208,37 +208,44 @@ func _on_hitbox_body_entered(sprite):
 #///// Beeping Stuff //////////
 #//////////////////////////////
 
-func _process(delta):
-	# Check if any general beeping sound is not playing, then play it
-	
-	if not beepSoundObj.is_playing() and isInsideBeep:
-		beepSoundObj.play()
-	
-	for beepSoundObj in allBeepInteraction:
-		if not beepSoundObj.is_playing():
-			beepSoundObj.play()
 
-			
+func _process(delta):
+# Check if any general beeping sound is not playing, then play it
+	if not beepSoundObj.is_playing() and isInsideBeep:
+		print("looping")
+		beepSoundObj.play() 
+	if beepSoundObj.is_playing() and not isInsideBeep:
+		print("stopping")
+		beepSoundObj.stop()
+
+	for beepSound in allBeepInteraction:
+		if not beepSound.is_playing():
+			#print("looping")
+			beepSound.play()
 
 func _on_beep_area_area_entered(area):
-	#check if entered interactable item is a key
+# check if entered interactable item is a key
 	print("entered")
 	if area.isKey:
 		isInsideBeep = true
 		beepSoundObj.play()
 		print("entered key area")
 	else:
-		#add general interaction area sound to list
-		allInteractions.insert(0, area)
+		# add general interaction area sound to list
+		allBeepInteraction.append(area)
 		getToDoor = true
 		updateInteraction()
 
-
 func _on_beep_area_area_exited(area):
-	if not area.isKey:
-		#remove from list again
-		allBeepInteraction.erase(area)
-		isInsideBeep = false
-		getToDoor = false
-		interactLabel.text = ""
-		updateInteraction()
+	print("exited")
+	#if not area.isKey:
+	# remove from list
+	allBeepInteraction.erase(area)
+	print("false")
+	isInsideBeep = false
+	getToDoor = false
+	interactLabel.text = ""
+	updateInteraction()
+
+	#clear array 
+	#allBeepInteraction.clear
