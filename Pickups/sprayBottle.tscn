@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://daxhr25unrjho"]
+
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="1_qeit6"]
+[ext_resource type="Resource" uid="uid://lulsim8ar6nr" path="res://Pickups/sprayBottle.tres" id="2_qolkx"]
+[ext_resource type="Texture2D" uid="uid://ck1unq333mybj" path="res://resizedSprayGood.png" id="3_plv7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcjvj"]
+resource_local_to_scene = true
+size = Vector2(13, 22)
+
+[node name="pickup" instance=ExtResource("1_qeit6")]
+itemRes = ExtResource("2_qolkx")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(22, 50.9522)
+scale = Vector2(1.04, 1)
+texture = ExtResource("3_plv7t")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(20.5, 52)
+shape = SubResource("RectangleShape2D_xcjvj")

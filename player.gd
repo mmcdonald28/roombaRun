@@ -10,7 +10,9 @@ extends CharacterBody2D
 @onready var collectedAllKeys = false #have you collected all 3 keys?
 @onready var getToDoor = false #are you at the door?
 @onready var sprite = $CharacterBody2D # sprite
-var lives = 3 # number of lives
+@onready var animated = $sprayDown/AnimatedSpriteDown 
+@onready var collision = $sprayDown/CollisionShapeDown
+var lives = 1 # number of lives
 var is_dead = false # boolean for dead or alive, may not be used
 
 var rotation_direction = 0
@@ -55,7 +57,33 @@ func get_input():
 	if can_move:
 		var input_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = input_direction * speed
+		if Input.is_action_just_pressed("attack"):
+			attack()
+		# Attack input stuff here
 
+func attack():
+	#var input_direction = Input.get_vector("left", "right", "up", "down")
+	#if input_direction == "down":
+	#	var animated = $sprayDown/AnimatedSpriteDown 
+	#	var collision = $sprayDown/CollisionShapeDown
+	#elif input_direction == "right":
+	#	var animated =  $sprayRight/AnimatedSpriteRight
+	#	var collision = $sprayRight/CollisionShapeRight
+	#elif input_direction == "up":
+	#	var animated = $sprayDown/AnimatedSpriteDown 
+	#	var collision = $sprayDown/CollisionShapeDown
+	#elif input_direction == "left":
+	#	var animated = $sprayDown/AnimatedSpriteDown 
+	#	var collision = $sprayDown/CollisionShapeDown
+		
+	if inventory.canAttack == true:
+		animated.visible = true
+		collision.set_deferred("enabled", true)
+		animated.play("sprayDown")
+		await animated.animation_finished
+		animated.visible = false
+		collision.set_deferred("disabled", true)
+		
 # The physics function, occurs ever time unit, houses all the things we have to do and check etc
 func _physics_process(delta):
 	if can_move:
@@ -165,15 +193,19 @@ func updateInteraction():
 
 # Collision methods
 
+# TO INSERT TRAPS / ENEMIES:
+# Add the slime (adding slime has extra steps look at enemy.gd) or the trap
+# rename the trap/slime to something like "greenSlime" or "fireTrap2"
+# the name MUST have the word "Trap" or "Slime" in it in order for collision to 
+# be properly detected
 func handleEnemyCollision():
 	# All of this is to get the specific collider, the thing player collides into
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		var collider = collision.get_collider() # All of this was the get the specific collider
-		if collider.name == "slime" or collider.name == "spikes" or collider.name == "fire" or collider.name == "push":
+		var collider = collision.get_collider()
+		if "Slime" in collider.name or "Trap" in collider.name:
 			lives = lives - 1 
-			print("Lives Left: ", lives) # losing one life
-			
+			print("Lives Left: ", lives) # losing one lif
 
 # Function to check death and reset what must be reset
 func checkDeath():
@@ -208,44 +240,37 @@ func _on_hitbox_body_entered(sprite):
 #///// Beeping Stuff //////////
 #//////////////////////////////
 
-
 func _process(delta):
-# Check if any general beeping sound is not playing, then play it
+	# Check if any general beeping sound is not playing, then play it
+	
 	if not beepSoundObj.is_playing() and isInsideBeep:
-		print("looping")
-		beepSoundObj.play() 
-	if beepSoundObj.is_playing() and not isInsideBeep:
-		print("stopping")
-		beepSoundObj.stop()
+		beepSoundObj.play()
+	
+	for beepSoundObj in allBeepInteraction:
+		if not beepSoundObj.is_playing():
+			beepSoundObj.play()
 
-	for beepSound in allBeepInteraction:
-		if not beepSound.is_playing():
-			#print("looping")
-			beepSound.play()
+			
 
 func _on_beep_area_area_entered(area):
-# check if entered interactable item is a key
+	#check if entered interactable item is a key
 	print("entered")
 	if area.isKey:
 		isInsideBeep = true
 		beepSoundObj.play()
 		print("entered key area")
 	else:
-		# add general interaction area sound to list
-		allBeepInteraction.append(area)
+		#add general interaction area sound to list
+		allInteractions.insert(0, area)
 		getToDoor = true
 		updateInteraction()
 
-func _on_beep_area_area_exited(area):
-	print("exited")
-	#if not area.isKey:
-	# remove from list
-	allBeepInteraction.erase(area)
-	print("false")
-	isInsideBeep = false
-	getToDoor = false
-	interactLabel.text = ""
-	updateInteraction()
 
-	#clear array 
-	#allBeepInteraction.clear
+func _on_beep_area_area_exited(area):
+	if not area.isKey:
+		#remove from list again
+		allBeepInteraction.erase(area)
+		isInsideBeep = false
+		getToDoor = false
+		interactLabel.text = ""
+		updateInteraction()
