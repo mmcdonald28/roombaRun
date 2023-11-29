@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bflifrvp0to52"]
+[gd_scene load_steps=9 format=3 uid="uid://bflifrvp0to52"]
 
 [ext_resource type="Texture2D" uid="uid://du4sp421q3dxj" path="res://Art/Tiles/Floors/Floor - Wood 2 64x64.png" id="1_v61jr"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="2_evggb"]
 [ext_resource type="Texture2D" uid="uid://dt04nycseoq7f" path="res://Art/Tiles/Walls/Wall - Brick 3 64x64.png" id="3_qv54j"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="4_47vn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q7lv"]
 texture = ExtResource("1_v61jr")
@@ -1613,3 +1614,9 @@ polygon = PackedVector2Array(1807, 121, 2232, 130, 2226, 376, 1944, 376, 1950, 5
 
 [node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(2451, 1021, 2824, 1031, 2817, 2154, 2084, 2154, 2074, 2531, 1576, 2528, 1573, 2292, 1711, 2285, 1704, 1905, 2219, 1905, 2212, 1535, 2444, 1539, 2451, 1286, 2693, 1290, 2693, 1172, 2457, 1162)
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(2305, 2248)
+scale = Vector2(7.76952, 8.692)
+texture = ExtResource("4_47vn2")

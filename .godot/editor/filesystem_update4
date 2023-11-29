@@ -1,2 +1,8 @@
-res://Game Levels/maze_4.tscn
+res://world.tscn
 res://world.gd
+res://player.tscn
+res://Game Levels/maze_2.tscn
+res://maze.tscn
+res://Game Levels/maze_3.tscn
+res://Game Levels/maze_4.tscn
+res://menu.gd

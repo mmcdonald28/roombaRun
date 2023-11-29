@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp2roro084eay"]
+[gd_scene load_steps=9 format=3 uid="uid://bp2roro084eay"]
 
 [ext_resource type="Texture2D" uid="uid://b145ghxcb653k" path="res://Art/Tiles/Floors/Floor-Grass_01-64x64.png" id="1_hgdtd"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="2_2bfnf"]
 [ext_resource type="Texture2D" uid="uid://dt04nycseoq7f" path="res://Art/Tiles/Walls/Wall - Brick 3 64x64.png" id="3_tgbk2"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="4_lk7wm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yk47g"]
 texture = ExtResource("1_hgdtd")
@@ -1616,3 +1617,9 @@ polygon = PackedVector2Array(5184, 286, 5185, 159, 5312, 159, 5312, 286)
 
 [node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(2288, 271, 2288, 80, 2609, 81, 2609, 271)
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(4412, 2451)
+scale = Vector2(7.64286, 6.6)
+texture = ExtResource("4_lk7wm")
