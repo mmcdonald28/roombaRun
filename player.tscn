@@ -1,13 +1,14 @@
-[gd_scene load_steps=42 format=3 uid="uid://b0xyn1t35yvx1"]
+[gd_scene load_steps=43 format=3 uid="uid://b0xyn1t35yvx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_togku"]
 [ext_resource type="Resource" uid="uid://8g2yts47qimk" path="res://playerInventory.tres" id="2_4h4bv"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="2_vfdrc"]
 [ext_resource type="PackedScene" uid="uid://c6khbast6mudi" path="res://pause_menu.tscn" id="3_qiy31"]
-[ext_resource type="Script" path="res://TimerPanel.gd" id="5_mi1vw"]
+[ext_resource type="PackedScene" uid="uid://boxq3k5pqc73x" path="res://Doomsday Timer/Doomsday Timer.tscn" id="4_ekrwx"]
 [ext_resource type="Script" path="res://Lives.gd" id="6_tpga2"]
 [ext_resource type="Texture2D" uid="uid://c4fpdeyeihg17" path="res://Art/LifeHeart.jpg" id="7_miavl"]
 [ext_resource type="PackedScene" uid="uid://c7pxgim6cnpte" path="res://BeepDetection.tscn" id="8_gdsr2"]
+[ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="9_2yld2"]
 [ext_resource type="AudioStream" uid="uid://dj1fhwdixp6ap" path="res://Art/Key Buzz.mp3" id="9_ojamp"]
 [ext_resource type="Texture2D" uid="uid://cbu537co7uv5s" path="res://spraySS.png" id="10_v52ig"]
 
@@ -230,6 +231,8 @@ shape = SubResource("CircleShape2D_fe4ac")
 position = Vector2(587, 352)
 zoom = Vector2(2, 2)
 
+[node name="Doomsday Timer" parent="Camera2D" instance=ExtResource("4_ekrwx")]
+
 [node name="PauseMenu" parent="Camera2D" instance=ExtResource("3_qiy31")]
 visible = false
 offset_left = -112.0
@@ -237,49 +240,16 @@ offset_top = -92.0
 offset_right = 113.0
 offset_bottom = 87.0
 
-[node name="TimerCanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="TimerPanel" type="Panel" parent="Camera2D/TimerCanvasLayer"]
-offset_left = 35.0
-offset_top = 28.0
-offset_right = 173.0
-offset_bottom = 56.0
-script = ExtResource("5_mi1vw")
-
-[node name="Minutes" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
-layout_mode = 0
-offset_left = 15.0
-offset_right = 46.0
-offset_bottom = 38.0
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 1.0
-offset_right = 79.0
-offset_bottom = 39.0
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds" type="Label" parent="Camera2D/TimerCanvasLayer/TimerPanel"]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 1.0
-offset_right = 105.0
-offset_bottom = 39.0
-text = "00"
-horizontal_alignment = 2
-
-[node name="Control" type="Control" parent="Camera2D/TimerCanvasLayer"]
+[node name="Control" type="Control" parent="Camera2D"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -587.0
+offset_top = -352.0
+offset_right = -547.0
+offset_bottom = -312.0
 script = ExtResource("6_tpga2")
 
-[node name="HeartLives" type="TextureRect" parent="Camera2D/TimerCanvasLayer/Control"]
+[node name="HeartLives" type="TextureRect" parent="Camera2D/Control"]
 layout_mode = 0
 offset_left = 468.0
 offset_top = 1.0
@@ -320,23 +290,27 @@ shape = SubResource("CircleShape2D_n6tfe")
 [node name="KeyCountCanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="KeyCountPanel" type="Panel" parent="KeyCountCanvasLayer"]
-offset_left = 984.0
+offset_left = 903.0
 offset_top = 22.0
 offset_right = 1113.0
-offset_bottom = 68.0
+offset_bottom = 87.0
 
 [node name="KeysCollectedTitle" type="Label" parent="KeyCountCanvasLayer/KeyCountPanel"]
 layout_mode = 0
-offset_right = 129.0
-offset_bottom = 26.0
+offset_right = 210.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("9_2yld2")
+theme_override_font_sizes/font_size = 40
 text = "Keys Collected:"
 horizontal_alignment = 1
 
 [node name="KeysCollectedAmount" type="Label" parent="KeyCountCanvasLayer/KeyCountPanel"]
 layout_mode = 0
-offset_top = 23.0
-offset_right = 129.0
-offset_bottom = 49.0
+offset_top = 29.0
+offset_right = 210.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("9_2yld2")
+theme_override_font_sizes/font_size = 40
 text = "0/0"
 horizontal_alignment = 1
 

@@ -173,6 +173,8 @@ func _on_interaction_area_area_entered(area):
 			get_tree().change_scene_to_file("res://Game Levels/maze_3.tscn")
 		if get_tree().current_scene.name == "Maze 3":
 			get_tree().change_scene_to_file("res://Game Levels/maze_4.tscn")
+		if get_tree().current_scene.name == "Maze 4":
+			get_tree().change_scene_to_file("res://Game Win/game_win_scene.tscn")
 
 
 func _on_interaction_area_area_exited(area):

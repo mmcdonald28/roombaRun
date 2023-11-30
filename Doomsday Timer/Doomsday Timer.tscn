@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxq3k5pqc73x"]
+
+[ext_resource type="Script" path="res://Doomsday Timer/Doomsday Timer.gd" id="1_2fb5v"]
+[ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="3_2bkaf"]
+
+[node name="Doomsday Timer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fb5v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 31.0
+offset_top = 22.0
+offset_right = 293.0
+offset_bottom = 64.0
+
+[node name="Time Left Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 141.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("3_2bkaf")
+theme_override_font_sizes/font_size = 40
+text = "Time Left:"
+
+[node name="Minutes Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 4.0
+offset_right = 187.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("3_2bkaf")
+theme_override_font_sizes/font_size = 40
+text = "00:"
+
+[node name="Seconds Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 4.0
+offset_right = 228.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("3_2bkaf")
+theme_override_font_sizes/font_size = 40
+text = "00."
+
+[node name="Centiseconds Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 4.0
+offset_right = 268.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("3_2bkaf")
+theme_override_font_sizes/font_size = 40
+text = "00"
