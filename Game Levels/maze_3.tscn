@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="2_evggb"]
 [ext_resource type="Texture2D" uid="uid://dt04nycseoq7f" path="res://Art/Tiles/Walls/Wall - Brick 3 64x64.png" id="3_qv54j"]
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="4_47vn2"]
-[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/horizontalPushTrap.tscn" id="5_c801u"]
+[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/HorizontalPushTrap.tscn" id="5_c801u"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="6_8k36c"]
 [ext_resource type="PackedScene" uid="uid://4g7xm4iptyt8" path="res://TrapsAndAddons/VerticalPushTrap.tscn" id="7_st4ji"]
-[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="8_p4eod"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/SpikeTrap.tscn" id="8_p4eod"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q7lv"]
 texture = ExtResource("1_v61jr")

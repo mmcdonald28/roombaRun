@@ -38,7 +38,6 @@ func _ready():
 	if get_tree().current_scene.name == "Tutorial_1":
 		$Camera2D/TimerCanvasLayer.hide()
 		$KeyCountCanvasLayer/KeyCountPanel.hide()
-		
 	
 	#this sets up the Keys Collected Label
 	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
@@ -171,7 +170,10 @@ func _on_interaction_area_area_entered(area):
 		if get_tree().current_scene.name == "Maze":
 			get_tree().change_scene_to_file("res://Game Levels/maze_2.tscn")
 		if get_tree().current_scene.name == "Maze 2":
-			print("To the Next World! :D")
+			get_tree().change_scene_to_file("res://Game Levels/maze_3.tscn")
+		if get_tree().current_scene.name == "Maze 3":
+			get_tree().change_scene_to_file("res://Game Levels/maze_4.tscn")
+
 
 func _on_interaction_area_area_exited(area):
 	#removes the collision area we just exited
