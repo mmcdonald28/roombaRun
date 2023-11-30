@@ -1,13 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://bflifrvp0to52"]
+[gd_scene load_steps=16 format=3 uid="uid://bflifrvp0to52"]
 
 [ext_resource type="Texture2D" uid="uid://du4sp421q3dxj" path="res://Art/Tiles/Floors/Floor - Wood 2 64x64.png" id="1_v61jr"]
 [ext_resource type="PackedScene" uid="uid://b0xyn1t35yvx1" path="res://player.tscn" id="2_evggb"]
 [ext_resource type="Texture2D" uid="uid://dt04nycseoq7f" path="res://Art/Tiles/Walls/Wall - Brick 3 64x64.png" id="3_qv54j"]
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="4_47vn2"]
-[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/HorizontalPushTrap.tscn" id="5_c801u"]
+[ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/horizontalPushTrap.tscn" id="5_c801u"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="6_8k36c"]
 [ext_resource type="PackedScene" uid="uid://4g7xm4iptyt8" path="res://TrapsAndAddons/VerticalPushTrap.tscn" id="7_st4ji"]
-[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/SpikeTrap.tscn" id="8_p4eod"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="8_p4eod"]
+[ext_resource type="PackedScene" uid="uid://bnlwfv3igyvha" path="res://pickup.tscn" id="9_r3pox"]
+[ext_resource type="PackedScene" uid="uid://dgqhn3kam0wtt" path="res://Pickups/key2.tscn" id="10_1mdrt"]
+[ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="11_lfihs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q7lv"]
 texture = ExtResource("1_v61jr")
@@ -1708,3 +1711,12 @@ position = Vector2(-960, 825)
 
 [node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("8_p4eod")]
 position = Vector2(2227, 183)
+
+[node name="pickup" parent="." instance=ExtResource("9_r3pox")]
+position = Vector2(870, 543)
+
+[node name="pickup2" parent="." instance=ExtResource("10_1mdrt")]
+position = Vector2(840, 482)
+
+[node name="pickup3" parent="." instance=ExtResource("11_lfihs")]
+position = Vector2(2251, 396)
