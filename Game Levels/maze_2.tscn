@@ -1756,16 +1756,20 @@ position = Vector2(1233, -394)
 position = Vector2(533, 132)
 
 [node name="horizontalPushTrap" parent="horizontalPushTrap" instance=ExtResource("11_4aio1")]
-position = Vector2(773, 141)
+position = Vector2(773, 110)
 
 [node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap" instance=ExtResource("11_4aio1")]
 position = Vector2(-390, 422)
 
 [node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("11_4aio1")]
-position = Vector2(1014, -211)
+position = Vector2(1017, -193)
 
 [node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("11_4aio1")]
+visible = false
 position = Vector2(540, 259)
+
+[node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("11_4aio1")]
+position = Vector2(-1046, 110)
 
 [node name="fireTrap" parent="." instance=ExtResource("12_63f6d")]
 position = Vector2(963, 81)
@@ -1785,6 +1789,9 @@ position = Vector2(511, -338)
 [node name="fireTrap" parent="fireTrap/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("12_63f6d")]
 position = Vector2(-204, -469)
 
+[node name="fireTrap" parent="fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("12_63f6d")]
+position = Vector2(918, 615)
+
 [node name="verticalPushTrap" parent="." instance=ExtResource("13_6ud34")]
 position = Vector2(747, 30)
 
@@ -1799,6 +1806,9 @@ position = Vector2(217, 356)
 
 [node name="verticalPushTrap" parent="verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("13_6ud34")]
 position = Vector2(-450, 375)
+
+[node name="verticalPushTrap" parent="verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("13_6ud34")]
+position = Vector2(-484, -871)
 
 [node name="spikeTrap" parent="." instance=ExtResource("14_7s1hb")]
 position = Vector2(570, 416)
@@ -1817,5 +1827,8 @@ position = Vector2(370, -483)
 
 [node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("14_7s1hb")]
 position = Vector2(-969, -394)
+
+[node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("14_7s1hb")]
+position = Vector2(195, 492)
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701315565
+::res://::1701361743
 BeepDetection.gd::GDScript::-1::1700965488::0::1::::BeepDetection<>Area2D<>::
 BeepDetection.tscn::PackedScene::7051257675847346990::1701279222::0::1::::<><>::res://BeepDetection.gd
 button.tscn::PackedScene::8024657474446498803::1698692000::0::1::::<><>::
@@ -24,7 +24,7 @@ Key.gd::GDScript::-1::1699409116::0::1::::<>Area2D<>::
 key.tscn::PackedScene::5747651314809248522::1700621352::0::1::::<><>::uid://dkxubgl4nb6f2
 Keys.png::CompressedTexture2D::902460682152585206::1698691591::1698780699::1::::<><>::
 Lives.gd::GDScript::-1::1699847706::0::1::::<>Control<>::
-maze.tscn::PackedScene::320948293840703439::1701313976::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://bsfwb2jrkfjni::::res://Art/Horror Wind Sound Effect.mp3<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://dfpg4dp0npqhg::::res://Interactions/MazeDoor.png<>uid://dgqhn3kam0wtt::::res://Pickups/key2.tscn<>uid://bduvjqxdbhevs::::res://Pickups/key3.tscn<>uid://bdoqlm1q7sew3::::res://TrapsAndAddons/spikeTrap.tscn<>uid://cnj0tfmuhpxwh::::res://TrapsAndAddons/FireTrap.tscn<>uid://b3uydd7iv26ui::::res://TrapsAndAddons/horizontalPushTrap.tscn<>uid://c2brvd5cf7iwp::::res://Enemies/slime.tscn<>uid://4g7xm4iptyt8::::res://TrapsAndAddons/VerticalPushTrap.tscn
+maze.tscn::PackedScene::320948293840703439::1701317133::0::1::::<><>::uid://b0xyn1t35yvx1::::res://player.tscn<>res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://bsfwb2jrkfjni::::res://Art/Horror Wind Sound Effect.mp3<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://dfpg4dp0npqhg::::res://Interactions/MazeDoor.png<>uid://dgqhn3kam0wtt::::res://Pickups/key2.tscn<>uid://bduvjqxdbhevs::::res://Pickups/key3.tscn<>uid://bdoqlm1q7sew3::::res://TrapsAndAddons/spikeTrap.tscn<>uid://cnj0tfmuhpxwh::::res://TrapsAndAddons/FireTrap.tscn<>uid://b3uydd7iv26ui::::res://TrapsAndAddons/horizontalPushTrap.tscn<>uid://c2brvd5cf7iwp::::res://Enemies/slime.tscn<>uid://4g7xm4iptyt8::::res://TrapsAndAddons/VerticalPushTrap.tscn
 menu.gd::GDScript::-1::1701289129::0::1::::<>Control<>::
 menuMainMenu.tscn::PackedScene::1638160130944835459::1700621352::0::1::::<><>::res://menu.gd
 new_resource.tres::Resource/Resource::1295741865697874009::1699483618::0::1::::<><>::res://inventoryItem.gd<>uid://bk04fufrfcf0h
@@ -34,20 +34,20 @@ pause_menu.tscn::PackedScene::6969766131160747758::1700965488::0::1::::<><>::res
 pickup.gd::GDScript::-1::1699483618::0::1::::<>Area2D<>::
 pickup.tscn::PackedScene::3322929655709912162::1701279222::0::1::::<><>::res://pickup.gd
 player.gd::GDScript::-1::1701313956::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4190104282406082268::1701313976::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://pause_menu.tscn<>res://TimerPanel.gd<>res://Lives.gd<>uid://c4fpdeyeihg17::::res://Art/LifeHeart.jpg<>uid://c7pxgim6cnpte::::res://BeepDetection.tscn<>uid://dj1fhwdixp6ap::::res://Art/Key Buzz.mp3<>uid://cbu537co7uv5s::::res://spraySS.png
+player.tscn::PackedScene::4190104282406082268::1701317133::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://pause_menu.tscn<>res://TimerPanel.gd<>res://Lives.gd<>uid://c4fpdeyeihg17::::res://Art/LifeHeart.jpg<>uid://c7pxgim6cnpte::::res://BeepDetection.tscn<>uid://dj1fhwdixp6ap::::res://Art/Key Buzz.mp3<>uid://cbu537co7uv5s::::res://spraySS.png
 playerInventory.tres::Resource/Resource::2330301351549000162::1701313956::0::1::::<><>::res://inventory.gd
 README.md::TextFile::-1::1698427105::0::1::::<><>::
 resizedSprayGood.png::CompressedTexture2D::5529642065486407723::1701289129::1701289170::1::::<><>::
 Skeleton Key - 2.png::CompressedTexture2D::1991378082999177001::1699409116::1699409147::1::::<><>::
 slot_gui.gd::GDScript::-1::1699409116::0::1::::<>Panel<>::
 slot_gui.tscn::PackedScene::528053554827023539::1699409116::0::1::::<><>::res://slot_gui.gd<>uid://bk04fufrfcf0h
-sprayAttack.tscn::PackedScene::8838797438106989501::1701313976::0::1::::<><>::uid://cbu537co7uv5s::::res://spraySS.png
+sprayAttack.tscn::PackedScene::8838797438106989501::1701317133::0::1::::<><>::uid://cbu537co7uv5s::::res://spraySS.png
 spraySS.png::CompressedTexture2D::4886190962634244546::1701289129::1701289170::1::::<><>::
 timer.gd::GDScript::-1::1699291927::0::1::::<>Control<>::
 timer.tscn::PackedScene::2550975219195536722::1699408977::0::1::::<><>::
 TimerPanel.gd::GDScript::-1::1699637698::0::1::::<>Panel<>::
-world.gd::GDScript::-1::1701313976::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7644692277978918607::1701313976::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://bpbspjhoaa35f::::res://Interactions/key_interact_area.tscn<>uid://daxhr25unrjho::::res://Pickups/sprayBottle.tscn<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn
+world.gd::GDScript::-1::1701316014::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7644692277978918607::1701317133::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://bpbspjhoaa35f::::res://Interactions/key_interact_area.tscn<>uid://daxhr25unrjho::::res://Pickups/sprayBottle.tscn<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn
 ::res://Art/::1700972007
 00.png::CompressedTexture2D::5798789900728638032::1699409116::1699409147::1::::<><>::
 Bear_Trap.png::CompressedTexture2D::7581338280739462661::1699569028::1699569087::1::::<><>::
@@ -199,15 +199,15 @@ Wall-Stone_02-64x64.png::CompressedTexture2D::1873487779137173123::1699483618::1
 Wall-Stone_03-64x64.png::CompressedTexture2D::8866763200784546612::1699483618::1699505626::1::::<><>::
 Wall-Stone_04-64x64.png::CompressedTexture2D::8521933274841785487::1699483618::1699505626::1::::<><>::
 ::res://Art/Tiles/Walls/Tiled Tsx/::1699483618
-::res://Enemies/::1701313976
+::res://Enemies/::1701317133
 enemy.gd::GDScript::-1::1700077977::0::1::::<>CharacterBody2D<>::
 Slime2.png::CompressedTexture2D::1056981764353801964::1700077977::1700086125::1::::<><>::
-slime.tscn::PackedScene::6671074417929172139::1701313976::0::1::::<><>::uid://pcalnr7rjjmy::::res://Enemies/Slime2.png<>res://Enemies/enemy.gd
-::res://Game Levels/::1701313976
+slime.tscn::PackedScene::6671074417929172139::1701317133::0::1::::<><>::uid://pcalnr7rjjmy::::res://Enemies/Slime2.png<>res://Enemies/enemy.gd
+::res://Game Levels/::1701317133
 game_level_1.tscn::PackedScene::3994881818476310974::1700621352::0::1::::<><>::uid://cxg5yh0bsb0dk
-maze_2.tscn::PackedScene::4841592101111418355::1701313976::0::1::::<><>::res://CanvasLayer.gd<>uid://8r8p71uc7cuk::::res://Art/Tiles/Floors/Floor-Stone_02-64x64.png<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://1xscm6myxi8j::::res://Art/Tiles/Walls/Wall-Stone_02-64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dfpg4dp0npqhg::::res://Interactions/MazeDoor.png<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://dgqhn3kam0wtt::::res://Pickups/key2.tscn<>uid://bduvjqxdbhevs::::res://Pickups/key3.tscn
-maze_3.tscn::PackedScene::2760568648143125655::1701313976::0::1::::<><>::uid://du4sp421q3dxj::::res://Art/Tiles/Floors/Floor - Wood 2 64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dt04nycseoq7f::::res://Art/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://b3uydd7iv26ui::::res://TrapsAndAddons/horizontalPushTrap.tscn<>uid://cnj0tfmuhpxwh::::res://TrapsAndAddons/FireTrap.tscn<>uid://4g7xm4iptyt8::::res://TrapsAndAddons/VerticalPushTrap.tscn<>uid://bdoqlm1q7sew3::::res://TrapsAndAddons/spikeTrap.tscn
-maze_4.tscn::PackedScene::3496049643320242624::1701313976::0::1::::<><>::uid://b145ghxcb653k::::res://Art/Tiles/Floors/Floor-Grass_01-64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dt04nycseoq7f::::res://Art/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://bw8f6yvyywrej::::res://Art/black_background.png
+maze_2.tscn::PackedScene::4841592101111418355::1701316747::0::1::::<><>::res://CanvasLayer.gd<>uid://8r8p71uc7cuk::::res://Art/Tiles/Floors/Floor-Stone_02-64x64.png<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://1xscm6myxi8j::::res://Art/Tiles/Walls/Wall-Stone_02-64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dfpg4dp0npqhg::::res://Interactions/MazeDoor.png<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://dgqhn3kam0wtt::::res://Pickups/key2.tscn<>uid://bduvjqxdbhevs::::res://Pickups/key3.tscn<>uid://b3uydd7iv26ui::::res://TrapsAndAddons/horizontalPushTrap.tscn<>uid://cnj0tfmuhpxwh::::res://TrapsAndAddons/FireTrap.tscn<>uid://4g7xm4iptyt8::::res://TrapsAndAddons/VerticalPushTrap.tscn<>uid://bdoqlm1q7sew3::::res://TrapsAndAddons/spikeTrap.tscn
+maze_3.tscn::PackedScene::2760568648143125655::1701317133::0::1::::<><>::uid://du4sp421q3dxj::::res://Art/Tiles/Floors/Floor - Wood 2 64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dt04nycseoq7f::::res://Art/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://b3uydd7iv26ui::::res://TrapsAndAddons/horizontalPushTrap.tscn<>uid://cnj0tfmuhpxwh::::res://TrapsAndAddons/FireTrap.tscn<>uid://4g7xm4iptyt8::::res://TrapsAndAddons/VerticalPushTrap.tscn<>uid://bdoqlm1q7sew3::::res://TrapsAndAddons/spikeTrap.tscn<>uid://bnlwfv3igyvha::::res://pickup.tscn<>uid://dgqhn3kam0wtt::::res://Pickups/key2.tscn<>uid://bduvjqxdbhevs::::res://Pickups/key3.tscn
+maze_4.tscn::PackedScene::3496049643320242624::1701317133::0::1::::<><>::uid://b145ghxcb653k::::res://Art/Tiles/Floors/Floor-Grass_01-64x64.png<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://dt04nycseoq7f::::res://Art/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://bw8f6yvyywrej::::res://Art/black_background.png
 ::res://Game Levels/Game Over/::1700201443
 game_over_scene.gd::GDScript::-1::1700201443::0::1::::<>Control<>::
 game_over_scene.tscn::PackedScene::28891965128728921::1700201443::0::1::::<><>::res://Game Over/game_over_scene.gd<>uid://bw8f6yvyywrej
@@ -246,15 +246,15 @@ testPickup.tscn::PackedScene::2716588867425081617::1699409116::0::1::::<><>::uid
 HelvetiPixel.ttf::FontFile::8739544257053081194::1699822869::1699847572::1::::<><>::
 textbox.gd::GDScript::-1::1699843572::0::1::::<>CanvasLayer<>::
 textbox.tscn::PackedScene::3752344942608545838::1699932345::0::1::::<><>::uid://dwrratye5f3dm
-::res://TrapsAndAddons/::1701313976
+::res://TrapsAndAddons/::1701317133
 FireTrap.gd::GDScript::-1::1701289129::0::1::::<>StaticBody2D<>::
-FireTrap.tscn::PackedScene::5705427871443599159::1701313976::0::1::::<><>::res://TrapsAndAddons/FireTrap.gd<>uid://c0qfgybs6kfby::::res://Art/Fire_Trap.png
+FireTrap.tscn::PackedScene::5705427871443599159::1701317133::0::1::::<><>::res://TrapsAndAddons/FireTrap.gd<>uid://c0qfgybs6kfby::::res://Art/Fire_Trap.png
 HorizontalPushTrap.gd::GDScript::-1::1701289129::0::1::::<>StaticBody2D<>::
-horizontalPushTrap.tscn::PackedScene::4394458633243749076::1701313976::0::1::::<><>::res://TrapsAndAddons/HorizontalPushTrap.gd<>uid://ctebcsx6x8rlf::::res://Art/Push_Trap_Right.png
+horizontalPushTrap.tscn::PackedScene::4394458633243749076::1701317133::0::1::::<><>::res://TrapsAndAddons/HorizontalPushTrap.gd<>uid://ctebcsx6x8rlf::::res://Art/Push_Trap_Right.png
 SpikeTrap.gd::GDScript::-1::1701289129::0::1::::<>StaticBody2D<>::
-spikeTrap.tscn::PackedScene::2626880289996811304::1701313976::0::1::::<><>::res://TrapsAndAddons/spikeTrap.gd<>uid://by5youtk4bnty::::res://Art/Spike Trap.png
+spikeTrap.tscn::PackedScene::2626880289996811304::1701317133::0::1::::<><>::res://TrapsAndAddons/spikeTrap.gd<>uid://by5youtk4bnty::::res://Art/Spike Trap.png
 VerticalPushTrap.gd::GDScript::-1::1701289129::0::1::::<>StaticBody2D<>::
-VerticalPushTrap.tscn::PackedScene::2049847424519470671::1701313976::0::1::::<><>::uid://ctn7tna3gtgtp::::res://Art/Push_Trap_Front.png<>res://TrapsAndAddons/VerticalPushTrap.gd
+VerticalPushTrap.tscn::PackedScene::2049847424519470671::1701317133::0::1::::<><>::uid://ctn7tna3gtgtp::::res://Art/Push_Trap_Front.png<>res://TrapsAndAddons/VerticalPushTrap.gd
 ::res://Tutorial/::1699932345
 tutorial_1.gd::GDScript::-1::1699843572::0::1::::<>Node2D<>::
 tutorial_1.tscn::PackedScene::6407345790663996368::1699932345::0::1::::<><>::res://Tutorial/tutorial_1.gd<>res://CanvasLayer.gd<>uid://bw8f6yvyywrej

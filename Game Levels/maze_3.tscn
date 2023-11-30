@@ -1649,6 +1649,12 @@ position = Vector2(-813, 881)
 [node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("5_c801u")]
 position = Vector2(2066, -1045)
 
+[node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("5_c801u")]
+position = Vector2(-1638, -252)
+
+[node name="horizontalPushTrap" parent="horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap/horizontalPushTrap" instance=ExtResource("5_c801u")]
+position = Vector2(1635, -461)
+
 [node name="fireTrap" parent="." instance=ExtResource("6_8k36c")]
 position = Vector2(830, 81)
 
@@ -1669,6 +1675,12 @@ position = Vector2(-1321, -19)
 
 [node name="fireTrap" parent="fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("6_8k36c")]
 position = Vector2(-104, -815)
+
+[node name="fireTrap" parent="fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("6_8k36c")]
+position = Vector2(291, -871)
+
+[node name="fireTrap" parent="fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("6_8k36c")]
+position = Vector2(2568, 121)
 
 [node name="verticalPushTrap" parent="." instance=ExtResource("7_st4ji")]
 position = Vector2(1231, 771)
@@ -1691,6 +1703,12 @@ position = Vector2(-1239, -253)
 [node name="verticalPushTrap" parent="verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("7_st4ji")]
 position = Vector2(48, -1395)
 
+[node name="verticalPushTrap" parent="verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("7_st4ji")]
+position = Vector2(3368, -401)
+
+[node name="verticalPushTrap" parent="verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("7_st4ji")]
+position = Vector2(-1682, -112)
+
 [node name="spikeTrap" parent="." instance=ExtResource("8_p4eod")]
 position = Vector2(316, 525)
 
@@ -1711,6 +1729,12 @@ position = Vector2(-960, 825)
 
 [node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("8_p4eod")]
 position = Vector2(2227, 183)
+
+[node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("8_p4eod")]
+position = Vector2(713, -919)
+
+[node name="spikeTrap" parent="spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("8_p4eod")]
+position = Vector2(-2285, 173)
 
 [node name="pickup" parent="." instance=ExtResource("9_r3pox")]
 position = Vector2(870, 543)

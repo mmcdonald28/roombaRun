@@ -1,5 +1,7 @@
 res://maze.tscn
 res://world.gd
+res://Game Levels/maze_2.tscn
+res://Game Levels/maze_3.tscn
 res://world.tscn
 res://player.tscn
 res://sprayAttack.tscn
@@ -7,6 +9,4 @@ res://Enemies/slime.tscn
 res://TrapsAndAddons/VerticalPushTrap.tscn
 res://TrapsAndAddons/spikeTrap.tscn
 res://TrapsAndAddons/FireTrap.tscn
-res://Game Levels/maze_3.tscn
 res://Game Levels/maze_4.tscn
-res://Game Levels/maze_2.tscn
