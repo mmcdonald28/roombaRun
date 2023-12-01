@@ -1,12 +1,15 @@
 res://world.tscn
 res://world.gd
+res://player.gd
 res://player.tscn
-res://Doomsday Timer/Doomsday Timer.tscn
-res://pause_menu.tscn
-res://menuMainMenu.tscn
-res://Game Levels/game_level_1.tscn
+res://maze.tscn
 res://Game Levels/maze_2.tscn
 res://Game Levels/maze_3.tscn
 res://Game Levels/maze_4.tscn
-res://maze.tscn
-res://player.gd
+res://pickup.tscn
+res://BeepDetection.tscn
+res://interactionCollision.tscn
+res://Interactions/key_interact_area.tscn
+res://Interactions/interact_area.tscn
+res://Enemies/slime.tscn
+res://playerInventory.tres

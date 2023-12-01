@@ -34,6 +34,93 @@ signal Final_Tutorial_Text
 
 
 
+#Save data Things
+
+var timeDicto = {}
+var lvlNum = 0
+var lvlTime = 0.0
+var filePath = "user://saveTime.res"
+
+#/////////////////////////
+#//// Saving Time ///////
+#////////////////////////
+func saveTime():
+	var lvlName = "Level"
+	
+	
+		
+	# Maze, Maze 2, Maze 3, Maze 4
+	if get_tree().current_scene.name == "Maze" :
+		lvlNum = 2
+		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+		
+		var result = ResourceSaver.save(filePath, timeDicto)
+	
+		if result == OK:
+			print("Data Saved successfully")
+		else:
+			print("Error Saving data")
+		
+		
+	if get_tree().current_scene.name == "Maze 2" :
+		lvlNum = 3
+		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+		var result = ResourceSaver.save(filePath, timeDicto)
+	
+		if result == OK:
+			print("Data Saved successfully")
+		else:
+			print("Error dSaving Data")
+			
+	if get_tree().current_scene.name == "Maze 3" :
+		lvlNum = 4
+		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+		var result = ResourceSaver.save(filePath, timeDicto)
+	
+		if result == OK:
+			print("Data Saved successfully")
+		else: 
+			print("Error saving Data")
+			
+			
+	if get_tree().current_scene.name == "Maze 4" :
+		lvlNum = 5
+		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+		var result = ResourceSaver.save(filePath, timeDicto)
+	
+		if result == OK:
+			print("Data Saved successfully")
+		else:
+			print("Error saving data")
+			
+			
+func readTime():
+	var resource_loader = ResourceLoader.new()
+	var resource = resource_loader.load(filePath)
+
+	if resource != null:
+		var timeDicto = resource.get_data()
+		
+		for key in timeDicto.keys():
+			var levelName = key
+			var levelTime = timeDicto[key]
+			
+			# Do something with levelName and levelTime
+			print("Level:", levelName, "Time:", levelTime)
+
+		print("Data Read successfully")
+	else:
+		print("Error Reading data")
+
+
+
+
+
+
 func _ready():
 	#this hides the timer and key count for the tutorial
 	if get_tree().current_scene.name == "Tutorial_1":
@@ -274,7 +361,6 @@ func _on_beep_area_area_entered(area):
 
 
 func _on_beep_area_area_exited(area):
-	if not area.isKey:
 		#remove from list again
 		allBeepInteraction.erase(area)
 		isInsideBeep = false
