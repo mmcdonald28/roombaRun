@@ -12,7 +12,7 @@ extends CharacterBody2D
 @onready var sprite = $CharacterBody2D # sprite
 @onready var animated = $sprayDown/AnimatedSpriteDown 
 @onready var collision = $sprayDown/CollisionShapeDown
-var lives = 1 # number of lives
+var lives = 10000 # number of lives
 var is_dead = false # boolean for dead or alive, may not be used
 
 var rotation_direction = 0
