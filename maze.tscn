@@ -1722,7 +1722,6 @@ scale = Vector2(3.5, 3.5)
 
 [node name="horizontalPushTrap" parent="traps (this nodes just a container)/horizontalPushTrap2" instance=ExtResource("13_wwp0b")]
 position = Vector2(-128.571, 16.8571)
-scale = Vector2(1, 1)
 
 [node name="horizontalPushTrap" parent="traps (this nodes just a container)" instance=ExtResource("13_wwp0b")]
 position = Vector2(695, 134)

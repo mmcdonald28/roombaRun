@@ -1,6 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://xlsi1jfmvnpj"]
+[gd_scene load_steps=10 format=3 uid="uid://xlsi1jfmvnpj"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_4hup4"]
+[ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="2_pj4wl"]
+[ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="3_nxb0t"]
+[ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="4_vbyea"]
+[ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="5_ql0f8"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="6_xybsw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06wxk"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_li1hb"]
+bg_color = Color(0.152941, 0.0156863, 0.27451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5ujx"]
+bg_color = Color(0.282353, 0.0509804, 0.482353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
 
 [node name="menuMainMenu" type="Control"]
 layout_mode = 3
@@ -9,51 +38,117 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -574.0
+offset_top = -346.0
+offset_right = -574.0
+offset_bottom = -346.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4hup4")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -114.0
-offset_top = -75.0
-offset_right = 46.0
-offset_bottom = 27.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.41703, 1.41703)
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(576, 226)
+scale = Vector2(1.38381, 1.34133)
+texture = ExtResource("2_pj4wl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="Game Over Label Background2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 65.0
+offset_right = 1152.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0.152941, 0.0156863, 0.27451, 1)
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 200
+text = "Roomba, Run"
+horizontal_alignment = 1
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Game Over Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 1160.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 200
+text = "Roomba, Run"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 250.0
+offset_right = 754.0
+offset_bottom = 447.0
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_06wxk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_li1hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5ujx")
 text = "Play"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Options"
-
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
-[node name="Maze" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Maze"
-
-[node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_06wxk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_li1hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5ujx")
 text = "Tutorial"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Maze" to="." method="_on_maze_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_06wxk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_li1hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5ujx")
+text = "Quit"
+
+[node name="Morse Code" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 452.0
+offset_right = 1116.0
+offset_bottom = 656.0
+theme_override_fonts/font = ExtResource("3_nxb0t")
+theme_override_font_sizes/font_size = 40
+text = ".--. .-.. . .- ... . --..-- / -.-- --- ..- / -.-. .- -. .----. - / --. .. ...- . / ..- .--. .--. .-.. . .- ... . / .... . .-.. .--. .-.-.- .-.-.- .-.-.- / .. / -. . . -.. / - --- / --. . - / --- ..- - / --- ..-. / .... . .-. . .-.-.- / .. / -.. --- -. .----. - / -.- -. --- .-- / .-- .... . .-. . / .. / .- -- --..-- / -... ..- - / .. / -.- -. --- .-- / - .... .- - / .. - .----. ... / -.. .- -. --. . .-. --- ..- ... .-.-.- / - --- --- / -.. .- -. --. . .-. --- ..- ... .-.-.-
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Icon-Down" type="Sprite2D" parent="."]
+position = Vector2(335, 164)
+scale = Vector2(0.632978, 0.632978)
+texture = ExtResource("4_vbyea")
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("5_ql0f8")]
+position = Vector2(769, 273)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_ql0f8")]
+position = Vector2(376, 273)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("5_ql0f8")]
+position = Vector2(769, 411)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("5_ql0f8")]
+position = Vector2(376, 411)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("6_xybsw")]
+position = Vector2(375, 345)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("6_xybsw")]
+position = Vector2(770, 345)
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

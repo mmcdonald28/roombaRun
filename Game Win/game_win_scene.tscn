@@ -50,6 +50,7 @@ scale = Vector2(1.03429, 0.998667)
 texture = ExtResource("1_d64p4")
 
 [node name="You Win Label Background" type="Label" parent="."]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
 offset_right = 1155.0
@@ -63,6 +64,7 @@ text = "YOU WIN!"
 horizontal_alignment = 1
 
 [node name="You Win Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 53.0
 offset_right = 1160.0
@@ -75,6 +77,7 @@ text = "YOU WIN!"
 horizontal_alignment = 1
 
 [node name="Your Time Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 195.0
 offset_right = 1160.0
@@ -85,6 +88,7 @@ text = "Your Time:"
 horizontal_alignment = 1
 
 [node name="User Time Numbers Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 268.0
 offset_right = 1160.0
@@ -398,6 +402,7 @@ text = "00"
 horizontal_alignment = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 400.0
 offset_top = 396.0
 offset_right = 763.0
@@ -622,6 +627,7 @@ text = "00"
 horizontal_alignment = 2
 
 [node name="Morse Code" type="Label" parent="."]
+layout_mode = 0
 offset_left = 784.0
 offset_top = 400.0
 offset_right = 1136.0
@@ -634,6 +640,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Morse Code2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 28.0
 offset_top = 411.0
 offset_right = 372.0
