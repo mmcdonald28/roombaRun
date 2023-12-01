@@ -14,9 +14,9 @@ func _ready():
 		time = 120.0 #2 mins
 	if get_tree().current_scene.name == "Maze 2":
 		time = 120.0 #2 mins
-	if get_tree().current_scene.name == "Maze 3":
+	if get_tree().current_scene.name == "Maze_3":
 		time = 240.0 #4 mins
-	if get_tree().current_scene.name == "Maze 4":
+	if get_tree().current_scene.name == "Maze_4":
 		time = 240.0 #4 mins
 
 

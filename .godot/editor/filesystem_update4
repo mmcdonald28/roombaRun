@@ -1,6 +1,7 @@
-res://world.tscn
-res://world.gd
-res://player.tscn
 res://Doomsday Timer/Doomsday Timer.tscn
+res://world.gd
+res://Doomsday Timer/Doomsday Timer.gd
+res://world.tscn
+res://player.tscn
 res://pause_menu.tscn
 res://menuMainMenu.tscn
