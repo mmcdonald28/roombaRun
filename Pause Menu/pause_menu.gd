@@ -28,14 +28,3 @@ func _on_resume_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
-
-
-func _on_options_button_pressed():
-	get_tree().change_scene_to_file("res://options_menu.tscn")
-	#NEED TO FIX THIS
-
-
-func _on_save_button_pressed():
-	pauseMenu()
-	# Need to figure out WHAT we're saving
-	#for now, it resumes

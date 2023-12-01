@@ -18,6 +18,7 @@ var is_dead = false # boolean for dead or alive, may not be used
 var rotation_direction = 0
 var can_move: bool = true # can the roomba move?
 var firstHitWithDoor = true #for part 2 of the tutorial. So we only get the text once
+var collectedTutorialKey = false #So the "I found it!" dialouge doesn't activate twice
 
 #signals to activate the textbox in the tutorial
 signal Reached_Door_In_Tutorial
@@ -36,7 +37,7 @@ signal Final_Tutorial_Text
 func _ready():
 	#this hides the timer and key count for the tutorial
 	if get_tree().current_scene.name == "Tutorial_1":
-		$Camera2D/TimerCanvasLayer.hide()
+		$"Camera2D/Doomsday Timer/CanvasLayer".hide()
 		$KeyCountCanvasLayer/KeyCountPanel.hide()
 	
 	#this sets up the Keys Collected Label
@@ -112,7 +113,9 @@ func _on_inventory_gui_collected_keys():
 	if get_tree().current_scene.name == "Tutorial_1":
 		collectedAllKeys = true
 		print("Got the only Key!")
-		emit_signal("Collected_Tutorial_Key") #activate the textbox
+		if !collectedTutorialKey:
+			emit_signal("Collected_Tutorial_Key") #activate the textbox
+			collectedTutorialKey = true
 		
 	if get_tree().current_scene.name == "world":
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/3"

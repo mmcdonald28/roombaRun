@@ -1,5 +1,9 @@
-res://player.tscn
+res://pause_menu.tscn
 res://world.gd
+res://Pause Menu/pause_menu.gd
 res://world.tscn
+res://player.tscn
 res://Doomsday Timer/Doomsday Timer.tscn
+res://menuMainMenu.tscn
 res://player.gd
+res://CanvasLayer.gd
