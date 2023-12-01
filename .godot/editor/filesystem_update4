@@ -1,29 +1,5 @@
-res://menuMainMenu.tscn
+res://maze.tscn
 res://world.gd
-<<<<<<< HEAD
-res://player.gd
-res://player.tscn
-res://maze.tscn
 res://Game Levels/maze_2.tscn
 res://Game Levels/maze_3.tscn
 res://Game Levels/maze_4.tscn
-res://pickup.tscn
-res://BeepDetection.tscn
-res://interactionCollision.tscn
-res://Interactions/key_interact_area.tscn
-res://Interactions/interact_area.tscn
-res://Enemies/slime.tscn
-res://playerInventory.tres
-=======
-res://menu.gd
-res://world.tscn
-res://player.tscn
-res://Doomsday Timer/Doomsday Timer.tscn
-res://pause_menu.tscn
-res://Game Levels/game_level_1.tscn
-res://Game Levels/maze_2.tscn
-res://Game Levels/maze_3.tscn
-res://Game Levels/maze_4.tscn
-res://maze.tscn
-res://Game Win/game_win_scene.tscn
->>>>>>> a59d370c269577e9b51961f1793f11c445ff19c9

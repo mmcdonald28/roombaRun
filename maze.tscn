@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="12_rb3j7"]
 [ext_resource type="PackedScene" uid="uid://b3uydd7iv26ui" path="res://TrapsAndAddons/horizontalPushTrap.tscn" id="13_wwp0b"]
 [ext_resource type="PackedScene" uid="uid://c2brvd5cf7iwp" path="res://Enemies/slime.tscn" id="15_0gweq"]
-[ext_resource type="PackedScene" path="res://TrapsAndAddons/VerticalPushTrap.tscn" id="15_qj0j3"]
+[ext_resource type="PackedScene" uid="uid://4g7xm4iptyt8" path="res://TrapsAndAddons/VerticalPushTrap.tscn" id="15_qj0j3"]
 [ext_resource type="Texture2D" uid="uid://blltn2bfksnec" path="res://Art/Tiles/Floors/Floor - Metal 1 64x64.png" id="16_mtqhu"]
 [ext_resource type="Texture2D" uid="uid://cltqmu8gg4eaj" path="res://Art/Tiles/Walls/Wall-Brick_03-64x64.png" id="17_riqmi"]
 
@@ -1720,54 +1720,65 @@ scale = Vector2(3.5, 3.5)
 position = Vector2(832, 157)
 scale = Vector2(3.5, 3.5)
 
-[node name="horizontalPushTrap" parent="traps (this nodes just a container)/horizontalPushTrap2" instance=ExtResource("13_wwp0b")]
-position = Vector2(-128.571, 16.8571)
-
 [node name="horizontalPushTrap" parent="traps (this nodes just a container)" instance=ExtResource("13_wwp0b")]
 position = Vector2(695, 134)
 scale = Vector2(3.5, 3.5)
+
+[node name="horizontalPushTrap5" parent="traps (this nodes just a container)" instance=ExtResource("13_wwp0b")]
+position = Vector2(382.001, 216)
+scale = Vector2(3.5, 3.5)
+
+[node name="spikeTrap4" parent="traps (this nodes just a container)" instance=ExtResource("11_4edyn")]
+position = Vector2(1339, 96.9995)
+scale = Vector2(1.5, 1.5)
+
+[node name="spikeTrap3" parent="traps (this nodes just a container)" instance=ExtResource("11_4edyn")]
+position = Vector2(1042, 820)
+scale = Vector2(1.5, 1.5)
+
+[node name="spikeTrap2" parent="traps (this nodes just a container)" instance=ExtResource("11_4edyn")]
+position = Vector2(524, 436)
+scale = Vector2(1.5, 1.5)
 
 [node name="spikeTrap" parent="traps (this nodes just a container)" instance=ExtResource("11_4edyn")]
 position = Vector2(608, 44)
 scale = Vector2(1.5, 1.5)
 
-[node name="spikeTrap" parent="traps (this nodes just a container)/spikeTrap" instance=ExtResource("11_4edyn")]
-position = Vector2(-56, 261.333)
+[node name="verticalPushTrap4" parent="traps (this nodes just a container)" instance=ExtResource("15_qj0j3")]
+position = Vector2(792.998, 930.002)
+scale = Vector2(3.5, 3.5)
 
-[node name="spikeTrap" parent="traps (this nodes just a container)/spikeTrap/spikeTrap" instance=ExtResource("11_4edyn")]
-position = Vector2(543.333, -226)
+[node name="verticalPushTrap3" parent="traps (this nodes just a container)" instance=ExtResource("15_qj0j3")]
+position = Vector2(71.001, 540)
+scale = Vector2(3.5, 3.5)
 
-[node name="spikeTrap" parent="traps (this nodes just a container)/spikeTrap/spikeTrap/spikeTrap" instance=ExtResource("11_4edyn")]
-position = Vector2(-198, 482)
+[node name="verticalPushTrap2" parent="traps (this nodes just a container)" instance=ExtResource("15_qj0j3")]
+position = Vector2(1092, 277)
+scale = Vector2(3.5, 3.5)
 
 [node name="verticalPushTrap" parent="traps (this nodes just a container)" instance=ExtResource("15_qj0j3")]
 position = Vector2(805, 11)
 scale = Vector2(3.5, 3.5)
 
-[node name="verticalPushTrap" parent="traps (this nodes just a container)/verticalPushTrap" instance=ExtResource("15_qj0j3")]
-position = Vector2(82, 76)
+[node name="fireTrap5" parent="traps (this nodes just a container)" instance=ExtResource("12_rb3j7")]
+position = Vector2(152.001, 139)
+scale = Vector2(1.5, 1.5)
 
-[node name="verticalPushTrap" parent="traps (this nodes just a container)/verticalPushTrap/verticalPushTrap" instance=ExtResource("15_qj0j3")]
-position = Vector2(-291.714, 75.1429)
+[node name="fireTrap4" parent="traps (this nodes just a container)" instance=ExtResource("12_rb3j7")]
+position = Vector2(1281, 408)
+scale = Vector2(1.5, 1.5)
 
-[node name="verticalPushTrap" parent="traps (this nodes just a container)/verticalPushTrap/verticalPushTrap/verticalPushTrap" instance=ExtResource("15_qj0j3")]
-position = Vector2(206.285, 111.429)
+[node name="fireTrap3" parent="traps (this nodes just a container)" instance=ExtResource("12_rb3j7")]
+position = Vector2(1602, 583.999)
+scale = Vector2(1.5, 1.5)
+
+[node name="fireTrap2" parent="traps (this nodes just a container)" instance=ExtResource("12_rb3j7")]
+position = Vector2(64.9944, 945.999)
+scale = Vector2(1.5, 1.5)
 
 [node name="fireTrap" parent="traps (this nodes just a container)" instance=ExtResource("12_rb3j7")]
 position = Vector2(502, 39)
 scale = Vector2(1.5, 1.5)
-
-[node name="fireTrap" parent="traps (this nodes just a container)/fireTrap" instance=ExtResource("12_rb3j7")]
-position = Vector2(-233.333, 66.6667)
-
-[node name="fireTrap" parent="traps (this nodes just a container)/fireTrap/fireTrap" instance=ExtResource("12_rb3j7")]
-position = Vector2(752.666, 179.333)
-
-[node name="fireTrap" parent="traps (this nodes just a container)/fireTrap/fireTrap/fireTrap" instance=ExtResource("12_rb3j7")]
-position = Vector2(214, 117.333)
-
-[node name="fireTrap" parent="traps (this nodes just a container)/fireTrap/fireTrap/fireTrap/fireTrap" instance=ExtResource("12_rb3j7")]
-position = Vector2(-1024.67, 241.333)
 
 [node name="Floor" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ld1kj")
