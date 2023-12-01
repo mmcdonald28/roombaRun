@@ -55,5 +55,5 @@ text = "Tutorial"
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Maze" to="." method="_on_maze_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]

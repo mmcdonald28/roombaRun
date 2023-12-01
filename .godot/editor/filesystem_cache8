@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701394095
+::res://::1701397156
 BeepDetection.gd::GDScript::-1::1700862299::0::1::::BeepDetection<>Area2D<>::
 BeepDetection.tscn::PackedScene::7051257675847346990::1701139699::0::1::::<><>::res://BeepDetection.gd
 button.tscn::PackedScene::8024657474446498803::1699411483::0::1::::<><>::
-CanvasLayer.gd::GDScript::-1::1700862299::0::1::::<>CanvasLayer<>::
+CanvasLayer.gd::GDScript::-1::1701396688::0::1::::<>CanvasLayer<>::
 Collectable.gd::GDScript::-1::1699235788::0::1::::<>Node<>::
 Documentation Tracking.txt::TextFile::-1::1697820384::0::1::::<><>::
 exampleItem.tres::Resource/Resource::5984546644029856969::1698241050::0::1::::<><>::res://inventoryItem.gd<>uid://dfqehjy7qs5mv
@@ -26,15 +26,15 @@ Keys.png::CompressedTexture2D::902460682152585206::1699411483::1699460374::1::::
 Lives.gd::GDScript::-1::1699886444::0::1::::<>Control<>::
 maze.tscn::PackedScene::320948293840703439::1701372125::0::1::::<><>::uid://b0xyn1t35yvx1
 menu.gd::GDScript::-1::1701045148::0::1::::<>Control<>::
-menuMainMenu.tscn::PackedScene::1638160130944835459::1700695074::0::1::::<><>::res://menu.gd
+menuMainMenu.tscn::PackedScene::1638160130944835459::1701396719::0::1::::<><>::res://menu.gd
 new_resource.tres::Resource/Resource::1295741865697874009::1699460381::0::1::::<><>::res://inventoryItem.gd<>uid://bk04fufrfcf0h
 options_menu.gd::GDScript::-1::1698241169::0::1::::<>Control<>::
 options_menu.tscn::PackedScene::4454864356766979053::1697820384::0::1::::<><>::res://options_menu.gd
-pause_menu.tscn::PackedScene::6969766131160747758::1700697816::0::1::::<><>::res://Pause Menu/pause_menu.gd
+pause_menu.tscn::PackedScene::6969766131160747758::1701396719::0::1::::<><>::res://Pause Menu/pause_menu.gd<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf
 pickup.gd::GDScript::-1::1699466067::0::1::::<>Area2D<>::
 pickup.tscn::PackedScene::3322929655709912162::1701139699::0::1::::<><>::res://pickup.gd
-player.gd::GDScript::-1::1701372487::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4190104282406082268::1701372790::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://pause_menu.tscn<>uid://boxq3k5pqc73x::::res://Doomsday Timer/Doomsday Timer.tscn<>res://Lives.gd<>uid://c4fpdeyeihg17::::res://Art/LifeHeart.jpg<>uid://c7pxgim6cnpte::::res://BeepDetection.tscn<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf<>uid://dj1fhwdixp6ap::::res://Art/Key Buzz.mp3<>uid://cbu537co7uv5s::::res://spraySS.png
+player.gd::GDScript::-1::1701396564::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4190104282406082268::1701396718::0::1::::<><>::res://player.gd<>uid://8g2yts47qimk::::res://playerInventory.tres<>uid://ddy20j8r2l1gr::::res://Art/icon - Down.png<>uid://c6khbast6mudi::::res://pause_menu.tscn<>uid://boxq3k5pqc73x::::res://Doomsday Timer/Doomsday Timer.tscn<>res://Lives.gd<>uid://c4fpdeyeihg17::::res://Art/LifeHeart.jpg<>uid://c7pxgim6cnpte::::res://BeepDetection.tscn<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf<>uid://dj1fhwdixp6ap::::res://Art/Key Buzz.mp3<>uid://cbu537co7uv5s::::res://spraySS.png
 playerInventory.tres::Resource/Resource::2330301351549000162::1701316994::0::1::::<><>::res://inventory.gd
 README.md::TextFile::-1::1698424339::0::1::::<><>::
 resizedSprayGood.png::CompressedTexture2D::5529642065486407723::1701289172::1701316991::1::::<><>::
@@ -44,8 +44,8 @@ slot_gui.tscn::PackedScene::528053554827023539::1698976611::0::1::::<><>::res://
 sprayAttack.tscn::PackedScene::8838797438106989501::1701372122::0::1::::<><>::uid://cbu537co7uv5s
 spraySS.png::CompressedTexture2D::4886190962634244546::1701289172::1701316991::1::::<><>::
 TimerPanel.gd::GDScript::-1::1699637896::0::1::::<>Panel<>::
-world.gd::GDScript::-1::1701372428::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7644692277978918607::1701372642::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://bpbspjhoaa35f::::res://Interactions/key_interact_area.tscn<>uid://daxhr25unrjho::::res://Pickups/sprayBottle.tscn<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn
+world.gd::GDScript::-1::1701394631::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7644692277978918607::1701396718::0::1::::<><>::res://CanvasLayer.gd<>uid://dpekv5tdukjnc::::res://inventory_gui.tscn<>uid://b0xyn1t35yvx1::::res://player.tscn<>uid://bw8f6yvyywrej::::res://Art/black_background.png<>uid://cxg5yh0bsb0dk::::res://Art/pixel-waver-002.jpg<>uid://5gk13i17whb5::::res://Art/CreepyHouseSounds.mp3<>uid://c0vqbdkipkoh::::res://Pickups/key1.tscn<>uid://bpbspjhoaa35f::::res://Interactions/key_interact_area.tscn<>uid://daxhr25unrjho::::res://Pickups/sprayBottle.tscn<>uid://dpld2d5cir3kt::::res://Interactions/interact_area.tscn
 ::res://Art/::1701045143
 00.png::CompressedTexture2D::5798789900728638032::1699307295::1699307313::1::::<><>::
 Bear_Trap.png::CompressedTexture2D::7581338280739462661::1699508109::1699637884::1::::<><>::
@@ -197,9 +197,9 @@ Wall-Stone_02-64x64.png::CompressedTexture2D::1873487779137173123::1699473445::1
 Wall-Stone_03-64x64.png::CompressedTexture2D::8866763200784546612::1699473445::1699473502::1::::<><>::
 Wall-Stone_04-64x64.png::CompressedTexture2D::8521933274841785487::1699473445::1699473502::1::::<><>::
 ::res://Art/Tiles/Walls/Tiled Tsx/::1699473445
-::res://Doomsday Timer/::1701372642
+::res://Doomsday Timer/::1701396718
 Doomsday Timer.gd::GDScript::-1::1701372225::0::1::::<>Control<>::
-Doomsday Timer.tscn::PackedScene::3417567229363193023::1701372642::0::1::::<><>::res://Doomsday Timer/Doomsday Timer.gd<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf
+Doomsday Timer.tscn::PackedScene::3417567229363193023::1701396718::0::1::::<><>::res://Doomsday Timer/Doomsday Timer.gd<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf
 ::res://Enemies/::1701372122
 enemy.gd::GDScript::-1::1700080644::0::1::::<>CharacterBody2D<>::
 Slime2.png::CompressedTexture2D::1056981764353801964::1700080644::1700080670::1::::<><>::
@@ -214,7 +214,7 @@ game_over_scene.gd::GDScript::-1::1700199351::0::1::::<>Control<>::
 game_over_scene.tscn::PackedScene::3400664676320931655::1700698305::0::1::::<><>::res://Game Over/game_over_scene.gd<>uid://bw8f6yvyywrej
 ::res://Game Win/::1701372230
 game_win_scene.gd::GDScript::-1::1701372230::0::1::::<>Control<>::
-game_win_scene.tscn::PackedScene::43093969051749295::1701372230::0::1::::<><>::uid://bw8f6yvyywrej::::res://Art/black_background.png<>res://Game Win/game_win_scene.gd<>uid://dwrratye5f3dm::::res://Textbox/HelvetiPixel.ttf
+game_win_scene.tscn::PackedScene::43093969051749295::1701372230::0::1::::<><>::uid://bw8f6yvyywrej
 ::res://Interactions/::1701139699
 interact_area.gd::GDScript::-1::1700862299::0::1::::<>Area2D<>::
 interact_area.tscn::PackedScene::8235033432374623391::1701045214::0::1::::<><>::res://Interactions/interact_area.gd
@@ -229,8 +229,8 @@ inventoryItem.gd::GDScript::-1::1699235780::0::1::::InventoryItem<>Resource<>::
 inventory_gui.gd::GDScript::-1::1698976611::0::1::::<>Control<>::
 slot_gui.gd::GDScript::-1::1698976611::0::1::::<>Panel<>::
 slot_gui.tscn::PackedScene::528053554827023539::1698976611::0::1::::<><>::res://Inventory/slot_gui.gd<>uid://bk04fufrfcf0h
-::res://Pause Menu/::1700698305
-pause_menu.gd::GDScript::-1::1700698005::0::1::::<>Control<>::
+::res://Pause Menu/::1701395290
+pause_menu.gd::GDScript::-1::1701395290::0::1::::<>Control<>::
 pause_menu.tscn::PackedScene::6969766131160747758::1700698305::0::1::::<><>::res://Pause Menu/pause_menu.gd
 ::res://Pickups/::1701289172
 key1.tres::Resource/Resource::8311695951914235563::1699466067::0::1::::<><>::res://inventoryItem.gd<>uid://cou8htfhsjy8g

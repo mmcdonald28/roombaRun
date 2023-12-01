@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RoombaRunWorkspace"
-run/main_scene="res://game_manager_actual.tscn"
+run/main_scene="res://menuMainMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
