@@ -1,10 +1,10 @@
+CollisionPolygon2D
+TileMap
 CollisionShape2D
 AnimatedSprite2D
 StaticBody2D
 Node
 Node2D
-CollisionPolygon2D
-TileMap
 AudioStreamPlayer2D
 Area2D
 Marker2D

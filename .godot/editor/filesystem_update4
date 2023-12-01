@@ -1,7 +1,11 @@
-res://Doomsday Timer/Doomsday Timer.tscn
-res://world.gd
-res://Doomsday Timer/Doomsday Timer.gd
 res://world.tscn
+res://world.gd
 res://player.tscn
+res://Doomsday Timer/Doomsday Timer.tscn
 res://pause_menu.tscn
 res://menuMainMenu.tscn
+res://maze.tscn
+res://Game Levels/game_level_1.tscn
+res://Game Levels/maze_2.tscn
+res://Game Levels/maze_3.tscn
+res://Game Levels/maze_4.tscn
