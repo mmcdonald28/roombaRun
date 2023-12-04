@@ -300,7 +300,8 @@ func handleEnemyCollision():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if "Slime" in collider.name or "Trap" in collider.name:
-			lives = lives - 1 
+			lives = lives - 1
+			$"Camera2D/Lives/Panel/Lives Number Label".text = str(lives) 
 			invulnerable = true # So the roomba can only lose 1 life per second
 			await get_tree().create_timer(1.0).timeout
 			invulnerable = false

@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="3_nxb0t"]
 [ext_resource type="Texture2D" uid="uid://ddy20j8r2l1gr" path="res://Art/icon - Down.png" id="4_vbyea"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="5_ql0f8"]
-[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/SpikeTrap.tscn" id="6_xybsw"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="6_xybsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06wxk"]
 bg_color = Color(0, 0, 0, 1)

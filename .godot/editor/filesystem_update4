@@ -1,7 +1,5 @@
 res://menuMainMenu.tscn
-res://playerInventory.tres
 res://world.gd
+res://player.tscn
+res://Lives/Lives.tscn
 res://player.gd
-res://TrapsAndAddons/VerticalPushTrap.tscn
-res://TrapsAndAddons/VerticalPushTrap.gd
-res://TrapsAndAddons/HorizontalPushTrap.tscn

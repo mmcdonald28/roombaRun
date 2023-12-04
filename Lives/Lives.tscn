@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc8i76i6qbc6a"]
+
+[ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="1_ljrkv"]
+
+[node name="Lives" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 67.0
+offset_top = 66.0
+offset_right = 253.0
+offset_bottom = 108.0
+
+[node name="Lives Left Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 148.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("1_ljrkv")
+theme_override_font_sizes/font_size = 40
+text = "Lives Left:"
+
+[node name="Lives Number Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 3.0
+offset_right = 178.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("1_ljrkv")
+theme_override_font_sizes/font_size = 40
+text = "3"
