@@ -11,7 +11,7 @@ func _process(delta):
 # If sprite is below a frame, activate collision, if below disactivate
 # Only diff btwn the various trap scripts is the frames they are active
 func run():
-	if $AnimatedSprite2D.frame < 7 or $AnimatedSprite2D.frame > 12:
+	if $AnimatedSprite2D.frame < 2 or $AnimatedSprite2D.frame > 8:
 		$CollisionShape2D.set_deferred("disabled", true)
 	else:
 		$CollisionShape2D.set_deferred("disabled", false)

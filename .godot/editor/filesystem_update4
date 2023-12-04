@@ -1,8 +1,7 @@
-res://Game Levels/maze_2.tscn
-res://world.gd
-res://Game Levels/maze_3.tscn
 res://menuMainMenu.tscn
-res://maze.tscn
-res://Game Levels/maze_4.tscn
-res://Game Levels/game_level_1.tscn
-res://Enemies/slime.tscn
+res://playerInventory.tres
+res://world.gd
+res://player.gd
+res://TrapsAndAddons/VerticalPushTrap.tscn
+res://TrapsAndAddons/VerticalPushTrap.gd
+res://TrapsAndAddons/HorizontalPushTrap.tscn

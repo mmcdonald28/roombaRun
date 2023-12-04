@@ -12,8 +12,9 @@ extends CharacterBody2D
 @onready var sprite = $CharacterBody2D # sprite
 @onready var animated = $sprayDown/AnimatedSpriteDown 
 @onready var collision = $sprayDown/CollisionShapeDown
-var lives = 10000 # number of lives
+var lives = 3 # number of lives
 var is_dead = false # boolean for dead or alive, may not be used
+var invulnerable = false
 
 var rotation_direction = 0
 var can_move: bool = true # can the roomba move?
@@ -176,7 +177,8 @@ func _physics_process(delta):
 	if can_move:
 		get_input()
 		move_and_slide()
-		handleEnemyCollision()
+		if invulnerable == false:
+			handleEnemyCollision()
 		checkDeath()
 
 #this function is for the animation of the sprite
@@ -299,6 +301,9 @@ func handleEnemyCollision():
 		var collider = collision.get_collider()
 		if "Slime" in collider.name or "Trap" in collider.name:
 			lives = lives - 1 
+			invulnerable = true # So the roomba can only lose 1 life per second
+			await get_tree().create_timer(1.0).timeout
+			invulnerable = false
 			print("Lives Left: ", lives) # losing one lif
 
 # Function to check death and reset what must be reset
