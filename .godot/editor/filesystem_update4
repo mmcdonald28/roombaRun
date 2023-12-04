@@ -1,5 +1,6 @@
-res://menuMainMenu.tscn
+res://Game Levels/maze_4.tscn
 res://world.gd
+res://Game Levels/maze_3.tscn
+res://menuMainMenu.tscn
 res://player.tscn
 res://Lives/Lives.tscn
-res://player.gd
