@@ -140,6 +140,10 @@ func _ready():
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/4"
 	if get_tree().current_scene.name == "Maze 2":
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
+	if get_tree().current_scene.name == "Maze_3":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
+	if get_tree().current_scene.name == "Maze_4":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/4"
 
 func get_input():
 	if can_move:
