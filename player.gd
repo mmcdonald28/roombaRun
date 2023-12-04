@@ -258,11 +258,11 @@ func _on_interaction_area_area_entered(area):
 		
 		#moving to the next level
 		if get_tree().current_scene.name == "world":
-			get_tree().change_scene_to_file("res://maze.tscn") #maze time bby
+			get_tree().change_scene_to_file("res://Game Levels/maze_2.tscn") #maze time bby
 		if get_tree().current_scene.name == "Maze":
-			get_tree().change_scene_to_file("res://Game Levels/maze_2.tscn")
-		if get_tree().current_scene.name == "Maze 2":
 			get_tree().change_scene_to_file("res://Game Levels/maze_3.tscn")
+		if get_tree().current_scene.name == "Maze 2":
+			get_tree().change_scene_to_file("res://maze.tscn")
 		if get_tree().current_scene.name == "Maze 3":
 			get_tree().change_scene_to_file("res://Game Levels/maze_4.tscn")
 		if get_tree().current_scene.name == "Maze 4":
