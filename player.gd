@@ -48,10 +48,40 @@ var filePath = "user://saveTime.res"
 func saveTime():
 	var lvlName = "Level"
 	
-	
+	if get_tree().current_scene.name == "world" :
+		#michael's earlier stuff
+		lvlNum = 1
+		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
 		
+		var result = ResourceSaver.save(filePath, timeDicto)
+	
+		if result == OK:
+			print("Data Saved successfully")
+		else:
+			print("Error Saving data")
+		
+		#the newer stuff (remeber to call this whole function when we change level)
+		lvlNum = 2
+		lvlTime = str(lvlTime)
+		print(lvlTime)
+		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+		
+		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
+		
+		#var result = ResourceSaver.save(filePath, timeDicto)
+		
+		#var result = FileAccess.open("res://Data/")
+	
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error Saving data")
+	
+	
 	# Maze, Maze 2, Maze 3, Maze 4
-	if get_tree().current_scene.name == "Maze" :
+	if get_tree().current_scene.name == "Maze 2" :
+		#michael's earlier stuff
 		lvlNum = 2
 		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
 		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
@@ -63,8 +93,25 @@ func saveTime():
 		else:
 			print("Error Saving data")
 		
+		#the newer stuff (remeber to call this whole function when we change level)
+		lvlNum = 2
+		lvlTime = str(lvlTime)
+		print(lvlTime)
+		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
 		
-	if get_tree().current_scene.name == "Maze 2" :
+		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
+		
+		#var result = ResourceSaver.save(filePath, timeDicto)
+		
+		#var result = FileAccess.open("res://Data/")
+	
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error Saving data")
+		
+		
+	if get_tree().current_scene.name == "Maze" :
 		lvlNum = 3
 		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
 		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
@@ -75,7 +122,7 @@ func saveTime():
 		else:
 			print("Error dSaving Data")
 			
-	if get_tree().current_scene.name == "Maze 3" :
+	if get_tree().current_scene.name == "Maze_3" :
 		lvlNum = 4
 		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
 		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
@@ -87,7 +134,7 @@ func saveTime():
 			print("Error saving Data")
 			
 			
-	if get_tree().current_scene.name == "Maze 4" :
+	if get_tree().current_scene.name == "Maze_4" :
 		lvlNum = 5
 		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
 		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
@@ -127,6 +174,8 @@ func _ready():
 	if get_tree().current_scene.name == "Tutorial_1":
 		$"Camera2D/Doomsday Timer/CanvasLayer".hide()
 		$KeyCountCanvasLayer/KeyCountPanel.hide()
+	
+	print(get_tree().current_scene.name)
 	
 	#this sets up the Keys Collected Label
 	#$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/NUMEBR OF KEYS IN LEVEL"
@@ -203,6 +252,8 @@ func _input(event):
 #this function counts the items collected. There are 3 total
 #$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text
 func _on_inventory_gui_collected_keys():
+	print("Key collected")
+	
 	if get_tree().current_scene.name == "Tutorial_1":
 		collectedAllKeys = true
 		print("Got the only Key!")
@@ -227,14 +278,18 @@ func _on_inventory_gui_collected_keys():
 		if inventory.keys == 3:
 			collectedAllKeys = true
 			print("Got all 3 keys!!!") #for testing
+			
+	if get_tree().current_scene.name == "Maze_3":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/3"
+		if inventory.keys == 3:
+			collectedAllKeys = true
+			print("Got all 3 keys!!!") #for testing
 		
-	#HOW TO SET IT UP (Just copy paste starting at the if)
-	#To find the name of the scene, just use print(get_tree().current_scene.name)
-#	#for example, I thought it was maze when it was Maze, which caused it not to work
-#	if get_tree().current_scene.name == "NAME OF SCENE":
-#		$KeyCountCanvasLayer/Panel/KeysCollectedAmount.text = str(keys)+"/NUMBER OF KEYS IN THE LEVEL"
-#		if keys == NUMBER OF KEYS IN THE LEVEL:
-#			collectedAllKeys = true
+	if get_tree().current_scene.name == "Maze_4":
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/4"
+		if inventory.keys == 4:
+			collectedAllKeys = true
+			print("Got all 4 keys!!!") #for testing
 
 
 #/////////////////////////////////
@@ -267,9 +322,9 @@ func _on_interaction_area_area_entered(area):
 			get_tree().change_scene_to_file("res://Game Levels/maze_3.tscn")
 		if get_tree().current_scene.name == "Maze 2":
 			get_tree().change_scene_to_file("res://maze.tscn")
-		if get_tree().current_scene.name == "Maze 3":
+		if get_tree().current_scene.name == "Maze_3":
 			get_tree().change_scene_to_file("res://Game Levels/maze_4.tscn")
-		if get_tree().current_scene.name == "Maze 4":
+		if get_tree().current_scene.name == "Maze_4":
 			get_tree().change_scene_to_file("res://Game Win/game_win_scene.tscn")
 
 

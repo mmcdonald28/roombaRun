@@ -52,3 +52,7 @@ func _on_inventory_gui_closed():
 
 func _on_inventory_gui_opened():
 	get_tree().paused = true
+
+
+func _on_collected_keys():
+	pass # Replace with function body.
