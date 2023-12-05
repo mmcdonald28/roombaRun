@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="8_je7o0"]
 [ext_resource type="PackedScene" uid="uid://dgqhn3kam0wtt" path="res://Pickups/key2.tscn" id="9_nblx8"]
 [ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="10_sykpt"]
-[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="11_4edyn"]
+[ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/SpikeTrap.tscn" id="11_4edyn"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="12_rb3j7"]
 [ext_resource type="Texture2D" uid="uid://blltn2bfksnec" path="res://Art/Tiles/Floors/Floor - Metal 1 64x64.png" id="16_mtqhu"]
 [ext_resource type="Texture2D" uid="uid://cltqmu8gg4eaj" path="res://Art/Tiles/Walls/Wall-Brick_03-64x64.png" id="17_riqmi"]

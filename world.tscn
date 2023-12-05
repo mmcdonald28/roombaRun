@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
 [ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="9_rvr18"]
 [ext_resource type="PackedScene" uid="uid://bpbspjhoaa35f" path="res://Interactions/key_interact_area.tscn" id="9_y8oxm"]
-[ext_resource type="PackedScene" path="res://Pickups/sprayBottle.tscn" id="10_gfxqy"]
+[ext_resource type="PackedScene" uid="uid://daxhr25unrjho" path="res://Pickups/sprayBottle.tscn" id="10_gfxqy"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="10_q33cq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
