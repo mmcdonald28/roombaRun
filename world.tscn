@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg6e72pam0f40"]
+[gd_scene load_steps=18 format=3 uid="uid://dg6e72pam0f40"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_4pcsn"]
 [ext_resource type="PackedScene" uid="uid://dpekv5tdukjnc" path="res://inventory_gui.tscn" id="1_qh4io"]
@@ -8,7 +8,6 @@
 [ext_resource type="AudioStream" uid="uid://5gk13i17whb5" path="res://Art/CreepyHouseSounds.mp3" id="4_moq7n"]
 [ext_resource type="PackedScene" uid="uid://c0vqbdkipkoh" path="res://Pickups/key1.tscn" id="9_rvr18"]
 [ext_resource type="PackedScene" uid="uid://bpbspjhoaa35f" path="res://Interactions/key_interact_area.tscn" id="9_y8oxm"]
-[ext_resource type="PackedScene" uid="uid://daxhr25unrjho" path="res://Pickups/sprayBottle.tscn" id="10_gfxqy"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="10_q33cq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rjrl"]
@@ -103,16 +102,6 @@ position = Vector2(285, 391)
 [node name="keyInteractArea" parent="key1 1" instance=ExtResource("9_y8oxm")]
 position = Vector2(371, 597)
 isKey = true
-
-[node name="key1 2" parent="." instance=ExtResource("9_rvr18")]
-position = Vector2(457, 28)
-
-[node name="key 1 3" parent="." instance=ExtResource("9_rvr18")]
-position = Vector2(102, -92)
-
-[node name="sprayBottle" parent="." instance=ExtResource("10_gfxqy")]
-position = Vector2(746, 545)
-scale = Vector2(1.5, 1.5)
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
 [connection signal="area_entered" from="key1 1/keyInteractArea" to="CharacterBody2D" method="_on_key_interact_area_area_entered"]

@@ -331,6 +331,7 @@ stream = ExtResource("9_ojamp")
 pitch_scale = 1.82
 
 [node name="sprayDown" type="Area2D" parent="."]
+visible = false
 
 [node name="AnimatedSpriteDown" type="AnimatedSprite2D" parent="sprayDown"]
 position = Vector2(582, 414)

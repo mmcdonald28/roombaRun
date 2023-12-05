@@ -184,7 +184,7 @@ func _ready():
 	add_to_group("res://Art/Push_Trap_Right.png") # right trap addition
 	add_to_group("res://Art/Fire_Trap.png") # fire trap addition
 	if get_tree().current_scene.name == "world":
-		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/3"
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/1"
 	if get_tree().current_scene.name == "Maze": 
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = "0/4"
 	if get_tree().current_scene.name == "Maze 2":
@@ -262,10 +262,10 @@ func _on_inventory_gui_collected_keys():
 			collectedTutorialKey = true
 		
 	if get_tree().current_scene.name == "world":
-		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/3"
-		if inventory.keys == 3:
+		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/1"
+		if inventory.keys == 1:
 			collectedAllKeys = true
-			print("Got all 3 keys!!!") #for testing
+			print("Got the key!") #for testing
 	
 	if get_tree().current_scene.name == "Maze": 
 		$KeyCountCanvasLayer/KeyCountPanel/KeysCollectedAmount.text = str(inventory.keys)+"/4"
