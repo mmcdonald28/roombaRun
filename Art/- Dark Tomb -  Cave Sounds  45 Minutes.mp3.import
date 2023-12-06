@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf5v58xvgs76g"
+path="res://.godot/imported/- Dark Tomb -  Cave Sounds  45 Minutes.mp3-1eb41f5d019368c988ab2c711dec8726.mp3str"
+
+[deps]
+
+source_file="res://Art/- Dark Tomb -  Cave Sounds  45 Minutes.mp3"
+dest_files=["res://.godot/imported/- Dark Tomb -  Cave Sounds  45 Minutes.mp3-1eb41f5d019368c988ab2c711dec8726.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ca8kkxuw6j0ax"]
+[gd_scene load_steps=39 format=3 uid="uid://ca8kkxuw6j0ax"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_c5hg1"]
 [ext_resource type="Texture2D" uid="uid://8r8p71uc7cuk" path="res://Art/Tiles/Floors/Floor-Stone_02-64x64.png" id="2_gcjgp"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dgqhn3kam0wtt" path="res://Pickups/key2.tscn" id="7_y6iu7"]
 [ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="8_wnm6o"]
 [ext_resource type="PackedScene" uid="uid://cnj0tfmuhpxwh" path="res://TrapsAndAddons/FireTrap.tscn" id="12_63f6d"]
+[ext_resource type="AudioStream" uid="uid://bf5v58xvgs76g" path="res://Art/- Dark Tomb -  Cave Sounds  45 Minutes.mp3" id="13_mutco"]
 [ext_resource type="PackedScene" uid="uid://bdoqlm1q7sew3" path="res://TrapsAndAddons/spikeTrap.tscn" id="14_7s1hb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4ukf"]
@@ -1796,5 +1797,9 @@ position = Vector2(1473, 52)
 position = Vector2(80.6875, -44.8125)
 scale = Vector2(0.500706, 0.459175)
 texture = ExtResource("4_ruidb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_mutco")
+autoplay = true
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]

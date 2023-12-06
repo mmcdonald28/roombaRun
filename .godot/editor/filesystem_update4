@@ -1,16 +1,5 @@
-res://menuMainMenu.tscn
-res://world.gd
-res://Textbox/textbox.gd
 res://player.tscn
-res://Game Levels/game_level_1.tscn
+res://world.gd
 res://Game Levels/maze_2.tscn
 res://Game Levels/maze_3.tscn
 res://Game Levels/maze_4.tscn
-res://maze.tscn
-res://Pickups/key1.tscn
-res://world.tscn
-res://Tutorial/tutorial_1.tscn
-res://Textbox/textbox.tscn
-res://player.gd
-res://Tutorial/tutorial_1.gd
-res://Game Win/game_win_scene.tscn

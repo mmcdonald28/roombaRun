@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bflifrvp0to52"]
+[gd_scene load_steps=17 format=3 uid="uid://bflifrvp0to52"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_stnbt"]
 [ext_resource type="Texture2D" uid="uid://du4sp421q3dxj" path="res://Art/Tiles/Floors/Floor - Wood 2 64x64.png" id="1_v61jr"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dfpg4dp0npqhg" path="res://Interactions/MazeDoor.png" id="10_qoswd"]
 [ext_resource type="PackedScene" uid="uid://bduvjqxdbhevs" path="res://Pickups/key3.tscn" id="11_lfihs"]
 [ext_resource type="PackedScene" uid="uid://dpld2d5cir3kt" path="res://Interactions/interact_area.tscn" id="11_r6eew"]
+[ext_resource type="AudioStream" uid="uid://cs2846tqy7mr7" path="res://Art/Abandoned House  Creaking, Wind, Sunset  15 Minutes of Ambience.mp3" id="12_7mtxb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q7lv"]
 texture = ExtResource("1_v61jr")
@@ -1705,5 +1706,9 @@ position = Vector2(2750, 2995)
 
 [node name="pickup" parent="." instance=ExtResource("11_lfihs")]
 position = Vector2(1515, 874)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_7mtxb")
+autoplay = true
 
 [connection signal="collectedKeys" from="CanvasLayer/InventoryGui" to="CharacterBody2D" method="_on_inventory_gui_collected_keys"]
