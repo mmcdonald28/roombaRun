@@ -123,12 +123,10 @@ func _on_tutorial_1_start_tutorial_2_text():
 func _on_character_body_2d_reached_door_in_tutorial():
 	queue_text("Dang. It's locked.")
 	queue_text("Maybe There's a key around?")
-	queue_text("[For a better experience, please make sure your sound is on.]")
 	
 
 func _on_character_body_2d_collected_tutorial_key():
 	queue_text("I found it!")
-	queue_text("I guess the metal detector that was installed years ago still works!")
 	queue_text("Let's see if it opens the door.")
 	queue_text("[Press the E key to see the key in your inventory!]")
 

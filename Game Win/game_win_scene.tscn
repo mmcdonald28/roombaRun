@@ -1,15 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://u40suamhbul"]
+[gd_scene load_steps=10 format=3 uid="uid://u40suamhbul"]
 
 [ext_resource type="Texture2D" uid="uid://bw8f6yvyywrej" path="res://Art/black_background.png" id="1_d64p4"]
 [ext_resource type="Script" path="res://Game Win/game_win_scene.gd" id="1_jc3do"]
 [ext_resource type="FontFile" uid="uid://dwrratye5f3dm" path="res://Textbox/HelvetiPixel.ttf" id="2_js7p8"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td8wj"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+[ext_resource type="Texture2D" uid="uid://bpqe5q5ouywxe" path="res://Art/Key Items 16x16/00.png" id="4_qpu4h"]
+[ext_resource type="Texture2D" uid="uid://dai428eml7yyr" path="res://Art/Key Items 16x16/01.png" id="5_q6m0l"]
+[ext_resource type="Texture2D" uid="uid://bood6r216vh3q" path="res://Art/Key Items 16x16/02.png" id="6_6f8ya"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbe31"]
 bg_color = Color(0, 0, 0, 1)
@@ -45,7 +41,7 @@ grow_vertical = 2
 script = ExtResource("1_jc3do")
 
 [node name="BlackBackground" type="Sprite2D" parent="."]
-position = Vector2(560, 243)
+position = Vector2(587, 172)
 scale = Vector2(1.03429, 0.998667)
 texture = ExtResource("1_d64p4")
 
@@ -76,337 +72,12 @@ theme_override_font_sizes/font_size = 200
 text = "YOU WIN!"
 horizontal_alignment = 1
 
-[node name="Your Time Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 195.0
-offset_right = 1160.0
-offset_bottom = 284.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 100
-text = "Your Time:"
-horizontal_alignment = 1
-
-[node name="User Time Numbers Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 268.0
-offset_right = 1160.0
-offset_bottom = 357.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 100
-text = "00:00.00"
-horizontal_alignment = 1
-
-[node name="TimerPanel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.0494792
-anchor_bottom = 0.257716
-offset_left = 80.0
-offset_top = 253.0
-offset_right = 218.0
-offset_bottom = 221.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_td8wj")
-
-[node name="Level 1 Label" type="Label" parent="TimerPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 77.0
-offset_bottom = 32.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Level 1:"
-
-[node name="Minutes1" type="Label" parent="TimerPanel/Level 1 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 82.1053
-offset_top = -20.1282
-offset_right = 110.105
-offset_bottom = 4.87179
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds1" type="Label" parent="TimerPanel/Level 1 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 109.105
-offset_top = -20.0
-offset_right = 135.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds1" type="Label" parent="TimerPanel/Level 1 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 134.105
-offset_top = -20.0
-offset_right = 155.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Level 2 Label" type="Label" parent="TimerPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 31.0
-offset_right = 77.0
-offset_bottom = 56.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Level 2:"
-
-[node name="Minutes2" type="Label" parent="TimerPanel/Level 2 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 82.1053
-offset_top = -20.1282
-offset_right = 110.105
-offset_bottom = 4.87179
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds2" type="Label" parent="TimerPanel/Level 2 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 109.105
-offset_top = -20.0
-offset_right = 135.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds2" type="Label" parent="TimerPanel/Level 2 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 134.105
-offset_top = -20.0
-offset_right = 155.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Level 3 Label" type="Label" parent="TimerPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 56.0
-offset_right = 77.0
-offset_bottom = 81.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Level 3:"
-
-[node name="Minutes3" type="Label" parent="TimerPanel/Level 3 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 82.1053
-offset_top = -20.1282
-offset_right = 110.105
-offset_bottom = 4.87179
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds3" type="Label" parent="TimerPanel/Level 3 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 109.105
-offset_top = -20.0
-offset_right = 135.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds3" type="Label" parent="TimerPanel/Level 3 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 134.105
-offset_top = -20.0
-offset_right = 155.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Level 4 Label" type="Label" parent="TimerPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 80.0
-offset_right = 77.0
-offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Level 4:"
-
-[node name="Minutes4" type="Label" parent="TimerPanel/Level 4 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 82.1053
-offset_top = -20.1282
-offset_right = 110.105
-offset_bottom = 4.87179
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds4" type="Label" parent="TimerPanel/Level 4 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 109.105
-offset_top = -20.0
-offset_right = 135.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds4" type="Label" parent="TimerPanel/Level 4 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 134.105
-offset_top = -20.0
-offset_right = 155.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Level 5 Label" type="Label" parent="TimerPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 104.0
-offset_right = 77.0
-offset_bottom = 129.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Level 5:"
-
-[node name="Minutes5" type="Label" parent="TimerPanel/Level 5 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 82.1053
-offset_top = -20.1282
-offset_right = 110.105
-offset_bottom = 4.87179
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds5" type="Label" parent="TimerPanel/Level 5 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 109.105
-offset_top = -20.0
-offset_right = 135.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds5" type="Label" parent="TimerPanel/Level 5 Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 134.105
-offset_top = -20.0
-offset_right = 155.105
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 400.0
-offset_top = 396.0
+offset_top = 227.0
 offset_right = 763.0
-offset_bottom = 580.0
+offset_bottom = 411.0
 theme_override_constants/separation = 20
 
 [node name="Retry" type="Button" parent="VBoxContainer"]
@@ -439,196 +110,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_hbh1t")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fxdku")
 text = "Quit Game"
 
-[node name="LeaderboardPanel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.0494792
-anchor_bottom = 0.257716
-offset_left = 877.0
-offset_top = 278.0
-offset_right = 1018.0
-offset_bottom = 188.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_td8wj")
-
-[node name="First Place Label" type="Label" parent="LeaderboardPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 29.0
-offset_bottom = 32.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "First Place:"
-
-[node name="Minutes1" type="Label" parent="LeaderboardPanel/First Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 77.7369
-offset_top = -20.1282
-offset_right = 105.737
-offset_bottom = 4.8718
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds1" type="Label" parent="LeaderboardPanel/First Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 102.737
-offset_top = -20.0
-offset_right = 128.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds1" type="Label" parent="LeaderboardPanel/First Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 125.737
-offset_top = -20.0
-offset_right = 146.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Second Place Label" type="Label" parent="LeaderboardPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 27.0
-offset_right = 29.0
-offset_bottom = 52.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Second Place:"
-
-[node name="Minutes2" type="Label" parent="LeaderboardPanel/Second Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 69.7369
-offset_top = -20.1282
-offset_right = 97.7367
-offset_bottom = 4.8718
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds2" type="Label" parent="LeaderboardPanel/Second Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 94.7366
-offset_top = -20.0
-offset_right = 120.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds2" type="Label" parent="LeaderboardPanel/Second Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 117.737
-offset_top = -20.0
-offset_right = 138.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
-[node name="Thrid Place Label" type="Label" parent="LeaderboardPanel"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 48.0
-offset_right = 29.0
-offset_bottom = 73.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "Third Place:"
-
-[node name="Minutes3" type="Label" parent="LeaderboardPanel/Thrid Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.805128
-anchor_right = 0.421053
-anchor_bottom = 0.805128
-offset_left = 76.7369
-offset_top = -20.1282
-offset_right = 104.737
-offset_bottom = 4.8718
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds3" type="Label" parent="LeaderboardPanel/Thrid Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 101.737
-offset_top = -20.0
-offset_right = 127.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00."
-horizontal_alignment = 2
-
-[node name="Centiseconds3" type="Label" parent="LeaderboardPanel/Thrid Place Label"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.421053
-anchor_top = 0.8
-anchor_right = 0.421053
-anchor_bottom = 0.8
-offset_left = 124.737
-offset_top = -20.0
-offset_right = 145.737
-offset_bottom = 5.0
-theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 25
-text = "00"
-horizontal_alignment = 2
-
 [node name="Morse Code" type="Label" parent="."]
 layout_mode = 0
-offset_left = 784.0
+offset_left = 825.0
 offset_top = 400.0
 offset_right = 1136.0
 offset_bottom = 610.0
@@ -643,14 +127,67 @@ autowrap_mode = 2
 layout_mode = 0
 offset_left = 28.0
 offset_top = 411.0
-offset_right = 372.0
-offset_bottom = 613.0
+offset_right = 351.0
+offset_bottom = 639.0
 theme_override_fonts/font = ExtResource("2_js7p8")
 theme_override_font_sizes/font_size = 40
 text = "--- .... / -- -.-- / --. --- -.. --..-- / -.-- --- ..- / -.- .. .-.. .-.. . -.. / -.- . -. -. -.-- -.-.-- / -.-- --- ..- / -... .- ... - .- .-. -.. -.-.--"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Morse Code3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 418.0
+offset_right = 767.0
+offset_bottom = 646.0
+theme_override_fonts/font = ExtResource("2_js7p8")
+theme_override_font_sizes/font_size = 40
+text = "... .... --- ..- - / --- ..- - / - --- / --- ..- .-. / .--. .-. --- ..-. . ... ... --- .-. .-.-.- / -.-- --- ..- / -.. .- / -... --- -- -... .-.-.- -.-. --- -- -.-.--"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="00" type="Sprite2D" parent="."]
+position = Vector2(193, 61)
+scale = Vector2(3.0625, 3.3125)
+texture = ExtResource("4_qpu4h")
+
+[node name="01" type="Sprite2D" parent="."]
+position = Vector2(85, 163)
+scale = Vector2(2.625, 2.625)
+texture = ExtResource("5_q6m0l")
+
+[node name="02" type="Sprite2D" parent="."]
+position = Vector2(223, 231)
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("6_6f8ya")
+
+[node name="03" type="Sprite2D" parent="."]
+position = Vector2(1038, 337)
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("6_6f8ya")
+
+[node name="04" type="Sprite2D" parent="."]
+position = Vector2(926, 257)
+scale = Vector2(3.0625, 3.3125)
+texture = ExtResource("4_qpu4h")
+
+[node name="05" type="Sprite2D" parent="."]
+position = Vector2(1046, 176)
+scale = Vector2(2.625, 2.625)
+texture = ExtResource("5_q6m0l")
+
+[node name="06" type="Sprite2D" parent="."]
+position = Vector2(967, 81.0001)
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("6_6f8ya")
+
+[node name="07" type="Sprite2D" parent="."]
+position = Vector2(112, 336)
+scale = Vector2(3.0625, 3.3125)
+texture = ExtResource("4_qpu4h")
 
 [connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

@@ -22,6 +22,7 @@ func _ready():
 	$Key.hide()
 	$Key.monitoring = false
 	
+	
 
 func _on_textbox_textbox_is_closed():
 	textbox_open = false

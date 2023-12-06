@@ -174,6 +174,7 @@ func _ready():
 	if get_tree().current_scene.name == "Tutorial_1":
 		$"Camera2D/Doomsday Timer/CanvasLayer".hide()
 		$KeyCountCanvasLayer/KeyCountPanel.hide()
+		$Camera2D/Lives.hide()
 	
 	print(get_tree().current_scene.name)
 	
