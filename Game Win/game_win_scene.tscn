@@ -41,7 +41,7 @@ grow_vertical = 2
 script = ExtResource("1_jc3do")
 
 [node name="BlackBackground" type="Sprite2D" parent="."]
-position = Vector2(587, 172)
+position = Vector2(579, 173)
 scale = Vector2(1.03429, 0.998667)
 texture = ExtResource("1_d64p4")
 
@@ -75,9 +75,9 @@ horizontal_alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 400.0
-offset_top = 227.0
+offset_top = 386.0
 offset_right = 763.0
-offset_bottom = 411.0
+offset_bottom = 570.0
 theme_override_constants/separation = 20
 
 [node name="Retry" type="Button" parent="VBoxContainer"]
@@ -112,12 +112,12 @@ text = "Quit Game"
 
 [node name="Morse Code" type="Label" parent="."]
 layout_mode = 0
-offset_left = 825.0
-offset_top = 400.0
-offset_right = 1136.0
-offset_bottom = 610.0
+offset_left = 991.0
+offset_top = 13.0
+offset_right = 1152.0
+offset_bottom = 119.0
 theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 20
 text = ".. - .----. ... / -.. .- -. --. . .-. --- ..- ... / - --- / --. --- / .- .-.. --- -. . --..-- / - .- -.- . / - .... .. ... -.-.--"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -125,12 +125,12 @@ autowrap_mode = 2
 
 [node name="Morse Code2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 411.0
-offset_right = 351.0
-offset_bottom = 639.0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 137.0
 theme_override_fonts/font = ExtResource("2_js7p8")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 20
 text = "--- .... / -- -.-- / --. --- -.. --..-- / -.-- --- ..- / -.- .. .-.. .-.. . -.. / -.- . -. -. -.-- -.-.-- / -.-- --- ..- / -... .- ... - .- .-. -.. -.-.--"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -138,10 +138,10 @@ autowrap_mode = 2
 
 [node name="Morse Code3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 396.0
-offset_top = 418.0
-offset_right = 767.0
-offset_bottom = 646.0
+offset_left = 779.0
+offset_top = 383.0
+offset_right = 1135.0
+offset_bottom = 611.0
 theme_override_fonts/font = ExtResource("2_js7p8")
 theme_override_font_sizes/font_size = 40
 text = "... .... --- ..- - / --- ..- - / - --- / --- ..- .-. / .--. .-. --- ..-. . ... ... --- .-. .-.-.- / -.-- --- ..- / -.. .- / -... --- -- -... .-.-.- -.-. --- -- -.-.--"
@@ -149,8 +149,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Morse Code4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 383.0
+offset_right = 390.0
+offset_bottom = 611.0
+theme_override_fonts/font = ExtResource("2_js7p8")
+theme_override_font_sizes/font_size = 30
+text = "-.-. .-. . .- - . -.. / -... -.-- / -.- .. -- -... . .-. .-.. -.-- / -- -.-. -. . .. .-.. --..-- / ... . .-. . -. .- / -- --- -. - . ..-. --- .-. - . --..-- / -. .. -.-. .... --- .-.. .- ... / -- .. -.-. .... .- . .-.. ... --..-- / -- .- - - / -- .- -.-. -.. --- -. .- .-.. -.. --..-- / .- -. -.. / -- .. -.-. .... .- . .-.. / .-- .- - -.- .. -. ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="00" type="Sprite2D" parent="."]
-position = Vector2(193, 61)
+position = Vector2(220, 66)
 scale = Vector2(3.0625, 3.3125)
 texture = ExtResource("4_qpu4h")
 
@@ -180,7 +193,7 @@ scale = Vector2(2.625, 2.625)
 texture = ExtResource("5_q6m0l")
 
 [node name="06" type="Sprite2D" parent="."]
-position = Vector2(967, 81.0001)
+position = Vector2(954, 66)
 scale = Vector2(2.9375, 2.9375)
 texture = ExtResource("6_6f8ya")
 
@@ -188,6 +201,32 @@ texture = ExtResource("6_6f8ya")
 position = Vector2(112, 336)
 scale = Vector2(3.0625, 3.3125)
 texture = ExtResource("4_qpu4h")
+
+[node name="Your Time Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 198.0
+offset_right = 1160.0
+offset_bottom = 287.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_js7p8")
+theme_override_font_sizes/font_size = 100
+text = "Your Time:"
+horizontal_alignment = 1
+
+[node name="Your Time Numbers Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 281.0
+offset_right = 1160.0
+offset_bottom = 370.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_js7p8")
+theme_override_font_sizes/font_size = 100
+text = "00:00:00"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

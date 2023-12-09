@@ -1685,7 +1685,7 @@ autoplay = true
 position = Vector2(1661, 957)
 
 [node name="MazeDoor" type="Sprite2D" parent="."]
-z_index = 3
+z_index = 1
 position = Vector2(1663.63, 958.875)
 scale = Vector2(0.391244, 0.377946)
 texture = ExtResource("8_je7o0")

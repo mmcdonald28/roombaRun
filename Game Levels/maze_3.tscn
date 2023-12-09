@@ -1676,7 +1676,7 @@ scale = Vector2(2.5, 2.5)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="greenSlime4"]
-position = Vector2(4.80005, 589.2)
+position = Vector2(11.6, 597.2)
 scale = Vector2(2.5, 2.5)
 
 [node name="greenSlime5" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("8_wjodv")]

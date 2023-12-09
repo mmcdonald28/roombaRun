@@ -20,6 +20,7 @@ var rotation_direction = 0
 var can_move: bool = true # can the roomba move?
 var firstHitWithDoor = true #for part 2 of the tutorial. So we only get the text once
 var collectedTutorialKey = false #So the "I found it!" dialouge doesn't activate twice
+var time = 0.0
 
 #signals to activate the textbox in the tutorial
 signal Reached_Door_In_Tutorial
@@ -32,140 +33,6 @@ signal Final_Tutorial_Text
 @onready var allBeepInteraction = []
 @onready var beepSoundObj = $BeepSound
 @onready var isInsideBeep = false
-
-
-
-#Save data Things
-
-var timeDicto = {}
-var lvlNum = 0
-var lvlTime = 0.0
-var filePath = "user://saveTime.res"
-
-#/////////////////////////
-#//// Saving Time ///////
-#////////////////////////
-func saveTime():
-	var lvlName = "Level"
-	
-	if get_tree().current_scene.name == "world" :
-		#michael's earlier stuff
-		lvlNum = 1
-		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
-		
-		var result = ResourceSaver.save(filePath, timeDicto)
-	
-		if result == OK:
-			print("Data Saved successfully")
-		else:
-			print("Error Saving data")
-		
-		#the newer stuff (remeber to call this whole function when we change level)
-		lvlNum = 2
-		lvlTime = str(lvlTime)
-		print(lvlTime)
-		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		
-		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
-		
-		#var result = ResourceSaver.save(filePath, timeDicto)
-		
-		#var result = FileAccess.open("res://Data/")
-	
-#		if result == OK:
-#			print("Data Saved successfully")
-#		else:
-#			print("Error Saving data")
-	
-	
-	# Maze, Maze 2, Maze 3, Maze 4
-	if get_tree().current_scene.name == "Maze 2" :
-		#michael's earlier stuff
-		lvlNum = 2
-		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
-		
-		var result = ResourceSaver.save(filePath, timeDicto)
-	
-		if result == OK:
-			print("Data Saved successfully")
-		else:
-			print("Error Saving data")
-		
-		#the newer stuff (remeber to call this whole function when we change level)
-		lvlNum = 2
-		lvlTime = str(lvlTime)
-		print(lvlTime)
-		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		
-		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
-		
-		#var result = ResourceSaver.save(filePath, timeDicto)
-		
-		#var result = FileAccess.open("res://Data/")
-	
-#		if result == OK:
-#			print("Data Saved successfully")
-#		else:
-#			print("Error Saving data")
-		
-		
-	if get_tree().current_scene.name == "Maze" :
-		lvlNum = 3
-		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
-		var result = ResourceSaver.save(filePath, timeDicto)
-	
-		if result == OK:
-			print("Data Saved successfully")
-		else:
-			print("Error dSaving Data")
-			
-	if get_tree().current_scene.name == "Maze_3" :
-		lvlNum = 4
-		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
-		var result = ResourceSaver.save(filePath, timeDicto)
-	
-		if result == OK:
-			print("Data Saved successfully")
-		else: 
-			print("Error saving Data")
-			
-			
-	if get_tree().current_scene.name == "Maze_4" :
-		lvlNum = 5
-		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
-		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
-		var result = ResourceSaver.save(filePath, timeDicto)
-	
-		if result == OK:
-			print("Data Saved successfully")
-		else:
-			print("Error saving data")
-			
-			
-func readTime():
-	var resource_loader = ResourceLoader.new()
-	var resource = resource_loader.load(filePath)
-
-	if resource != null:
-		var timeDicto = resource.get_data()
-		
-		for key in timeDicto.keys():
-			var levelName = key
-			var levelTime = timeDicto[key]
-			
-			# Do something with levelName and levelTime
-			print("Level:", levelName, "Time:", levelTime)
-
-		print("Data Read successfully")
-	else:
-		print("Error Reading data")
-
-
-
 
 
 
@@ -316,6 +183,10 @@ func _on_interaction_area_area_entered(area):
 		if get_tree().current_scene.name == "Tutorial_1":
 			emit_signal("Final_Tutorial_Text") #activates the textbox
 		
+		Global.totalTime += time
+		print(time)
+		print (Global.totalTime)
+		
 		#moving to the next level
 		if get_tree().current_scene.name == "world":
 			get_tree().change_scene_to_file("res://Game Levels/maze_2.tscn") #maze time bby
@@ -410,7 +281,7 @@ func _process(delta):
 		if not beepSoundObj.is_playing():
 			beepSoundObj.play()
 
-			
+	time += delta
 
 func _on_beep_area_area_entered(area):
 	#check if entered interactable item is a key
@@ -433,3 +304,138 @@ func _on_beep_area_area_exited(area):
 		getToDoor = false
 		interactLabel.text = ""
 		updateInteraction()
+
+
+
+#/////////////////////////////////
+#/////// Old Time Stuff //////////
+#/////////////////////////////////
+
+##Save data Things
+#
+#var timeDicto = {}
+#var lvlNum = 0
+#var lvlTime = 0.0
+#var filePath = "user://saveTime.res"
+#
+##/////////////////////////
+##//// Saving Time ///////
+##////////////////////////
+#func saveTime():
+#	var lvlName = "Level"
+#
+#	if get_tree().current_scene.name == "world" :
+#		#michael's earlier stuff
+#		lvlNum = 1
+#		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+#
+#		var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error Saving data")
+#
+#		#the newer stuff (remeber to call this whole function when we change level)
+#		lvlNum = 2
+#		lvlTime = str(lvlTime)
+#		print(lvlTime)
+#		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#
+#		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
+#
+#		#var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		#var result = FileAccess.open("res://Data/")
+#
+##		if result == OK:
+##			print("Data Saved successfully")
+##		else:
+##			print("Error Saving data")
+#
+#
+#	# Maze, Maze 2, Maze 3, Maze 4
+#	if get_tree().current_scene.name == "Maze 2" :
+#		#michael's earlier stuff
+#		lvlNum = 2
+#		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+#
+#		var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error Saving data")
+#
+#		#the newer stuff (remeber to call this whole function when we change level)
+#		lvlNum = 2
+#		lvlTime = str(lvlTime)
+#		print(lvlTime)
+#		#lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#
+#		timeDicto[str(lvlName + str(lvlNum))] = (lvlTime)
+#
+#		#var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		#var result = FileAccess.open("res://Data/")
+#
+##		if result == OK:
+##			print("Data Saved successfully")
+##		else:
+##			print("Error Saving data")
+#
+#
+#	if get_tree().current_scene.name == "Maze" :
+#		lvlNum = 3
+#		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+#		var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error dSaving Data")
+#
+#	if get_tree().current_scene.name == "Maze_3" :
+#		lvlNum = 4
+#		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+#		var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else: 
+#			print("Error saving Data")
+#
+#
+#	if get_tree().current_scene.name == "Maze_4" :
+#		lvlNum = 5
+#		lvlTime = str($Camera2D/TimerCanvasLayer/TimerPanel/Minutes) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Seconds) + ":" + str($Camera2D/TimerCanvasLayer/TimerPanel/Centiseconds)
+#		timeDicto.insert(0, lvlName + str(lvlNum), lvlTime)
+#		var result = ResourceSaver.save(filePath, timeDicto)
+#
+#		if result == OK:
+#			print("Data Saved successfully")
+#		else:
+#			print("Error saving data")
+#
+#
+#func readTime():
+#	var resource_loader = ResourceLoader.new()
+#	var resource = resource_loader.load(filePath)
+#
+#	if resource != null:
+#		var timeDicto = resource.get_data()
+#
+#		for key in timeDicto.keys():
+#			var levelName = key
+#			var levelTime = timeDicto[key]
+#
+#			# Do something with levelName and levelTime
+#			print("Level:", levelName, "Time:", levelTime)
+#
+#		print("Data Read successfully")
+#	else:
+#		print("Error Reading data")
