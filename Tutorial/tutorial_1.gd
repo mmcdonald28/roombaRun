@@ -21,6 +21,7 @@ func _ready():
 	$"Interact Area".monitorable = false
 	$Key.hide()
 	$Key.monitoring = false
+	$"CharacterBody2D/Camera2D/Lives/Panel/Lives Number Label".hide()
 	
 	
 

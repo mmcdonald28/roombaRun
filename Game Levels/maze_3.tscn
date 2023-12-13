@@ -1704,9 +1704,6 @@ texture = ExtResource("10_qoswd")
 [node name="Interact Area" parent="." instance=ExtResource("11_r6eew")]
 position = Vector2(2750, 2995)
 
-[node name="pickup" parent="." instance=ExtResource("11_lfihs")]
-position = Vector2(1515, 874)
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_7mtxb")
 autoplay = true
